@@ -1,0 +1,56 @@
+// Icon mixin
+
+@mixin icon($filename, $width: 24px, $height: 24px) {
+  background-image: image-url('icons/#{$filename}.svg');
+  background-size: $width $height;
+}
+
+
+// Icon
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.icon--white {
+  fill: $diverst-white;
+}
+
+// .icon--dark {
+//   fill: $color-grey-dark;
+// }
+
+.icon--large {
+  width: 48px;
+  height: 48px;
+}
+
+.icon--apple {
+  width: 18px;
+  height: 21px;
+}
+
+// Section icons
+
+.icon--marker {
+  width: 24px;
+  height: 30px;
+}
+
+.icon--friends {
+  width: 26px;
+  height: 30px;
+}
+
+.icon--contact {
+  width: 30px;
+  height: 24px;
+}
+
+.icon--press {
+  width: 26px;
+  height: 26px;
+}

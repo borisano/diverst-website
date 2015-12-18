@@ -1,0 +1,87 @@
+.header {
+  position: relative;
+  padding: 6em 0;
+  color: $diverst-white;
+  background-image: url('/images/header.jpg');
+  background-size: cover;
+  background-position: center center;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  * {
+    position: relative;
+    z-index: 10;
+
+    .ready & {
+      @include animation(fade-in-up $time $curve both);
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          @include animation-delay($i * 0.1s);
+        }
+      }
+    }
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &:after {
+    height: 100%;
+    background-color: rgba(#000, 0.4);
+  }
+
+  &:before {
+    display: none;
+    height: 150px;
+    @include linear-gradient(to top, rgba(#000, 0), rgba(#000, 0.5));
+
+    @include mq(large) {
+      display: block;
+    }
+  }
+
+  @include mq(small) {
+    padding: 8em 0;
+  }
+
+  @include mq(medium) {
+    padding: 11em 0;
+  }
+
+  @include mq(large) {
+    padding: 13em 0;
+
+    &:after {
+      background-color: rgba(#000, 0.25);
+    }
+  }
+
+  h1,
+  h2 {
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+  }
+
+  h1 {
+    color: $diverst-white;
+    line-height: 1.1;
+  }
+
+  h2 {
+    color: rgba($diverst-white, 0.7);
+    margin-bottom: 1.25em;
+    font-weight: $font-weight-regular;
+  }
+
+  .btn {
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+  }
+}

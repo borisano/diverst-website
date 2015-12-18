@@ -1,0 +1,34 @@
+// Buttons
+
+.btn {
+  display: inline-block;
+  width: auto;
+  line-height: 1.3;
+  padding: 1.5em 2.5em;
+  border-radius: $border-radius;
+  border: 0;
+  outline: 0;
+  font-size: 85%;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;;
+  @include transition(all $time $curve);
+}
+
+.btn--primary {
+  color: $diverst-white;
+  background-color: $diverst-purple;
+
+  &:hover {
+    background-color: mix($diverst-purple, $diverst-white, 91%); 
+  }
+}
+
+.btn--reverse {
+  background-color: $diverst-white;
+  color: $diverst-purple;
+
+  &:hover {
+    background-color: mix($diverst-white, #000, 91%); 
+  }
+}

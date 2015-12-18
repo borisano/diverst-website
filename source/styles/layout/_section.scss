@@ -1,0 +1,44 @@
+// Section
+
+.section {
+  background-color: $diverst-white;
+  padding: 4em 0;
+
+  @include mq(small) {
+    padding: 6em 0;
+  }
+
+  @include mq(medium) {
+    padding: 8em 0;
+  }
+
+  @include mq(large) {
+    padding: 10em 0;
+  }
+}
+
+.section--accent {
+  background-color: $diverst-purple;
+  color: $diverst-white;
+
+  * {
+    color: $diverst-white;
+  }
+}
+
+.section--alt {
+  background-color: $diverst-background;
+}
+
+
+// Title
+
+.section__title {
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative;
+
+  @include mq(medium) {
+    margin-bottom: 2.5em;
+  }
+}

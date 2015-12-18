@@ -1,0 +1,19 @@
+{
+  "name": "Diverst",
+  "version": "1.0.0",
+  "authors": [
+    "Alexander Haniotis <alexanderhaniotis@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery-smooth-scroll": "~1.5.5",
+    "bourbon": "~4.2.6"
+  }
+}

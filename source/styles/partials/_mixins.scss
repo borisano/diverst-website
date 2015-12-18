@@ -1,0 +1,13 @@
+// Media query mixin
+
+@mixin mq($size) {
+   @if $size == large {
+     @media (min-width: $large) { @content ; }
+  }
+    @else if $size == medium {
+     @media (min-width: $medium) { @content ; }
+  }
+    @else if $size == small {
+     @media (min-width: $small) { @content ; }
+  }
+}

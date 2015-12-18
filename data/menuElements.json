@@ -1,0 +1,31 @@
+{
+  "top": [{
+    "title": "Tech",
+    "href": "/tech"
+  }, {
+    "title": "Integrations",
+    "href": "/integrations"
+  }, {
+    "title": "Resources",
+    "href": "/resources"
+  }, {
+    "title": "ROI Calculator",
+    "href": "/roi"
+  }],
+  "menu": [{
+    "title": "ERG Manager",
+    "href": "erg-manager"
+  }, {
+    "title": "Scrum",
+    "href": "/scrum"
+  }, {
+    "title": "Market Scope",
+    "href": "/market-scope"
+  }, {
+    "title": "Mentoring",
+    "href": "/mentoring"
+  }, {
+    "title": "Discover",
+    "href": "/discover"
+  }]
+}

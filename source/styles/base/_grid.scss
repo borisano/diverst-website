@@ -1,0 +1,81 @@
+// Grid
+
+$columns: 12;
+
+.row {
+  margin-left: (-$gutter/2);
+  margin-right: (-$gutter/2);
+  @include clearfix;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: ($gutter/2);
+  padding-right: ($gutter/2);
+}
+
+
+// Columns
+
+@for $i from 0 through $columns + 1 {
+  .col-xs-#{$i} {
+    width: (((100 / $columns) * $i) * 1%);
+  }
+}
+
+@include mq(small) {
+  @for $i from 0 through $columns + 1 {
+    .col-sm-#{$i} {
+      width: (((100 / $columns) * $i) * 1%);
+    }
+  }
+}
+
+@include mq(medium) {
+  @for $i from 0 through $columns + 1 {
+    .col-md-#{$i} {
+      width: (((100 / $columns) * $i) * 1%);
+    }
+  }
+}
+
+@include mq(large) {
+  @for $i from 0 through $columns + 1 {
+    .col-lg-#{$i} {
+      width: (((100 / $columns) * $i) * 1%);
+    }
+  }
+}
+
+
+// Offset
+
+@for $i from 0 through $columns + 1 {
+  .col-xs-offset-#{$i} {
+    margin-left: (((100 / $columns) * $i) * 1%);
+  }
+}
+
+@include mq(small) {
+  @for $i from 0 through $columns + 1 {
+    .col-sm-offset-#{$i} {
+      margin-left: (((100 / $columns) * $i) * 1%);
+    }
+  }
+}
+
+@include mq(medium) {
+  @for $i from 0 through $columns + 1 {
+    .col-md-offset-#{$i} {
+      margin-left: (((100 / $columns) * $i) * 1%);
+    }
+  }
+}
+
+@include mq(large) {
+  @for $i from 0 through $columns + 1 {
+    .col-lg-offset-#{$i} {
+      margin-left: (((100 / $columns) * $i) * 1%);
+    }
+  }
+}

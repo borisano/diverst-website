@@ -1,0 +1,49 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+
+  &.js-menu-open {
+    overflow: hidden;
+
+    @include mq(medium) {
+      overflow: visible;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Site Wrap
+
+.site-wrap {
+  width: 100%;
+  padding: 0 2em;
+  margin: 0 auto;
+  @include clearfix;
+
+  @include mq(small) {
+    width: 90%;
+    padding: 0;
+    max-width: em(900px);
+  }
+
+  @include mq(medium) {
+    max-width: em(1100px);
+  }
+
+  @include mq(large) {
+    max-width: em(1200px);
+  }
+}
