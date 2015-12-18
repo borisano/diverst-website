@@ -1,3 +1,83 @@
+// Page header
+
+.page-header {
+  background-color: $diverst-purple;
+  padding: 3em 0;
+  text-align: center;
+  overflow: hidden;
+
+  @include mq(small) {
+    padding: 4em 0;
+  }
+
+  @include mq(medium) {
+    padding: 6em 0;
+  }
+
+  @include mq(large) {
+    padding: 12em 0 8em;
+  }
+
+  * {
+    color: $diverst-white;
+    opacity: 0;
+
+    .ready & {
+      @include animation(fade-in-up $time $curve both);
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          @include animation-delay($i * 0.1s);
+        }
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 0.25em;
+
+    &:after {
+      content: "";
+      display: block;
+      margin: 15px auto;
+      height: 3px;
+      width: 30px;
+      background-color: $diverst-white;
+
+      @include mq(medium) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  h2 {
+    color: rgba($diverst-white, 0.6);
+    font-weight: $font-weight-regular;
+  }
+}
+
+.page-header__image {
+  margin: 1em -1em -4.5em;
+  width: 800px;
+
+  @include mq(small) {
+    margin-top: 2em;
+    margin-bottom: -6.5em;
+  }
+
+  @include mq(medium) {
+    margin-bottom: -8em;
+  }
+
+  @include mq(large) {
+    margin-bottom: -12em;
+  }
+}
+
+
+// Header
+
 .header {
   position: relative;
   padding: 6em 0;
@@ -63,6 +143,10 @@
     &:after {
       background-color: rgba(#000, 0.25);
     }
+  }
+
+  h1, h2, .btn {
+    opacity: 0;
   }
 
   h1,

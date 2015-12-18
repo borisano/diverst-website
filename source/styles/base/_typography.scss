@@ -4,10 +4,8 @@ body {
   font: $font-weight-regular 15px/1.7 $font-family;
   -webkit-font-smoothing: subpixel-antialiased;
   color: $diverst-grey;
-  text-align: center;
 
   @include mq(medium) {
-    text-align: left;
     font-size: 16px;
   }
 }
@@ -69,12 +67,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 110%;
   margin: 0.5em 0;
-
-  @include mq(medium) {
-    font-size: 18px;
-  }
 }
 
 h4 {
@@ -86,4 +80,8 @@ h4 {
   @include mq(medium) {
     font-size: 12px;
   }
+}
+
+.large {
+  font-size: 110%;
 }

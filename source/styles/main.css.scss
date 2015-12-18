@@ -7,8 +7,8 @@
 
 @import
 "partials/variables",
-"partials/utilities",
 "partials/mixins",
+"partials/utilities",
 "partials/animations";
 
 
@@ -36,6 +36,7 @@
 @import
 "modules/icons",
 "modules/step",
+"modules/feature",
 "modules/overlay",
 "modules/dropdown",
 "modules/button";

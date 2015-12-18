@@ -6,7 +6,7 @@
 }
 
 
-// Icon
+// General
 
 .icon {
   display: inline-block;
@@ -15,42 +15,7 @@
   vertical-align: middle;
 }
 
-.icon--white {
-  fill: $diverst-white;
-}
-
-// .icon--dark {
-//   fill: $color-grey-dark;
-// }
-
 .icon--large {
   width: 48px;
   height: 48px;
-}
-
-.icon--apple {
-  width: 18px;
-  height: 21px;
-}
-
-// Section icons
-
-.icon--marker {
-  width: 24px;
-  height: 30px;
-}
-
-.icon--friends {
-  width: 26px;
-  height: 30px;
-}
-
-.icon--contact {
-  width: 30px;
-  height: 24px;
-}
-
-.icon--press {
-  width: 26px;
-  height: 26px;
 }

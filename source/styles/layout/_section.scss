@@ -2,6 +2,7 @@
 
 .section {
   background-color: $diverst-white;
+  border-bottom: 1px solid $diverst-border;
   padding: 4em 0;
 
   @include mq(small) {
@@ -14,6 +15,10 @@
 
   @include mq(large) {
     padding: 10em 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
   }
 }
 

@@ -11,3 +11,27 @@
 .text-right {
   text-align: right;
 }
+
+.hide-xs {
+  display: none;
+
+  @include mq(small) {
+    display: block;
+  }
+}
+
+.hide-sm {
+  display: none;
+
+  @include mq(medium) {
+    display: block;
+  }
+}
+
+.hide-md {
+  display: none;
+
+  @include mq(large) {
+    display: block;
+  }
+}
