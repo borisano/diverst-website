@@ -15,6 +15,11 @@
   @include transition(all $time $curve);
 }
 
+.btn--small {
+  padding: 0.75em 1.25em;
+  font-size: 75%;
+}
+
 .btn--primary {
   color: $diverst-white;
   background-color: $diverst-purple;

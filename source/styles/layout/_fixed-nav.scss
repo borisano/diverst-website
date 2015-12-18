@@ -1,0 +1,53 @@
+// Fixed nav
+
+.fixed-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em 0;
+  background-color: rgba($diverst-white, 0.96);
+  z-index: 9999;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  @include transform(translate3d(0, -100%, 0));
+  @include transition(transform $time $curve, box-shadow $time $curve);
+
+  &.visible {
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
+    @include transform(none);
+  }
+
+  .site-wrap,
+  .nav__list {
+    @include display(flex);
+    @include align-items(center);
+  }
+
+  @include mq(large) {
+    display: block;
+  }
+
+  .nav__link {
+    color: $diverst-grey;
+    text-shadow: none !important;
+
+    &:hover,
+    .has-dropdown:hover & {
+      color: $diverst-black !important;
+    }
+  }
+
+  .nav__logo {
+    fill: $diverst-purple;
+    width: 128px;
+  }
+
+  .nav__list {
+    margin-left: auto;
+  }
+
+  .btn {
+    margin-left: 2em;
+  }
+}

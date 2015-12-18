@@ -17,7 +17,7 @@
     padding: 10em 0;
   }
 
-  &:last-child {
+  &:last-of-type {
     border-bottom: 0;
   }
 }
@@ -33,6 +33,14 @@
 
 .section--alt {
   background-color: $diverst-background;
+}
+
+.section--testimonial {
+
+  * {
+    color: $diverst-white;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+  }
 }
 
 
