@@ -33,21 +33,7 @@
   }
 
   h1 {
-    margin-bottom: 0.25em;
-
-    &:after {
-      content: "";
-      display: block;
-      margin: 15px auto;
-      height: 3px;
-      width: 30px;
-      background-color: $diverst-white;
-
-      @include mq(medium) {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-    }
+    margin-bottom: 0.1em;
   }
 
   .site-wrap h2 {

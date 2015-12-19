@@ -22,7 +22,12 @@
   border: 0;
   box-shadow: 0;
   outline: 0;
+  color: $diverst-black;
   @include appearance(none);
+
+  @include placeholder {
+    color: mix($diverst-grey-light, #fff, 70%);
+  }
 
   &:focus {
     box-shadow: 0px 0px 0px 2px $diverst-purple;
