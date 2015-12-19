@@ -1,5 +1,15 @@
 // Form
 
+.form-hint {
+  margin-top: 1.5em;
+  display: none;
+
+  .icon {
+    fill: $diverst-purple;
+    margin-right: 0.5em;
+  }
+}
+
 .field {
   position: relative;
 }

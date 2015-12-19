@@ -20,6 +20,17 @@
 "base/grid",
 "base/typography";
 
+// Modules
+
+@import
+"modules/icons",
+"modules/form",
+"modules/step",
+"modules/feature",
+"modules/overlay",
+"modules/dropdown",
+"modules/button";
+
 
 // Layout
 
@@ -31,15 +42,3 @@
 "layout/section",
 "layout/main",
 "layout/footer";
-
-
-// Modules
-
-@import
-"modules/icons",
-"modules/form",
-"modules/step",
-"modules/feature",
-"modules/overlay",
-"modules/dropdown",
-"modules/button";

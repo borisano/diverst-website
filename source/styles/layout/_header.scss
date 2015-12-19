@@ -17,7 +17,7 @@
     padding: 12em 0 8em;
   }
 
-  * {
+  .site-wrap > * {
     color: $diverst-white;
     opacity: 0;
 
@@ -50,10 +50,23 @@
     }
   }
 
-  h2 {
+  .site-wrap h2 {
     color: rgba($diverst-white, 0.6);
     font-weight: $font-weight-regular;
     margin-bottom: 0;
+  }
+}
+
+.page-header__icon {
+  fill: $diverst-white;
+  margin-bottom: 0.5em;
+
+  @include mq(small) {
+    @include size(32px);
+  }
+
+  @include mq(medium) {
+    @include size(40px);
   }
 }
 
