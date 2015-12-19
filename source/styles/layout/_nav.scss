@@ -157,7 +157,7 @@
   max-width: 340px;
   height: 100%;
   overflow: scroll;
-  padding: 1.25em 0;
+  padding: 1.25em 0 2.5em;
   margin: 0;
   background-color: $diverst-white;
   text-align: left;
@@ -168,6 +168,11 @@
 
   @include mq(medium) {
     display: none;
+  }
+
+  .btn {
+    width: calc(100% - 5.5em);
+    margin-left: 2.75em;
   }
 
   .js-menu-open & {

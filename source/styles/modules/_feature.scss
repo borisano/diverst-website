@@ -22,7 +22,11 @@
 
 .feature__icon {
   fill: $diverst-purple;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
+
+  @include mq(medium) {
+    @include size(36px);
+  }
 }
 
 .feature--inline {
@@ -33,10 +37,6 @@
 
   .feature__icon {
     @include flex-shrink(0);
-
-    @include mq(medium) {
-      @include size(36px);
-    }
   }
 
   h3 {

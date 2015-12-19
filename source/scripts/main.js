@@ -27,6 +27,10 @@ $(".nav__hamburger, .mobile-nav__close").click(function() {
   $("body").toggleClass("js-menu-open");
 });
 
+$(".mobile-nav .btn").click(function() {
+  $("body").toggleClass("js-menu-open");
+});
+
 
 // Temporarily hide page header image if not present
 
