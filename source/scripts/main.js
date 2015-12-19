@@ -35,16 +35,22 @@ $(".page-header__image").error(function () {
 });
 
 
-// Smooth scroll
+/// Set offset for smooth scrolling
 
-$('a').smoothScroll({
-  easing: 'swing',
-  speed: 300,
-  offset: 2 // Compensate for 2px offset bug
-});
+var mq = window.matchMedia( "(min-width: 1140px)" );
 
-$('.fixed-nav .btn').smoothScroll({
-  easing: 'swing',
-  speed: 300,
-  offset: -70 // Compensate for 2px offset bug
-});
+if (mq.matches) {
+  $('a').smoothScroll({
+    easing: 'swing',
+    speed: 300,
+    offset: -78 // Compensate for 1px difference
+  });
+}
+
+else {
+  $('a').smoothScroll({
+    easing: 'swing',
+    speed: 300,
+    offset: 2
+  });
+}

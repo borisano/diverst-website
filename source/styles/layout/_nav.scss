@@ -94,7 +94,8 @@
   color: $diverst-grey;
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $diverst-black;
   }
 
@@ -106,6 +107,7 @@
     }
 
     &:hover,
+    &:focus,
     .has-dropdown:hover & {
       color: $diverst-white;
     }

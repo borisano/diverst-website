@@ -14,18 +14,18 @@
   }],
   "menu": [{
     "title": "ERG Manager",
-    "href": "erg-manager"
+    "href": "/products/erg-manager"
   }, {
     "title": "Scrum",
-    "href": "/scrum"
+    "href": "/products/scrum"
   }, {
-    "title": "Market Scope",
-    "href": "/market-scope"
+    "title": "MarketScope",
+    "href": "/products/market-scope"
   }, {
     "title": "Mentoring",
-    "href": "/mentoring"
+    "href": "/products/mentoring"
   }, {
     "title": "Discover",
-    "href": "/discover"
+    "href": "/products/discover"
   }]
 }
