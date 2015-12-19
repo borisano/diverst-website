@@ -54,15 +54,16 @@
   h2 {
     color: rgba($diverst-white, 0.6);
     font-weight: $font-weight-regular;
+    margin-bottom: 0;
   }
 }
 
 .page-header__image {
-  margin: 1em -1em -4.5em;
+  margin: 2em -1em -4.5em;
   width: 800px;
 
   @include mq(small) {
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: -6.5em;
   }
 
@@ -71,6 +72,7 @@
   }
 
   @include mq(large) {
+    margin-top: 4em;
     margin-bottom: -12em;
   }
 }

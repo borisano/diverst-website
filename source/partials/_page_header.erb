@@ -2,6 +2,8 @@
   <div class="site-wrap">
     <h1><%= current_page.data.title %></h1>
     <h2><%= current_page.data.subtitle %></h2>
-    <img class="page-header__image" src="/images/<%= current_page.data.image %>">
+    <%# if @some_condition_previusly_established_in_a_controller %>
+     <img class="page-header__image" src="/images/<%= current_page.data.screenshot %>">
+    <%# end %>
   </div>
 </div>

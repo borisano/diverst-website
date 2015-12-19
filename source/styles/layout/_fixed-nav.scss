@@ -32,6 +32,11 @@
     color: $diverst-grey;
     text-shadow: none !important;
 
+    &--active {
+      color: $diverst-black;
+      border-color: $diverst-purple;
+    }
+
     &:hover,
     .has-dropdown:hover & {
       color: $diverst-black !important;

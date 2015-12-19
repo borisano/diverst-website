@@ -25,7 +25,8 @@
   color: $diverst-white;
   background-color: $diverst-purple;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: mix($diverst-purple, $diverst-white, 91%); 
   }
 }
@@ -34,7 +35,8 @@
   background-color: $diverst-white;
   color: $diverst-purple;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: mix($diverst-white, #000, 91%); 
   }
 }
