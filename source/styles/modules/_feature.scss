@@ -2,12 +2,12 @@
 
 .feature {
   text-align: center;
-  padding: 0 30px;
-  margin-bottom: 1.5em;
+  padding: 0 $gutter;
+  margin-bottom: 2em;
+  display: block;
 
   @include mq(small) {
-    margin-bottom: 2em;
-    height: 140px;
+    margin-bottom: 2.5em;
   }
 
   @include mq(medium) {
@@ -17,11 +17,37 @@
 
   @include mq(large) {
     margin-bottom: 4em;
-    height: 155px;
   }
 }
 
 .feature__icon {
   fill: $diverst-purple;
   margin-bottom: 0.25em;
+}
+
+.feature--inline {
+  height: auto;
+  text-align: left;
+  padding: 0;
+  @include display(flex);
+
+  .feature__icon {
+    @include flex-shrink(0);
+
+    @include mq(medium) {
+      @include size(36px);
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .feature__content {
+    margin-left: 1em;
+
+    @include mq(medium) {
+      margin-left: 1.5em;
+    }
+  }
 }
