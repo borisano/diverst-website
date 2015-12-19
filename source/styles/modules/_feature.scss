@@ -42,11 +42,6 @@
   h3 {
     display: inline-block;
     margin-top: 0;
-
-    &:after {
-      content: "›";
-      margin-left: 0.25em;
-    }
   }
 
   .feature__content {
@@ -56,4 +51,9 @@
       margin-left: 1.5em;
     }
   }
+}
+
+a.feature h3:after {
+  content: "›";
+  margin-left: 0.25em;
 }
