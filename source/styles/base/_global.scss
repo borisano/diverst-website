@@ -40,11 +40,11 @@ a {
   }
 
   @include mq(medium) {
-    max-width: em(1100px);
+    max-width: em(1000px);
   }
 
   @include mq(large) {
-    max-width: em(1200px);
+    max-width: em(1100px);
   }
 }
 

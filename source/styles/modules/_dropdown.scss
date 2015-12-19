@@ -46,8 +46,13 @@
   }
 }
 
+.dropdown__item:last-child .dropdown__link {
+  margin-bottom: 0;
+}
+
 .dropdown__link {
-  line-height: 2;
+  margin-bottom: 0.3em;
+  display: block;
   
   @include mq(large) {
     color: $diverst-grey;

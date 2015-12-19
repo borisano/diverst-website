@@ -1,0 +1,49 @@
+// Sign-up form
+
+.sign-up {
+  text-align: center;
+  padding: 3em 0;
+  background-color: $diverst-black;
+  border-bottom: 1px solid mix($diverst-grey, $diverst-black, 50%);
+
+  @include mq(medium) {
+    padding: 4em 0;
+  }
+
+  h2 {
+    color: $diverst-white;
+  }
+}
+
+.sign-up-form {
+
+  @include mq(medium) {
+    @include display(flex);
+  }
+
+  .btn,
+  .field__input {
+    height: 55px;
+    line-height: 55px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .btn {
+    width: 100%;
+
+    @include mq(medium) {
+      width: auto;
+    }
+  }
+
+  .field__input {
+    margin-bottom: 1.5em;
+    @include flex(1);
+
+    @include mq(medium) {
+      margin-bottom: 0;
+      margin-right: 1em;
+    }
+  }
+}

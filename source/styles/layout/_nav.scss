@@ -49,7 +49,7 @@
     width: 150px;
     fill: $diverst-white;
 
-    .index & {
+    .index .header & {
       @include filter(drop-shadow(0 1px 2px rgba(0,0,0,0.2)));
     }
   }
@@ -124,6 +124,8 @@
 
 .nav__dropdown {
   fill: $diverst-grey;
+  cursor: pointer;
+  margin-left: -3px; // Move icon closer to text
 
   .has-dropdown:hover & {
     fill: $diverst-black;
@@ -153,7 +155,7 @@
   max-width: 340px;
   height: 100%;
   overflow: scroll;
-  padding: 2em 0;
+  padding: 1.25em 0;
   margin: 0;
   background-color: $diverst-white;
   text-align: left;

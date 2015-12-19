@@ -1,0 +1,20 @@
+// Form
+
+.field {
+  position: relative;
+}
+
+.field__input {
+  width: 100%;
+  border-radius: $border-radius;
+  padding: 1em;
+  margin: 0;
+  border: 0;
+  box-shadow: 0;
+  outline: 0;
+  @include appearance(none);
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $diverst-purple;
+  }
+}
