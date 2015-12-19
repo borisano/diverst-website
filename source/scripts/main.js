@@ -1,5 +1,13 @@
 //= require jquery
 //= require jquery-smooth-scroll
+//= require fastclick
+
+
+// Fastclick
+
+$(function() {
+    FastClick.attach(document.body);
+});
 
 
 // Fade in body when page is loaded

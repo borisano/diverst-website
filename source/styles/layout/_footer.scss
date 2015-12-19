@@ -17,6 +17,14 @@
   @include mq(large) {
     padding: 6em 0;
   }
+
+  .col-xs-12 {
+    margin-bottom: 1.5em;
+
+    @include mq(large) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .footer__section--addon {

@@ -162,6 +162,7 @@
   background-color: $diverst-white;
   text-align: left;
   z-index: 9999;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0px 0px 0px 0px rgba(#000, 0.3);
   @include transform(translate3d(100%, 0, 0));
   @include transition(transform $time $curve, box-shadow $time $curve);
