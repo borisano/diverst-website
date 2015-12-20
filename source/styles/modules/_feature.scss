@@ -46,3 +46,24 @@
   display: block;
   margin-top: 0.5em;
 }
+
+
+.feature--stacked {
+  padding: 0;
+
+  @include mq(small) {
+    padding: 0 $gutter/1.5;
+  }
+
+  @include mq(medium) {
+    padding: 0;
+  }
+
+  @include mq(large) {
+    padding: 0 $gutter;
+  }
+
+  .feature__content {
+    margin-left: 0;
+  }
+}
