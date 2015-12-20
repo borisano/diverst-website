@@ -22,17 +22,24 @@ $(document).ready(function(){
 $(window).scroll(function() {    
   var scroll = $(window).scrollTop();
   if (scroll >= 400) {
-    $(".fixed-nav").addClass("visible");
+    $(".fixed-nav, .fixed-product-nav").addClass("visible");
   } else {
-    $(".fixed-nav").removeClass("visible");
+    $(".fixed-nav, .fixed-product-nav").removeClass("visible");
   }
 });
 
 
-// Mobile nav
+// Product nav
 
 $(".product-nav-trigger").click(function() {
-  $("body").toggleClass("js-product-nav-open hidden");
+  $("body").toggleClass("js-product-nav-open");
+});
+
+
+// Fixed product nav (scrolled)
+
+$(".fixed-product-nav-trigger").click(function() {
+  $("body").toggleClass("js-fixed-product-nav-open");
 });
 
 

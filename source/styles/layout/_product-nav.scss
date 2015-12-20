@@ -9,6 +9,7 @@
   display: none;
   @include z-index(product-nav);
   @include transition(transform $time $curve, opacity $time $curve);
+  -webkit-backface-visibility: hidden;
 
   @include mq(medium) {
     @include display(flex);

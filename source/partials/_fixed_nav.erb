@@ -4,7 +4,7 @@
   </a>
   <ul class="nav__list">
     <li class="nav__item">
-      <button class="nav__link product-nav-trigger">Products<%= inline_svg("icons/dropdown.svg", class: "icon nav__dropdown") %></button>
+      <button class="nav__link fixed-product-nav-trigger">Products<%= inline_svg("icons/dropdown.svg", class: "icon nav__dropdown") %></button>
     </li>
     <% data.menuElements.top.each do |menuElement| %>
       <li class="nav__item">
@@ -12,5 +12,15 @@
       </li>
     <% end %>
     <a href="#sign-up" class="btn btn--primary btn--small">Request a demo</a>
+  </ul>
+</nav>
+
+<nav class="fixed-product-nav">
+  <ul class="nav__list">
+    <% data.menuElements.menu.each do |menuElement| %>
+      <li class="nav__item">
+        <a class="nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
+      </li>
+    <% end %>
   </ul>
 </nav>

@@ -4,6 +4,7 @@
   background-color: $diverst-purple;
   padding: 6em 0 3em;
   text-align: center;
+  position: relative;
 
   @include mq(small) {
     padding: 7em 0 4.5em;
@@ -40,6 +41,40 @@
     color: rgba($diverst-white, 0.6);
     font-weight: $font-weight-regular;
     margin-bottom: 0;
+  }
+}
+
+.page-header__nav {
+  position: absolute;
+  top: 26%;
+  color: $diverst-white;
+  display: none;
+  border-radius: $border-radius;
+  @include transition(background-color $time $curve);
+
+  .icon {
+    margin: 0;
+  }
+
+  @include mq(medium) {
+    display: block;
+    padding: 15px;
+
+    &:hover {
+      background-color: rgba(#000, 0.1);
+    }
+  }
+
+  @include mq(large) {
+    top: 40%;
+  }
+
+  &--prev {
+    left: 2em;
+  }
+
+  &--next {
+    right: 2em;
   }
 }
 
