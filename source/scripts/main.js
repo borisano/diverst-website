@@ -40,13 +40,6 @@ $(".mobile-nav .btn").click(function() {
 });
 
 
-// Temporarily hide page header image if not present
-
-$(".page-header__image").error(function () { 
-  $(this).hide(); 
-});
-
-
 /// Set offset for smooth scrolling
 
 var mq = window.matchMedia( "(min-width: 1140px)" );

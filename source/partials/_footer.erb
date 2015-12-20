@@ -3,9 +3,9 @@
     <div class="footer__section">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-3">
-          <h4 class="footer__heading">Navigation</h4>
+          <h4 class="footer__heading">Products</h4>
           <ul class="footer__list">
-            <% data.menuElements.top.each do |menuElement| %>
+            <% data.menuElements.menu.each do |menuElement| %>
               <li class="footer__item">
                 <a class="footer__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' footer__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
               </li>
@@ -13,9 +13,9 @@
           </ul>
         </div>
         <div class="col-xs-12 col-sm-6 col-lg-3">
-          <h4 class="footer__heading">Products</h4>
+          <h4 class="footer__heading">Navigation</h4>
           <ul class="footer__list">
-            <% data.menuElements.menu.each do |menuElement| %>
+            <% data.menuElements.top.each do |menuElement| %>
               <li class="footer__item">
                 <a class="footer__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' footer__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
               </li>

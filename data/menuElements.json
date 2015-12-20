@@ -10,17 +10,17 @@
     "href": "/roi"
   }],
   "menu": [{
-    "title": "ERG Manager",
-    "href": "/products/erg-manager"
+    "title": "Manage",
+    "href": "/products/manage"
   }, {
-    "title": "Scrum",
-    "href": "/products/scrum"
+    "title": "Collaborate",
+    "href": "/products/collaborate"
   }, {
-    "title": "MarketScope",
-    "href": "/products/market-scope"
+    "title": "Inquire",
+    "href": "/products/inquire"
   }, {
-    "title": "Mentoring",
-    "href": "/products/mentoring"
+    "title": "Mentor",
+    "href": "/products/mentor"
   }, {
     "title": "Meet",
     "href": "/products/meet"
