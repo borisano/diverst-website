@@ -51,13 +51,16 @@ a {
   padding-left: 1em;
 }
 
-
-
 #site-wrap {
+  position: relative;
+  z-index: 9996;
   @include transition(transform $time $curve);
 
   .js-product-nav-open & {
-    @include transform(translate3d(0, 200px, 0));
+
+    @include mq(medium) {
+      @include transform(translate3d(0, 200px, 0));
+    }
 
     @include mq(large) {
       @include transform(translate3d(0, 260px, 0));
