@@ -2,19 +2,19 @@
 
 .page-header {
   background-color: $diverst-purple;
-  padding: 3em 0;
+  padding: 6em 0 3em;
   text-align: center;
 
   @include mq(small) {
-    padding: 4em 0;
+    padding: 7em 0 4.5em;
   }
 
   @include mq(medium) {
-    padding: 6em 0;
+    padding: 9.5em 0 6.5em;
   }
 
   @include mq(large) {
-    padding: 12em 0 8em;
+    padding: 12em 0 10em;
   }
 
   .site-wrap > * {
