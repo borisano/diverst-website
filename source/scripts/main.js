@@ -1,5 +1,5 @@
 //= require jquery
-//= require jquery-smooth-scroll
+//= require jquery-smooth-scroll/src/jquery.smooth-scroll
 //= require fastclick
 
 
