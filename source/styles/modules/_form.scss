@@ -25,6 +25,10 @@
   color: $diverst-black;
   @include appearance(none);
 
+  &:invalid {
+    -moz-box-shadow: none; // Remove red border around input in Firefox
+  }
+
   @include placeholder {
     color: mix($diverst-grey-light, #fff, 70%);
   }
