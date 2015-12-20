@@ -1,5 +1,6 @@
 activate :autoprefixer
 activate :imageoptim
+activate :minify_html
 
 after_configuration do
 	@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))

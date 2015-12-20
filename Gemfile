@@ -12,5 +12,6 @@ gem "middleman-livereload", "~> 3.1.0"
 
 gem 'middleman-autoprefixer'
 gem 'middleman-imageoptim'
+gem 'middleman-minify-html'
 
 gem 'middleman-deploy', '~> 1.0'
