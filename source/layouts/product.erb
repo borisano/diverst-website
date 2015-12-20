@@ -12,21 +12,18 @@
   </head>
   <body class="<%= page_classes %>">
 
+    <%= partial :product_nav %>
+    <%= partial :fixed_nav %>
     <div class="overlay"></div>
 
-    <%= partial :product_nav %>
-
-    <%= partial :fixed_nav %>
-
-    <%= partial :nav %>
-
-    <%= partial :page_header %>
-    
-    <%= yield %>
-
-    <%= partial :sign_up %>
-
-    <%= partial :footer %>
+    <div id="site-wrap">
+      <%= partial :fixed_nav %>
+      <%= partial :nav %>
+      <%= partial :page_header %>
+      <%= yield %>
+      <%= partial :sign_up %>
+      <%= partial :footer %>
+    </div>
 
     <%= partial :ga %>
     <%= javascript_include_tag 'main' %>

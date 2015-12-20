@@ -1,12 +1,22 @@
 // Product nav
 
 .product-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: $diverst-white;
   display: none;
+  @include transform(translate3d(0, -100%, 0));
+  @include transition(transform $time $curve);
 
   @include mq(medium) {
     @include display(flex);
     @include align-items(center);
+  }
+
+  .js-product-nav-open & {
+    @include transform(none);
   }
 }
 

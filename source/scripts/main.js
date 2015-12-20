@@ -31,12 +31,19 @@ $(window).scroll(function() {
 
 // Mobile nav
 
+$("#product-nav-trigger").click(function() {
+  $("body").toggleClass("js-product-nav-open hidden");
+});
+
+
+// Mobile nav
+
 $(".nav__hamburger, .mobile-nav__close").click(function() {
-  $("body").toggleClass("js-menu-open");
+  $("body").toggleClass("js-menu-open hidden");
 });
 
 $(".mobile-nav .btn").click(function() {
-  $("body").toggleClass("js-menu-open");
+  $("body").toggleClass("js-menu-open hidden");
 });
 
 

@@ -1,7 +1,7 @@
 <nav class="product-nav">
   <% data.menuElements.menu.each do |menuElement| %>
     <a class="product-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' product-nav__link--active"' : '') %>" href="<%= menuElement.href %>">
-      <img class="icon product-nav__icon" src="/images/icons/<%= menuElement.title.downcase %>.svg">
+      <%= inline_svg("icons/#{menuElement.title.downcase}.svg", class: "icon product-nav__icon") %>
       <h3><%= menuElement.title %></h3>
       <p><%= menuElement.description %></p>
     </a>

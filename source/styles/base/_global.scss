@@ -5,12 +5,8 @@ body, html {
 body {
   overflow-x: hidden;
 
-  &.js-menu-open {
+  &.hidden {
     overflow: hidden;
-
-    @include mq(medium) {
-      overflow: visible;
-    }
   }
 }
 
@@ -53,4 +49,18 @@ a {
 
 .list {
   padding-left: 1em;
+}
+
+
+
+#site-wrap {
+  @include transition(transform $time $curve);
+
+  .js-product-nav-open & {
+    @include transform(translate3d(0, 200px, 0));
+
+    @include mq(large) {
+      @include transform(translate3d(0, 260px, 0));
+    }
+  }
 }
