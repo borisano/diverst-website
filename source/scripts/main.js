@@ -31,7 +31,7 @@ $(window).scroll(function() {
 
 // Mobile nav
 
-$("#product-nav-trigger").click(function() {
+$(".product-nav-trigger").click(function() {
   $("body").toggleClass("js-product-nav-open hidden");
 });
 

@@ -7,7 +7,7 @@
   width: 100%;
   background-color: $diverst-white;
   display: none;
-  z-index: 9996;
+  @include z-index(product-nav);
   @include transition(transform $time $curve, opacity $time $curve);
 
   @include mq(medium) {
@@ -21,6 +21,7 @@
   height: 200px;
   padding: 0 $gutter/2;
   opacity: 0;
+  background-color: $diverst-white;
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);

@@ -3,13 +3,14 @@
 "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 
-// Partials
+// Utilities
 
 @import
-"partials/variables",
-"partials/mixins",
-"partials/utilities",
-"partials/animations";
+"utilities/variables",
+"utilities/mixins",
+"utilities/helpers",
+"utilities/zindex",
+"utilities/animations";
 
 
 // Base

@@ -1,0 +1,20 @@
+// Z-index
+
+// Element list
+
+$z-indexed-items: 'header-content', 'nav', 'product-nav', 'page-wrap', 'overlay', 'mobile-nav', 'fixed-nav';
+
+
+// Generate map using list
+
+$z-index-map: ();
+$counter: 1;
+ 
+@each $item in $z-indexed-items {
+  $z-index-map: map-merge($z-index-map, ($item: $counter));
+  $counter: $counter + 1;
+}
+
+@mixin z-index($key) {
+  z-index: map-get($z-index-map, $key);
+}

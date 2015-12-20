@@ -51,10 +51,11 @@ a {
   padding-left: 1em;
 }
 
-#site-wrap {
+#page-wrap {
   position: relative;
-  z-index: 9996;
+  @include z-index(page-wrap);
   @include transition(transform $time $curve);
+  @include transform(translate3d(0, 0, 0));
 
   .js-product-nav-open & {
 

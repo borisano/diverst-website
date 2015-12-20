@@ -93,7 +93,7 @@
 
   * {
     position: relative;
-    z-index: 10;
+    @include z-index(header-content);
 
     .ready & {
       @include animation(fade-in-up $time $curve both);

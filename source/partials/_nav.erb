@@ -7,8 +7,7 @@
 
     <ul class="nav__list">
       <li class="nav__item">
-        <button class="nav__link" id="product-nav-trigger">Products</button>
-        <%= inline_svg("icons/dropdown.svg", class: "icon nav__dropdown") %>
+        <button class="nav__link product-nav-trigger">Products<%= inline_svg("icons/dropdown.svg", class: "icon nav__dropdown") %></button>
       </li>
       <% data.menuElements.top.each do |menuElement| %>
         <li class="nav__item">
