@@ -1,0 +1,30 @@
+// Product nav
+
+.product-nav {
+  background-color: $diverst-white;
+  display: none;
+
+  @include mq(medium) {
+    @include display(flex);
+    @include align-items(center);
+  }
+}
+
+.product-nav__link {
+  text-align: center;
+  height: 200px;
+  padding: 0 $gutter/2;
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex(1);
+
+  @include mq(large) {
+    height: 260px;
+  }
+}
+
+.product-nav__icon {
+  fill: $diverst-purple;
+}

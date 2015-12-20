@@ -11,18 +11,23 @@
   }],
   "menu": [{
     "title": "Manage",
-    "href": "/products/manage"
+    "href": "/products/manage",
+    "description": "Test"
   }, {
     "title": "Collaborate",
-    "href": "/products/collaborate"
+    "href": "/products/collaborate",
+    "description": "Test"
   }, {
     "title": "Inquire",
-    "href": "/products/inquire"
+    "href": "/products/inquire",
+    "description": "Test"
   }, {
     "title": "Mentor",
-    "href": "/products/mentor"
+    "href": "/products/mentor",
+    "description": "Test"
   }, {
     "title": "Meet",
-    "href": "/products/meet"
+    "href": "/products/meet",
+    "description": "Test"
   }]
 }

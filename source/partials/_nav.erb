@@ -8,22 +8,10 @@
     </button>
 
     <ul class="nav__list">
-      <li class="nav__item has-dropdown">
+      <li class="nav__item">
         <button class="nav__link">Products</button>
         <svg class="icon nav__dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"><path d="M7 9.5l5 5 5-5z"/></svg>
-        <ul class="dropdown">
-          <% data.menuElements.menu.each do |menuElement| %>
-            <li class="dropdown__item">
-              <a class="dropdown__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' dropdown__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
-            </li>
-          <% end %>
-        </ul>
       </li>
-      <% data.menuElements.top.each do |menuElement| %>
-        <li class="nav__item">
-          <a class="nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
-        </li>
-      <% end %>
       <li class="nav__item">
         <a href="#sign-up" class="btn btn--secondary btn--small nav__btn">Request a demo</a>
       </li>
