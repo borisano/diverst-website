@@ -3,7 +3,7 @@
     <a class="product-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' product-nav__link--active"' : '') %>" href="<%= menuElement.href %>">
       <%= inline_svg("icons/#{menuElement.title.downcase}.svg", class: "icon product-nav__icon") %>
       <h3><%= menuElement.title %></h3>
-      <p><%= menuElement.description %></p>
+      <p><small><%= menuElement.description %></small></p>
     </a>
   <% end %>
 </nav>

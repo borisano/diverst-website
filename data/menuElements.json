@@ -12,22 +12,22 @@
   "menu": [{
     "title": "Manage",
     "href": "/products/manage",
-    "description": "Test"
+    "description": "360° governance and view of your D&I process"
   }, {
     "title": "Collaborate",
     "href": "/products/collaborate",
-    "description": "Test"
+    "description": "The engagement and inclusion tool for your D&I process"
   }, {
-    "title": "Inquire",
-    "href": "/products/inquire",
-    "description": "Test"
+    "title": "Scope",
+    "href": "/products/scope",
+    "description": "Your diversity segmentation analysis ally"
   }, {
     "title": "Mentor",
     "href": "/products/mentor",
-    "description": "Test"
+    "description": "Developing diversity talent at every level"
   }, {
     "title": "Meet",
     "href": "/products/meet",
-    "description": "Test"
+    "description": "Developing diversity talent at every level"
   }]
 }
