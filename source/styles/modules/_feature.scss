@@ -29,6 +29,12 @@
   }
 }
 
+.feature__link {
+  color: $diverst-purple;
+  display: block;
+  margin-top: 0.5em;
+}
+
 .feature--inline {
   height: auto;
   text-align: left;
@@ -37,6 +43,11 @@
 
   .feature__icon {
     @include flex-shrink(0);
+
+    @include mq(medium) {
+      margin-top: -8px;
+      @include size(40px);
+    }
   }
 
   h3 {
@@ -51,9 +62,4 @@
       margin-left: 1.5em;
     }
   }
-}
-
-a.feature h3:after {
-  content: "›";
-  margin-left: 0.25em;
 }

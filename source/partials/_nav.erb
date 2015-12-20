@@ -24,6 +24,9 @@
           <a class="nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
         </li>
       <% end %>
+      <li class="nav__item">
+        <a href="#sign-up" class="btn btn--secondary btn--small nav__btn">Request a demo</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -32,6 +35,7 @@
   <button class="mobile-nav__close">
     <svg class="icon icon--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"><path d="M21.2 4.2l-1.4-1.4-7.8 7.8-7.8-7.8-1.4 1.4 7.8 7.8-7.8 7.8 1.4 1.4 7.8-7.8 7.8 7.8 1.4-1.4-7.8-7.8z"/></svg>
   </button>
+  <h4>Products</h4>
   <ul class="mobile-nav__list">
     <% data.menuElements.menu.each do |menuElement| %>
       <li class="mobile-nav__item">

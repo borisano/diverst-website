@@ -40,15 +40,16 @@ $(".mobile-nav .btn").click(function() {
 });
 
 
-/// Set offset for smooth scrolling
+// Set offset for smooth scrolling
 
 var mq = window.matchMedia( "(min-width: 1140px)" );
+var menuHeight = $('.fixed-nav').eq(0).outerHeight();
 
 if (mq.matches) {
   $('a').smoothScroll({
     easing: 'swing',
     speed: 300,
-    offset: -78 // Compensate for 1px difference
+    offset: -menuHeight + 2 // Compensate for 1px difference
   });
 }
 

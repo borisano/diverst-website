@@ -1,30 +1,32 @@
 // Nav
 
 .nav {
-  padding: 1.25em 0;
+  padding: 1.5em 0;
   position: relative; // Position nav above header
   z-index: 20;
-  background-color: $diverst-white;
-  box-shadow: 0px 0px 0px 0px rgba(#000, 0.15);
+  color: $diverst-white;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   @include clearfix;
-  @include transition(background-color $time $curve);
 
   @include mq(small) {
-    padding: 1.5em;
-  }
-
-  @include mq(medium) {
     padding: 1.75em 0;
   }
 
+  @include mq(medium) {
+    padding: 2em 0;
+  }
+
   @include mq(large) {
-    color: $diverst-white;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     padding: 2.5em 0;
+  }
+
+  .site-wrap {
+    @include display(flex);
+    @include align-items(center);
   }
 }
 
@@ -34,8 +36,12 @@
 .nav__logo {
   float: left;
   width: 104px;
-  fill: $diverst-purple;
+  fill: $diverst-white;
   @include transition(color $time $curve);
+
+  .index .header & {
+    @include filter(drop-shadow(0 1px 2px rgba(0,0,0,0.2)));
+  }
 
   @include mq(small) {
     width: 112px;
@@ -47,11 +53,6 @@
 
   @include mq(large) {
     width: 150px;
-    fill: $diverst-white;
-
-    .index .header & {
-      @include filter(drop-shadow(0 1px 2px rgba(0,0,0,0.2)));
-    }
   }
 }
 
@@ -59,14 +60,15 @@
 // Mobile menu icon
 
 .nav__hamburger {
-  float: right;
+  margin-left: auto;
 
   @include mq(medium) {
     display: none;
   }
 
   .icon {
-    fill: $diverst-grey;
+    fill: $diverst-white;
+    @include filter(drop-shadow(0 1px 2px rgba(0,0,0,0.2)));
   }
 }
 
@@ -77,11 +79,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  float: right;
   display: none;
 
   @include mq(medium) {
-    display: block;
+    margin-left: auto;
+    @include display(flex);
+    @include align-items(center);
   }
 }
 
@@ -91,58 +94,45 @@
 }
 
 .nav__link {
-  color: $diverst-grey;
   position: relative;
+  color: rgba($diverst-white, 0.8);
 
-  &:hover,
-  &:focus {
-    color: $diverst-black;
+  .index & {
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
   }
 
-  @include mq(large) {
-    color: rgba($diverst-white, 0.6);
-
-    .index & {
-      text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
-    }
-
-    &:hover,
-    &:focus,
-    .has-dropdown:hover & {
-      color: $diverst-white;
-    }
+  &:hover,
+  &:focus,
+  .has-dropdown:hover & {
+    color: $diverst-white;
   }
 
   &--active {
-    color: $diverst-black;
-
-    @include mq(large) {
-      color: $diverst-white;
-      padding-bottom: 5px;
-      border-bottom: 2px solid rgba($diverst-white, 0.2);
-    }
+    color: $diverst-white;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba($diverst-white, 0.2);
   }
 }
 
 .nav__dropdown {
-  fill: $diverst-grey;
+  fill: rgba($diverst-white, 0.8);
   cursor: pointer;
   margin-left: -3px; // Move icon closer to text
 
-  .has-dropdown:hover & {
-    fill: $diverst-black;
+  .index & {
+    @include filter(drop-shadow(0 1px 2px rgba(0,0,0,0.2)));
   }
 
-  @include mq(large) {
-    fill: rgba($diverst-white, 0.6);
-    
-    .index & {
-      @include filter(drop-shadow(0 1px 2px rgba(0,0,0,0.2)));
-    }
+  .has-dropdown:hover & {
+    fill: $diverst-white;
+  }
+}
 
-    .has-dropdown:hover & {
-      fill: $diverst-white;
-    }
+.nav__btn {
+  
+  .index & {
+    background-color: $diverst-purple;
+    color: $diverst-white;
   }
 }
 
@@ -157,7 +147,7 @@
   max-width: 340px;
   height: 100%;
   overflow: scroll;
-  padding: 1.25em 0 2.5em;
+  padding: 2em 0 2.5em;
   margin: 0;
   background-color: $diverst-white;
   text-align: left;
@@ -169,6 +159,10 @@
 
   @include mq(medium) {
     display: none;
+  }
+
+  h4 {
+    margin-left: $gutter;
   }
 
   .btn {

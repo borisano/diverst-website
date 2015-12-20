@@ -44,3 +44,13 @@
     background-color: mix($diverst-white, #000, 91%); 
   }
 }
+
+.btn--secondary {
+  background-color: $diverst-black;
+  color: $diverst-white;
+
+  &:hover,
+  &:focus {
+    background-color: mix($diverst-black, #000, 91%); 
+  }
+}

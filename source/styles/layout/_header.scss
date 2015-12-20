@@ -46,8 +46,10 @@
 .page-header__icon {
   fill: $diverst-white;
   margin-bottom: 0.5em;
+  display: none;
 
   @include mq(small) {
+    display: inline-block;
     @include size(32px);
   }
 
@@ -80,7 +82,7 @@
 
 .header {
   position: relative;
-  padding: 6em 0;
+  padding: 8em 0 6em;
   color: $diverst-white;
   background-image: url('/images/header.jpg');
   background-size: cover;
@@ -130,15 +132,15 @@
   }
 
   @include mq(small) {
-    padding: 8em 0;
+    padding: 9.5em 0 8em;
   }
 
   @include mq(medium) {
-    padding: 11em 0;
+    padding: 13.5em 0 11em;
   }
 
   @include mq(large) {
-    padding: 13em 0;
+    padding: 16.5em 0 13em;
 
     &:after {
       background-color: rgba(#000, 0.25);
