@@ -50,6 +50,7 @@
 
 .feature--stacked {
   padding: 0;
+  display: block;
 
   @include mq(small) {
     padding: 0 $gutter/1.5;
