@@ -15,3 +15,5 @@ gem 'middleman-imageoptim'
 gem 'middleman-minify-html'
 
 gem 'middleman-deploy', '~> 1.0'
+
+gem 'nokogiri'

@@ -2,6 +2,9 @@ activate :autoprefixer
 activate :imageoptim
 activate :minify_html
 
+require "lib/image_helpers"
+helpers ImageHelpers
+
 after_configuration do
 	@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
 	sprockets.append_path File.join "#{root}", @bower_config["directory"]
