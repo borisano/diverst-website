@@ -7,13 +7,18 @@
   width: 100%;
   background-color: $diverst-white;
   display: none;
+  -webkit-backface-visibility: hidden;
+  padding: 0 $gutter/2;
   @include z-index(product-nav);
   @include transition(transform $time $curve, opacity $time $curve);
-  -webkit-backface-visibility: hidden;
 
   @include mq(medium) {
     @include display(flex);
     @include align-items(center);
+  }
+
+  @include mq(large) {
+    padding: 0 $gutter;
   }
 
   p {

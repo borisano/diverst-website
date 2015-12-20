@@ -58,11 +58,11 @@ h1 {
   }
 
   @include mq(medium) {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   @include mq(large) {
-    font-size: 52px;
+    font-size: 48px;
   }
 }
 
