@@ -6,14 +6,14 @@
 // Fastclick
 
 $(function() {
-    FastClick.attach(document.body);
+  FastClick.attach(document.body);
 });
 
 
 // Fade in body when page is loaded
 
 $(document).ready(function(){
-  $('body').addClass('ready');
+  $("body").addClass("ready");
 });
 
 
@@ -53,16 +53,16 @@ var mq = window.matchMedia( "(min-width: 1140px)" );
 var menuHeight = $('.fixed-nav').eq(0).outerHeight();
 
 if (mq.matches) {
-  $('a').smoothScroll({
-    easing: 'swing',
+  $("a").smoothScroll({
+    easing: "swing",
     speed: 300,
     offset: -menuHeight + 2 // Compensate for 1px difference
   });
 }
 
 else {
-  $('a').smoothScroll({
-    easing: 'swing',
+  $("a").smoothScroll({
+    easing: "swing",
     speed: 300,
     offset: 2
   });

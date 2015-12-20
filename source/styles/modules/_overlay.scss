@@ -16,8 +16,4 @@
     visibility: visible;
     opacity: 1;
   }
-
-  @include mq(medium) {
-    display: none;
-  }
 }
