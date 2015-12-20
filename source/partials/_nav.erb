@@ -29,14 +29,14 @@
   <ul class="mobile-nav__list">
     <% data.menuElements.menu.each do |menuElement| %>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
+        <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' mobile-nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
       </li>
     <% end %>
   </ul>
   <ul class="mobile-nav__list">
     <% data.menuElements.top.each do |menuElement| %>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
+        <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' mobile-nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
       </li>
     <% end %>
   </ul>
