@@ -6,7 +6,7 @@
     <h1><%= current_page.data.title %></h1>
     <h2><%= current_page.data.subtitle %></h2>
     <% if current_page.data.screenshot %>
-      <img class="page-header__image" src="/images/<%= current_page.data.screenshot %>">
+      <img class="page-header__image" src="/images/screenshots/<%= current_page.data.title.downcase %>/header.png">
     <% end %>
   </div>
   <a href="#" class="page-header__nav page-header__nav--prev"><%= inline_svg("icons/left-arrow.svg", class: "icon page-header__icon") %></a>

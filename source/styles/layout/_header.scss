@@ -2,12 +2,12 @@
 
 .page-header {
   background-color: $diverst-purple;
-  padding: 6em 0 3em;
+  padding: 6em 0 4em;
   text-align: center;
   position: relative;
 
   @include mq(small) {
-    padding: 7em 0 4.5em;
+    padding: 7em 0 5.5em;
   }
 
   @include mq(medium) {
@@ -94,12 +94,12 @@
 }
 
 .page-header__image {
-  margin: 2em -1em -4.5em;
+  margin: 2em -1em -5em;
   width: 800px;
 
   @include mq(small) {
     margin-top: 3em;
-    margin-bottom: -6.5em;
+    margin-bottom: -7em;
   }
 
   @include mq(medium) {
