@@ -17,7 +17,7 @@
     <div id="page-wrap">
       <div class="overlay"></div>
       <%= partial :nav %>
-      <%= partial :page_header %>
+      <%= partial :page_header, locals: { show_nav_arrows: true } %>
       <%= yield %>
       <%= partial :sign_up %>
       <%= partial :footer %>

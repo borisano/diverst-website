@@ -1,5 +1,5 @@
 activate :autoprefixer
-activate :imageoptim
+#activate :imageoptim
 activate :minify_html
 
 require "lib/image_helpers"
@@ -13,8 +13,7 @@ end
 helpers do
   def product_index(product_title)
     products = data.menuElements.products
-    product = products.detect{ |p| p.title == product_title }
-    products.index product
+    products.index{ |p| p.title == product_title }
   end
 
   def next_product_path
@@ -47,8 +46,6 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.remote   = 'dokku'
-  deploy.branch   = 'master'
   deploy.build_before = true
 end
 

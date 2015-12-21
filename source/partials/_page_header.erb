@@ -9,6 +9,8 @@
       <img class="page-header__image" src="/images/screenshots/<%= current_page.data.title.downcase %>/header.png">
     <% end %>
   </div>
-  <a href="<%= prev_product_path %>" class="page-header__nav page-header__nav--prev"><%= inline_svg("icons/left-arrow.svg", class: "icon page-header__icon") %></a>
-  <a href="<%= next_product_path %>" class="page-header__nav page-header__nav--next"><%= inline_svg("icons/right-arrow.svg", class: "icon page-header__icon") %></a>
+  <% if show_nav_arrows %>
+    <a href="<%= prev_product_path %>" class="page-header__nav page-header__nav--prev"><%= inline_svg("icons/left-arrow.svg", class: "icon page-header__icon") %></a>
+    <a href="<%= next_product_path %>" class="page-header__nav page-header__nav--next"><%= inline_svg("icons/right-arrow.svg", class: "icon page-header__icon") %></a>
+  <% end %>
 </div>
