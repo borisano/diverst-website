@@ -7,6 +7,9 @@
     margin-bottom: 1em;
   }
 
+  .btn {
+    margin-bottom: 1em;
+  }
 }
 
 .calculator__section {
@@ -15,4 +18,10 @@
   @include mq(medium) {
     margin-top: 4em;
   }
+}
+
+.calculator__disclaimer {
+  display: block;
+  margin-top: 1.5em;
+  color: $diverst-grey-light;
 }

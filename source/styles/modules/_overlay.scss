@@ -12,6 +12,10 @@
   @include z-index(overlay);
   @include transition(visibility $time $curve, opacity $time $curve);
 
+  @include mq(medium) {
+    display: none;
+  }
+
   .js-menu-open & {
     visibility: visible;
     opacity: 1;
