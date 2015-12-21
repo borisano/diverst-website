@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery-smooth-scroll/src/jquery.smooth-scroll
 //= require fastclick
-//= require rangeslider.js/dist/rangeslider.min.js
+//= require rangeslider.js/dist/rangeslider
 
 
 // Fade in body when page is loaded
@@ -20,7 +20,18 @@ $(function() {
 
 // Range slider
 
-$('input[type="range"]').rangeslider();
+var output = document.querySelectorAll('.range-slider__output')[0];
+
+$(document).on('input', 'input[type="range"]', function(e) {
+    output.innerHTML = e.currentTarget.value;
+});
+
+$('input[type="range"]').rangeslider({
+  polyfill: false,
+  rangeClass: 'range-slider',
+  fillClass: 'range-slider__line',
+  handleClass: 'range-slider__handle',
+});
 
 
 // Fixed nav
