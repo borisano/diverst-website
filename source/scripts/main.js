@@ -1,6 +1,14 @@
 //= require jquery
 //= require jquery-smooth-scroll/src/jquery.smooth-scroll
 //= require fastclick
+//= require rangeslider.js/dist/rangeslider.min.js
+
+
+// Fade in body when page is loaded
+
+$(document).ready(function(){
+  $("body").addClass("ready");
+});
 
 
 // Fastclick
@@ -10,11 +18,9 @@ $(function() {
 });
 
 
-// Fade in body when page is loaded
+// Range slider
 
-$(document).ready(function(){
-  $("body").addClass("ready");
-});
+$('input[type="range"]').rangeslider();
 
 
 // Fixed nav
