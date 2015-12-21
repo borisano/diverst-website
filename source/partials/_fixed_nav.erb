@@ -17,7 +17,7 @@
 
 <nav class="fixed-product-nav">
   <ul class="nav__list">
-    <% data.menuElements.menu.each do |menuElement| %>
+    <% data.menuElements.products.each do |menuElement| %>
       <li class="nav__item">
         <a class="nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
       </li>

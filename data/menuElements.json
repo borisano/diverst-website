@@ -9,7 +9,7 @@
     "title": "ROI Calculator",
     "href": "/roi-calculator"
   }],
-  "menu": [{
+  "products": [{
     "title": "Manage",
     "href": "/products/manage",
     "description": "360° governance and view of your D&I process"
@@ -24,10 +24,6 @@
   }, {
     "title": "Mentor",
     "href": "/products/mentor",
-    "description": "Developing diversity talent at every level"
-  }, {
-    "title": "Meet",
-    "href": "/products/meet",
     "description": "Developing diversity talent at every level"
   }]
 }
