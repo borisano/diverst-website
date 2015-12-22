@@ -1,0 +1,74 @@
+// Savings
+
+.savings {
+  padding: 20px;
+  border: 1px solid $diverst-border;
+  border-radius: $border-radius;
+  margin-bottom: 2em;
+
+  @include mq(medium) {
+    padding: 30px;
+    margin-bottom: 3em;
+  }
+  
+  h4 {
+    font-size: 90%;
+  }
+}
+
+.savings--total {
+  background-color: $diverst-purple;
+  border: 0;
+  text-align: center;
+  margin-bottom: 0;
+
+  .savings__section {
+    padding: 30px;
+  }
+
+  * {
+    color: $diverst-white;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.savings__section {
+  margin-bottom: 1em;
+  @include display(flex);
+  @include justify-content(center);
+  @include flex-direction(column);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--sum {
+    h1 {
+      color: $diverst-purple;
+    }
+  }
+}
+
+.savings__row {
+  margin-bottom: 0.25em;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.savings__symbol {
+  display: inline-block;
+  width: 20px;
+  color: $diverst-purple;
+}
+
+.savings__sources {
+  padding-left: 1.5em;
+  margin: 1em 0 0 0;
+  font-size: 80%;
+  color: $diverst-grey-light;
+}

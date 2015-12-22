@@ -5,91 +5,101 @@ subtitle: "Features subheadline goes here"
 
 <section class="section calculator">
   <div class="site-wrap">
+
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <p>ROI Calculator intro</p>
-        <form id="calculator-form" action="#" class="form--inline">
-          <div class="field">
-            <input class="field__input" type="text" placeholder="Name" required>
+        <h2>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</h2>
+        <h3>Contact info</h3>
+        <form id="calculator-form" action="#">
+          <div class="form__section">
+            <div class="field field--third">
+              <label class="field__label">Name</label>
+              <input class="field__input" type="text" placeholder="John Doe" required>
+            </div>
+            <div class="field field--third">
+              <label class="field__label">Email</label>
+              <input class="field__input" type="email" placeholder="john@example.com" required>
+            </div>
+            <div class="field field--third">
+              <label class="field__label">Phone</label>
+              <input class="field__input" type="tel" placeholder="123-456-7890" required>
+            </div>
+          </div>
+          <div class="form__section">
+            <div class="field">
+              <h3>Organization info</h3>
+            </div>
+            <div class="field field--quarter">
+              <label class="field__label">No of employees</label>
+              <input class="field__input" type="number" placeholder="100" required>
+            </div>
+            <div class="field field--quarter">
+              <label class="field__label">Average salary</label>
+              <input class="field__input" type="number" placeholder="$50,000" required>
+            </div>
+            <div class="field field--quarter">
+              <label class="field__label">Turnover rate</label>
+              <input class="field__input" type="number" placeholder="20%" required>
+            </div>
+            <div class="field field--quarter">
+              <label class="field__label">Size of D&I team</label>
+              <input class="field__input" type="number" placeholder="10" required>
+            </div>
           </div>
           <div class="field">
-            <input class="field__input" type="email" placeholder="Email" required>
-          </div>
-          <div class="field">
-            <input class="field__input" type="tel" placeholder="Phone number" required>
+            <button class="btn btn--primary btn--full">Calculate ROI</button>
           </div>
         </form>
       </div>
     </div>
+
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 calculator__section">
         <h2>Cost savings</h2>
-        <form action="#">
-          <h3>Employee retention</h3>
-          <div class="field">
-            <label class="field__label">Number of Boomers</label>
-            <input class="field__input" type="number" placeholder="" required>
+        <div class="savings">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+              <h4>Absenteeism</h4>
+              <h1>$682,292</h1>
+            </div>
+            <div class="col-xs-12 col-sm-6 savings__section">
+              <div class="savings__row">
+                <strong>$50,000</strong> average salary
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>131%</strong> benefits cost
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">÷</span><strong>240</strong> work days
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>1.5 days</strong> of reduction in absenteeism
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>200</strong> employees
+              </div>
+            </div>
           </div>
-          <div class="field">
-            <label class="field__label">Number of Gen Y</label>
-            <input class="field__input" type="number" placeholder="" required>
-          </div>
-          <div class="field">
-            <label class="field__label">Number of Millennials</label>
-            <input class="field__input" type="number" placeholder="" required>
-          </div>
-        </form>
-        <h3>Reduction in absenteeism</h3>
-        <div class="field">
-          <label class="field__label">Level of employee inclusion sentiment</label>
-          <input type="range" min="1" max="100" step="1" value="1">
-          <div class="range-slider__output">1</div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 calculator__section">
-        <h2>Increased Profitability</h2>
-        <div class="form">
-          <h3>Return on assets</h3>
-          <div class="field">
-            <label class="field__label">Total assets (USD$)</label>
-            <input class="field__input" type="number" placeholder="" required>
-          </div>
-          <div class="field">
-            <label class="field__label">Female representation on the board</label>
-            <input type="range" min="1" max="100" step="1" value="1">
-            <div class="range-slider__output">1</div>
+          <div class="row">
+            <div class="col-xs-12">
+              <ol class="savings__sources">
+                <li>Hello</li>
+                <li>Hello</li>
+              </ol>
+            </div>
           </div>
         </div>
-        <div class="form">
-          <h3>Revenue increase</h3>
-          <div class="field">
-            <label class="field__label">Total revenue (USD$)</label>
-            <input class="field__input" type="number" placeholder="" required>
-          </div>
-          <div class="field">
-            <label class="field__label">Equal employment opportunities</label>
-            <input type="range" min="1" max="100" step="1" value="1">
-            <div class="range-slider__output">1</div>
+        <div class="savings savings--total">
+          <div class="row row--equal-height">
+            <div class="col-xs-12 savings__section">
+              <h4>Total</h4>
+              <h1>$682,292</h1>
+            </div>
           </div>
         </div>
-        <div class="form">
-          <h3>Stock price appreciation</h3>
-          <div class="field">
-            <label class="field__label">Annual EPS (USD$)</label>
-            <input class="field__input" type="number" placeholder="" required>
-          </div>
-          <div class="field">
-            <label class="field__label">Employment diversity</label>
-            <input type="range" min="1" max="100" step="1" value="1">
-            <div class="range-slider__output">1</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 calculator__section">
-        <button href="#" class="btn btn--primary btn--full">Submit and View ROI</button>
-        <small class="calculator__disclaimer">* ROI Calculator results for Cost Savings and Increased Profitability will be Calculated only on data provided and sent in confidence to registrant.</small>
-        <small class="calculator__disclaimer">* * Research, formulas and benchmarks  calculated using Diverst™ algorithm in USD$. For information regarding methodology, sources, footnotes and references, please contact Ryan Dankoff at Diverst: <a href="mailto:ryan@diverst.com">ryan@diverst.com</a></small>
+
       </div>
     </div>
+
   </div>
 </section>

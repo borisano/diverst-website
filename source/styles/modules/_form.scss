@@ -1,7 +1,12 @@
 // Form
 
+form {
+  margin: 0 -#{$gutter/4};
+  @include clearfix;
+}
+
 .form--inline {
-  margin: 0 -$gutter/4;
+  margin: 0 -#{$gutter/4};
 
   @include mq(medium) {
     @include display(flex);
@@ -34,6 +39,15 @@
   }
 }
 
+.form__section {
+  margin-bottom: 1em;
+  @include clearfix;
+
+  @include mq(medium) {
+    margin-bottom: 1.5em;
+  }
+}
+
 .form-hint {
   margin-top: 1.5em;
   display: none;
@@ -47,6 +61,24 @@
 .field {
   position: relative;
   margin-bottom: 1em;
+  padding: 0 $gutter/4;
+  float: left;
+  width: 100%;
+
+  &--third {
+    @include mq(small) {
+      width: 33.333%;
+    }
+  }
+
+  &--quarter {
+    @include mq(small) {
+      width: 50%;
+    }
+    @include mq(large) {
+      width: 25%;
+    }
+  }
 }
 
 .field__label {

@@ -14,8 +14,7 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "jquery-smooth-scroll": "~1.5.5",
-    "bourbon": "~4.2.6",
-    "rangeslider.js": "~2.0.5"
+    "bourbon": "~4.2.6"
   },
   "devDependencies": {
     "fastclick": "~1.0.6"
