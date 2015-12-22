@@ -1,5 +1,21 @@
 // Feature
 
+.features {
+  margin-bottom: -2em;
+
+  @include mq(small) {
+    margin-bottom: -2.5em;
+  }
+
+  @include mq(medium) {
+    margin-bottom: -3em;
+  }
+
+  @include mq(large) {
+    margin-bottom: -4em;
+  }
+}
+
 .feature {
   margin-bottom: 2em;
   @include display(flex);
