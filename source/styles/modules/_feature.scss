@@ -38,20 +38,14 @@
   }
 }
 
-.feature__content {
-  margin-left: 1em;
-
-  @include mq(medium) {
-    margin-left: 1.5em;
-  }
-}
-
 .feature__icon {
   fill: $diverst-purple;
   margin-bottom: 0.5em;
+  margin-right: 1em;
   @include flex-shrink(0);
 
   @include mq(medium) {
+    margin-right: 1.5em;
     margin-top: -8px;
     @include size(40px);
   }
