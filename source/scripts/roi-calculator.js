@@ -55,13 +55,13 @@ var vm = {
   showROI: function() {
     vm.errors.showAllMessages(true);
 
-    if (vm.errors.length === 0) {
+    if (vm.errors().length === 0) {
       vm.obfuscateResults(false);
-    }
 
-    $.smoothScroll({
-      scrollTarget: '#roi-results'
-    });
+      $.smoothScroll({
+        scrollTarget: '#roi-results'
+      });
+    }
   }
 };
 
