@@ -7,6 +7,10 @@ body {
 
   &.hidden {
     overflow: hidden;
+
+    @include mq(medium) {
+      overflow: visible;
+    }
   }
 }
 
