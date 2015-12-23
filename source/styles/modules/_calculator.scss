@@ -8,7 +8,9 @@
   }
 
   &--obfuscated {
-    @include filter(blur(10px));
+    opacity: 0.45;
+    @include user-select(none);
+    @include filter(grayscale(100%));
   }
 }
 
