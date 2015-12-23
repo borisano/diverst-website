@@ -45,41 +45,37 @@
 }
 
 .page-header__nav {
+  display: block;
+  position: absolute;
+  top: 26%;
+  color: $diverst-white;
   display: none;
+  border-radius: $border-radius;
+  @include transition(background-color $time $curve);
 
-  .products & {
+  .icon {
+    margin: 0;
+  }
+
+  @include mq(medium) {
     display: block;
-    position: absolute;
-    top: 26%;
-    color: $diverst-white;
-    display: none;
-    border-radius: $border-radius;
-    @include transition(background-color $time $curve);
+    padding: 15px;
 
-    .icon {
-      margin: 0;
+    &:hover {
+      background-color: rgba(#000, 0.1);
     }
+  }
 
-    @include mq(medium) {
-      display: block;
-      padding: 15px;
+  @include mq(large) {
+    top: 40%;
+  }
 
-      &:hover {
-        background-color: rgba(#000, 0.1);
-      }
-    }
+  &--prev {
+    left: 2em;
+  }
 
-    @include mq(large) {
-      top: 40%;
-    }
-
-    &--prev {
-      left: 2em;
-    }
-
-    &--next {
-      right: 2em;
-    }
+  &--next {
+    right: 2em;
   }
 }
 
