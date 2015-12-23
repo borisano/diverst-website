@@ -13,12 +13,18 @@
   @include transition(transform $time $curve, opacity $time $curve);
 
   @include mq(medium) {
-    @include display(flex);
-    @include align-items(center);
+    display: block;
   }
 
   @include mq(large) {
     padding: 0 $gutter;
+  }
+
+  > .site-wrap {
+    @include mq(medium) {
+      @include display(flex);
+      @include align-items(center);
+    }
   }
 
   p {
@@ -29,7 +35,7 @@
 .product-nav__link {
   text-align: center;
   height: 240px;
-  padding: 0 $gutter/1.5;
+  padding: 0 $gutter/2;
   opacity: 0;
   background-color: $diverst-white;
   @include display(flex);

@@ -2,18 +2,18 @@
 
 .section {
   background-color: $diverst-white;
-  padding: 4em 0;
+  padding: 3em 0;
 
   @include mq(small) {
-    padding: 6em 0;
+    padding: 4em 0;
   }
 
   @include mq(medium) {
-    padding: 8em 0;
+    padding: 6em 0;
   }
 
   @include mq(large) {
-    padding: 10em 0;
+    padding: 7em 0;
   }
 }
 
