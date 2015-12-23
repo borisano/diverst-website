@@ -1,6 +1,6 @@
 ---
 title: "ROI Calculator"
-subtitle: "Features subheadline goes here"
+subtitle: "Diversity by the numbers"
 ---
 
 <section class="section calculator">
@@ -8,21 +8,21 @@ subtitle: "Features subheadline goes here"
 
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <h2>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</h2>
+        <h2>Fill out the form below to get a glance at the estimated cost savings Diverst could help you achieve.</h2>
         <h3>Contact info</h3>
         <form id="calculator-form" action="#">
           <div class="form__section">
             <div class="field field--third">
               <label class="field__label">Name</label>
-              <input class="field__input" type="text" placeholder="John Doe" required>
+              <input class="field__input" type="text" placeholder="John Doe" data-bind="value: name">
             </div>
             <div class="field field--third">
               <label class="field__label">Email</label>
-              <input class="field__input" type="email" placeholder="john@example.com" required>
+              <input class="field__input" type="email" placeholder="john@example.com" required data-bind="value: email">
             </div>
             <div class="field field--third">
               <label class="field__label">Phone</label>
-              <input class="field__input" type="tel" placeholder="123-456-7890" required>
+              <input class="field__input" type="tel" placeholder="123-456-7890" required data-bind="value: phone">
             </div>
           </div>
           <div class="form__section">
@@ -31,40 +31,41 @@ subtitle: "Features subheadline goes here"
             </div>
             <div class="field field--quarter">
               <label class="field__label">No of employees</label>
-              <input class="field__input" type="number" placeholder="100" required>
+              <input class="field__input" type="number" placeholder="100" required data-bind="textInput: nbEmployeesInput" min="0">
             </div>
             <div class="field field--quarter">
               <label class="field__label">Average salary</label>
-              <input class="field__input" type="number" placeholder="$50,000" required>
+              <input class="field__input" type="number" placeholder="$50,000" required data-bind="textInput: averageSalaryInput" min="0">
             </div>
             <div class="field field--quarter">
               <label class="field__label">Turnover rate</label>
-              <input class="field__input" type="number" placeholder="20%" required>
+              <input class="field__input" type="number" placeholder="20%" required data-bind="textInput: turnoverRate" min="0" max="100">
             </div>
             <div class="field field--quarter">
               <label class="field__label">Size of D&I team</label>
-              <input class="field__input" type="number" placeholder="10" required>
+              <input class="field__input" type="number" placeholder="10" required data-bind="textInput: sizeOfDITeam" min="0">
             </div>
           </div>
           <div class="field">
-            <button class="btn btn--primary btn--full">Calculate ROI</button>
+            <button class="btn btn--primary btn--full" data-bind="click: showROI">Calculate ROI</button>
           </div>
         </form>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 calculator__section">
-        <h2>Cost savings</h2>
+    <div class="row" id="roi-results">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 calculator__section" data-bind="css: { 'calculator__section--obfuscated': obfuscateResults }">
+        <h2>Yearly cost savings</h2>
+
         <div class="savings">
           <div class="row">
             <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
               <h4>Absenteeism</h4>
-              <h1>$682,292</h1>
+              <h1>$<span data-bind="text: savings.absenteeism"></span></h1>
             </div>
             <div class="col-xs-12 col-sm-6 savings__section">
               <div class="savings__row">
-                <strong>$50,000</strong> average salary
+                <strong>$<span data-bind="text: averageSalary"></span></strong> average salary
               </div>
               <div class="savings__row">
                 <span class="savings__symbol">×</span><strong>131%</strong> benefits cost
@@ -73,10 +74,10 @@ subtitle: "Features subheadline goes here"
                 <span class="savings__symbol">÷</span><strong>240</strong> work days
               </div>
               <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>1.5 days</strong> of reduction in absenteeism
+                <span class="savings__symbol">×</span><strong>1.5</strong> days of reduction in absenteeism
               </div>
               <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>200</strong> employees
+                <span class="savings__symbol">×</span><strong data-bind="text: nbEmployees"></strong> employees
               </div>
             </div>
           </div>
@@ -89,11 +90,108 @@ subtitle: "Features subheadline goes here"
             </div>
           </div>
         </div>
+
+        <div class="savings">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+              <h4>Retention</h4>
+              <h1>$<span data-bind="text: savings.retention"></h1>
+            </div>
+            <div class="col-xs-12 col-sm-6 savings__section">
+              <div class="savings__row">
+                <strong data-bind="text: nbEmployees"></strong> employees
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>38%</strong> turnover cost
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong><span data-bind="text: turnoverRate"></span>%</strong> current turnover rate
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>22%</strong> turnover rate reduction
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <ol class="savings__sources">
+                <li>Hello</li>
+                <li>Hello</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+              <h4>HR time savings</h4>
+              <h1>$<span data-bind="text: savings.hrTime"></h1>
+            </div>
+            <div class="col-xs-12 col-sm-6 savings__section">
+              <div class="savings__row">
+                <strong><span data-bind="text: sizeOfDITeam"></span></strong> employees in D&I team
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>131%</strong> benefits cost
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>10%</strong> of time saved
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <ol class="savings__sources">
+                <li>Hello</li>
+                <li>Hello</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+              <h4>Productivity increase</h4>
+              <h1>$<span data-bind="text: savings.productivityIncrease"></h1>
+            </div>
+            <div class="col-xs-12 col-sm-6 savings__section">
+              <div class="savings__row">
+                <strong data-bind="text: nbEmployees"></strong> employees
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>131%</strong> benefits cost
+              </div>
+              <div class="savings__row">
+                <span class="savings__symbol">×</span><strong>5%</strong> productivity gain
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <ol class="savings__sources">
+                <li>Hello</li>
+                <li>Hello</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
         <div class="savings savings--total">
           <div class="row row--equal-height">
             <div class="col-xs-12 savings__section">
               <h4>Total</h4>
-              <h1>$682,292</h1>
+              <h1>$<span data-bind="text: totalSavings"></span></h1>
             </div>
           </div>
         </div>
@@ -103,3 +201,7 @@ subtitle: "Features subheadline goes here"
 
   </div>
 </section>
+
+<% content_for :page_scripts do %>
+  <%= javascript_include_tag 'roi-calculator' %>
+<% end %>

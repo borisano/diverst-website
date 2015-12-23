@@ -6,6 +6,10 @@
   @include mq(medium) {
     margin-top: 4em;
   }
+
+  &--obfuscated {
+    @include filter(blur(10px));
+  }
 }
 
 .calculator__disclaimer {
