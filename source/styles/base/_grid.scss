@@ -16,6 +16,10 @@ $columns: 12;
       @include flex(1 0 auto);
     }
   }
+
+  &--center {
+    @include align-items(center);
+  }
 }
 
 [class*="col-"] {
