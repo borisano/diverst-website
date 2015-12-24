@@ -5,13 +5,13 @@
         <h2>Request a demo today</h2>
         <form id="sign-up-form" action="#" class="form--inline">
           <div class="field">
-            <input class="field__input" type="text" placeholder="Name" required>
+            <input class="field__input" type="text" placeholder="Name" required data-bind="value: name">
           </div>
           <div class="field">
-            <input class="field__input" type="email" placeholder="Email" required>
+            <input class="field__input" type="email" placeholder="Email" required data-bind="value: email">
           </div>
           <div class="field">
-            <button class="btn btn--primary btn--full">Request demo</button>
+            <button class="btn btn--primary btn--full" data-bind="click: submitInfo">Request demo</button>
           </div>
         </form>
         <p class="form-hint"><%= inline_svg("icons/checkmark.svg", class: "icon") %>We'll be in touch soon</p>

@@ -3,14 +3,14 @@ title: "ROI Calculator"
 subtitle: "Diversity by the numbers"
 ---
 
-<section class="section calculator">
+<section class="section calculator" id="roi-calculator">
   <div class="site-wrap">
 
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <h2>Fill out the form below to get a glance at the estimated cost savings Diverst could help you achieve.</h2>
+        <h2>Fill out the form below for an ROI estimate of what the Diverst toolset could help you achieve.</h2>
         <h3>Contact info</h3>
-        <form id="calculator-form" action="#">
+        <form action="#">
           <div class="form__section">
             <div class="field field--third">
               <label class="field__label">Name</label>
@@ -204,4 +204,7 @@ subtitle: "Diversity by the numbers"
 
 <% content_for :page_scripts do %>
   <%= javascript_include_tag 'roi-calculator' %>
+  <script>
+    ko.applyBindings(new ROICalculator(), document.getElementById('roi-calculator'));
+  </script>
 <% end %>

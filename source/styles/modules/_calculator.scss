@@ -8,9 +8,22 @@
   }
 
   &--obfuscated {
-    opacity: 0.45;
+    position: relative;
+    opacity: 0.4;
+    max-height: 580px;
+    overflow: hidden;
     @include user-select(none);
-    @include filter(grayscale(100%));
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 240px;
+      left: 0;
+      bottom: 0;
+      @include linear-gradient(to bottom, rgba($diverst-white, 0), rgba($diverst-white, 100%));
+    }
   }
 }
 

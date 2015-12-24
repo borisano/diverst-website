@@ -1,6 +1,9 @@
 //= require jquery
 //= require jquery-smooth-scroll/src/jquery.smooth-scroll
 //= require fastclick
+//= require knockout
+//= require knockout-validation
+//= require contact-form
 
 // Fade in body when page is loaded
 
@@ -41,3 +44,37 @@ $("a").smoothScroll({
   speed: 300,
   offset: 2
 });
+
+
+// Configure Kockout validations
+
+ko.validation.init({
+  errorMessageClass: "field__error",
+  decorateInputElement: true,
+  errorElementClass: 'field__input--error',
+  parseInputAttributes: true
+});
+
+// Company email validation
+
+ko.validation.rules['companyEmail'] = {
+  validator: function (email, polarity) {
+    if (/@hotmail/.test(email)) return !polarity;
+    if (/@outlook/.test(email)) return !polarity;
+    if (/@live/.test(email)) return !polarity;
+    if (/@gmail/.test(email)) return !polarity;
+    if (/@yahoo/.test(email)) return !polarity;
+    if (/@me/.test(email)) return !polarity;
+    if (/@msn/.test(email)) return !polarity;
+    if (/@aol/.test(email)) return !polarity;
+
+    return polarity;
+  },
+  message: 'Please enter a company email'
+};
+
+ko.validation.registerExtenders();
+
+// Mount the Knockout contact form
+
+ko.applyBindings(new ContactForm(), document.getElementById('sign-up'));
