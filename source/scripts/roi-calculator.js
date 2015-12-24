@@ -42,7 +42,7 @@ var ROICalculator = function() {
 
   var sendInfoToCRM = function() {
     $.getJSON('http://ipinfo.io', function(visitorInfo) { // Get visitor info using a 3rd party service
-      $.post('http://localhost:3000/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
+      $.post('http://app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
     });
   };
 
