@@ -101,4 +101,8 @@ h4 {
 
 strong {
   color: $diverst-black;
+
+  &.soft {
+    color: $diverst-grey;
+  }
 }

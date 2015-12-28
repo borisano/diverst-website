@@ -75,9 +75,7 @@
 // Learn more
 
 #learn-more img {
-
   @include mq(medium) {
     margin-left: 4em;
-    max-width: 150%;
   }
 }
