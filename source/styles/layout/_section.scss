@@ -17,6 +17,22 @@
   }
 }
 
+.section--small {
+  padding: 2.5em 0;
+  
+  @include mq(small) {
+    padding: 3em 0;
+  }
+
+  @include mq(medium) {
+    padding: 3.5em 0;
+  }
+
+  @include mq(large) {
+    padding: 4em 0;
+  }
+}
+
 .section--accent {
   background-color: $diverst-purple;
   color: $diverst-white;
