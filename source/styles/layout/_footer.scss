@@ -74,6 +74,18 @@
   margin-bottom: 0.25em;
 }
 
+.footer__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+  vertical-align: 0;
+  fill: rgba($diverst-white, 0.85);
+
+  .footer__link:hover & {
+    fill: $diverst-white;
+  }
+}
+
 .footer__link:hover {
   color: $diverst-white;
 }

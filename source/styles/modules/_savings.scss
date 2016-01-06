@@ -71,8 +71,11 @@
 }
 
 .savings__sources {
-  padding-left: 1.5em;
-  margin: 1em 0 0 0;
+  margin-top: 1em;
   font-size: 80%;
   color: $diverst-grey-light;
+
+  @include mq(medium) {
+    margin-top: 1.5em;
+  }
 }

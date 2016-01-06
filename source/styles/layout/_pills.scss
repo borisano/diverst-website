@@ -1,9 +1,0 @@
-.pills {
-  text-align: center;
-  padding: 3em 0;
-  border-bottom: 1px solid mix($diverst-grey, $diverst-black, 50%);
-
-  @include mq(medium) {
-    padding: 4em 0;
-  }
-}
