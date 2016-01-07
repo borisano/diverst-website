@@ -50,3 +50,15 @@ activate :deploy do |deploy|
 end
 
 page '/index.html', :layout => false
+
+erg_variants = [{
+  abbr: 'ERG',
+  full: 'Enterprise Resource Group'
+}, {
+  abbr: 'BRG',
+  full: 'Business Resource Group'
+}]
+
+erg_variants.each do |erg_variant|
+  proxy "/products/manage-#{erg_variant[:abbr].downcase}.html", "/products/manage.html", locals: { erg_variant: erg_variant, subtitle: "#{erg_variant[:abbr]} management and reporting" }, layout: "product", ignore: true
+end

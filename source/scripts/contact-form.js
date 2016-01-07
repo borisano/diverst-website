@@ -25,7 +25,6 @@ var ContactForm = function() {
       });
 
       // Show submitted state
-      console.log('meow');
       $('#sign-up-form').css('display', 'none');
       $('#sign-up .form-hint').css('display', 'block');
     }

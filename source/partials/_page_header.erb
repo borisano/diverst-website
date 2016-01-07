@@ -4,7 +4,8 @@
       <%= inline_svg("icons/#{current_page.data.icon}.svg", class: "icon page-header__icon") %>
     <% end %>
     <h1><%= current_page.data.title %></h1>
-    <h2><%= current_page.data.subtitle %></h2>
+    <%# We either use the subtitle from the frontmatter or instance var (necessary when using proxies and the subtitle contains locals) %>
+    <h2><%= current_page.data.subtitle || @subtitle %></h2>
     <% if current_page.data.screenshot %>
       <img class="page-header__image" src="/images/screenshots/<%= current_page.data.title.downcase %>/header.png">
     <% end %>

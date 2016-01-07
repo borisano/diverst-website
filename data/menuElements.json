@@ -11,7 +11,7 @@
   }],
   "products": [{
     "title": "Manage",
-    "href": "/products/manage",
+    "href": "/products/manage-erg",
     "description": "ERG management and reporting"
   }, {
     "title": "Collaborate",

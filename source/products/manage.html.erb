@@ -2,17 +2,18 @@
 layout: product
 title: Manage
 icon: manage
-subtitle: ERG management and reporting
 screenshot: screenshot2.png
 testimonial_image: discussion.jpg
-tags: Employee Resource Groups, Employee Resource Group, Employee Resource Groups best practices, ERG management, LGBT Employee Resource Group, ERG employee resource group, veterans employee resource group
 ---
+
+<%# This is necessary to pass the subtitle to the layout %>
+<% @subtitle = subtitle %>
 
 <section class="section">
   <div class="site-wrap">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-        <p class="large"><strong class="soft">Manage</strong> helps you organize and manage your Employee Resource Groups from a simple dashboard. Whether it’s hosting an online governance meeting, updating a user list, creating a new group/segment, pushing-out news or organizing events, Manage is there to assist you.</p>
+        <p class="large"><strong class="soft">Manage</strong> helps you organize and manage your <%= erg_variant[:full] %>s from a simple dashboard. Whether it’s hosting an online governance meeting, updating a user list, creating a new group/segment, pushing-out news or organizing events, Manage is there to assist you.</p>
       </div>
     </div>
   </div>
@@ -34,7 +35,7 @@ tags: Employee Resource Groups, Employee Resource Group, Employee Resource Group
         <div class="feature feature--stacked">
           <div class="feature__content">
             <h3>Resources</h3>
-            <p>ERG playbook, CMS and document repository</p>
+            <p><%= erg_variant[:abbr] %> playbook, CMS and document repository</p>
             <img class="feature__image" src="/images/screenshots/manage/resources.png">
           </div>
         </div>
@@ -81,7 +82,7 @@ tags: Employee Resource Groups, Employee Resource Group, Employee Resource Group
         <div class="feature feature--stacked">
           <div class="feature__content">
             <h3>Role-based permissions</h3>
-            <p>Provide individual resource group managers their own dashboards and metrics.</p>
+            <p>Provide individual <%= erg_variant[:full].downcase %> managers their own dashboards and metrics.</p>
           </div>
         </div>
       </div>
@@ -89,7 +90,7 @@ tags: Employee Resource Groups, Employee Resource Group, Employee Resource Group
         <div class="feature feature--stacked">
           <div class="feature__content">
             <h3>Configurable</h3>
-            <p>Configure each resource group according to its unique characteristics.</p>
+            <p>Configure each <%= erg_variant[:full].downcase %> according to its unique characteristics.</p>
           </div>
         </div>
       </div>
@@ -97,7 +98,7 @@ tags: Employee Resource Groups, Employee Resource Group, Employee Resource Group
         <div class="feature feature--stacked">
           <div class="feature__content">
             <h3>Dedicated dashboards</h3>
-            <p>Each ERG gets its own branding, events, messages and content through its own dashboard.</p>
+            <p>Each <%= erg_variant[:abbr] %> gets its own branding, events, messages and content through its own dashboard.</p>
           </div>
         </div>
       </div>
