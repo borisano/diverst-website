@@ -23,6 +23,11 @@ var ContactForm = function() {
       $.getJSON('http://ipinfo.io', function(visitorInfo) { // Get visitor info using a 3rd party service
         $.post('http://app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
       });
+
+      // Show submitted state
+      console.log('meow');
+      $('#sign-up-form').css('display', 'none');
+      $('#sign-up .form-hint').css('display', 'block');
     }
   };
 
