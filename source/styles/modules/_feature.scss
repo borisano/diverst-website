@@ -49,6 +49,14 @@
   .feature__content {
     margin-left: 0;
   }
+
+  p {
+    margin-bottom: 1.25em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .feature--outline {
