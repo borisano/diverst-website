@@ -40,6 +40,10 @@
   * {
     color: $diverst-white;
   }
+
+  .icon {
+    fill: $diverst-white;
+  }
 }
 
 .section--alt {
@@ -72,6 +76,8 @@
 
   h2 {
     margin-bottom: 0;
+    line-height: 1.8;
+    text-align: center;
   }
 
   p {
@@ -103,8 +109,20 @@
 
 // Learn more
 
-#learn-more img {
-  @include mq(medium) {
-    margin-left: 4em;
+#learn-more {
+  overflow: hidden;
+  border-bottom: 1px solid $diverst-border;
+
+  img {
+    @include mq(medium) {
+      margin-top: 0;
+      margin-left: 4em;
+      margin-bottom: -9.25em;
+      max-width: 150%;
+    }
+
+    @include mq(large) {
+      margin-top: -1em;
+    }
   }
 }

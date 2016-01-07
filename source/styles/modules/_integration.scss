@@ -1,0 +1,25 @@
+// Integration
+
+.integrations {
+  display: block;
+  text-align: center;
+
+  @include mq(medium) {
+    text-align: left;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.integration {
+  display: inline-block;
+  text-align: center;
+  margin: 0 $gutter/3;
+}
+
+.integration__icon {
+  fill: $diverst-purple;
+  margin-bottom: 1em;
+}

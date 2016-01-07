@@ -11,14 +11,17 @@ $columns: 12;
     @include display(flex);
     @include flex-wrap(wrap);
 
-    > .col {
+    > [class*="col-"] {
       @include display(flex);
       @include flex(1 0 auto);
     }
   }
 
-  &--center {
-    @include align-items(center);
+  @include mq(medium) {
+    &--center {
+      @include display(flex);
+      @include align-items(center);
+    }
   }
 }
 
