@@ -34,6 +34,9 @@
     <% end %>
   </ul>
   <ul class="mobile-nav__list">
+    <li class="mobile-nav__item">
+      <a class="mobile-nav__link" href="/">Home</a>
+    </li>
     <% data.menuElements.top.each do |menuElement| %>
       <li class="mobile-nav__item">
         <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' mobile-nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>

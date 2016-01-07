@@ -79,9 +79,26 @@ subtitle: A modern approach to diversity
   <div class="site-wrap">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-        <%= inline_svg("icons/hosting.svg", class: "icon icon--large section__icon") %>
-        <h2>Hosting</h2>
-        <p>There is no hosting debate as Diverst is offered in both cloud and on-premise hosting options. If in-house, your IT department is master of your domain, controlling access through your firewall, as well as update schedules according to your timelines. In the Diverst cloud, speed, security and reliability are the standard. Diverst's cloud offerings run on multiple AWS availability zones for optimal redundancy and uptime.</p>
+        <h2 class="section__title">Hosting</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 text-left">
+            <div class="feature">
+              <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3 class="feature__title">On premise</h3>
+                <p>If in-house, your IT department is master of your domain, controlling access through your firewall, as well as update schedules according to your timelines.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 text-left">
+            <div class="feature">
+            <%= inline_svg("icons/cloud.svg", class: "icon feature__icon") %>
+            <div class="feature__content">
+              <h3>Cloud</h3>
+              <p>In the Diverst cloud, speed, security and reliability are the standard. Diverst's cloud offerings run on multiple AWS availability zones for optimal redundancy and uptime.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
