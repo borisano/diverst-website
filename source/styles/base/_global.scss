@@ -77,3 +77,15 @@ a {
     }
   }
 }
+
+
+// Images
+
+.certification {
+  width: 100px;
+
+  @include mq(medium) {
+    width: 150px;
+    margin: 0 $gutter/3;
+  }
+}
