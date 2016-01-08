@@ -20,28 +20,3 @@
     </ul>
   </div>
 </nav>
-
-<nav class="mobile-nav">
-  <button class="mobile-nav__close">
-    <%= inline_svg("icons/close.svg", class: "icon icon--close") %>
-  </button>
-  <h4>Products</h4>
-  <ul class="mobile-nav__list">
-    <% data.menuElements.products.each do |menuElement| %>
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' mobile-nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
-      </li>
-    <% end %>
-  </ul>
-  <ul class="mobile-nav__list">
-    <li class="mobile-nav__item">
-      <a class="mobile-nav__link" href="/">Home</a>
-    </li>
-    <% data.menuElements.top.each do |menuElement| %>
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' mobile-nav__link--active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
-      </li>
-    <% end %>
-  </ul>
-  <a href="#sign-up" class="btn btn--primary">Request a demo</a>
-</nav>
