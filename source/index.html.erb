@@ -9,6 +9,7 @@
     <%= favicon_tag '/favicon.png' %>
     <%= stylesheet_link_tag "main" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:400,500" %>
+    <%= partial :trackers_head %>
   </head>
   <body class="<%= page_classes %>">
 
@@ -220,7 +221,7 @@
 
     </div>
 
-    <%= partial :ga %>
+    <%= partial :trackers_body %>
     <%= javascript_include_tag 'main' %>
 
   </body>
