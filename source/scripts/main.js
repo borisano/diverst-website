@@ -4,6 +4,7 @@
 //= require knockout
 //= require knockout-validation
 //= require contact-form
+//= require tooltipster
 
 // Fade in body when page is loaded
 

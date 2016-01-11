@@ -1,5 +1,3 @@
-// Utility function
-
 var ROICalculator = function() {
   var self = this;
 
@@ -96,4 +94,7 @@ var ROICalculator = function() {
   }, this);
 
   self.errors = ko.validation.group(self);
+
+  // Init tooltipster
+  $('.tooltip').tooltipster();
 };
