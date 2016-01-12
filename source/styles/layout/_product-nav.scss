@@ -10,7 +10,7 @@
   -webkit-backface-visibility: hidden;
   padding: 0 $gutter/2;
   @include z-index(product-nav);
-  @include transition(transform $time $curve, opacity $time $curve);
+  transition: transform $time $curve, opacity $time $curve;
 
   @include mq(medium) {
     display: block;
@@ -22,8 +22,8 @@
 
   > .site-wrap {
     @include mq(medium) {
-      @include display(flex);
-      @include align-items(center);
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -38,29 +38,29 @@
   padding: 0 $gutter/2;
   opacity: 0;
   background-color: $diverst-white;
-  @include display(flex);
-  @include flex-direction(column);
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex(1);
-  @include transform(translate3d(0, $gutter, 0));
-  @include transition(transform $time $curve, opacity $time $curve);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0, $gutter, 0);
+  transition: transform $time $curve, opacity $time $curve;
 
   > * {
-    @include transition(transform $time/2 $curve);
+    transition: transform $time/2 $curve;
   }
 
   &:hover > * {
-    @include transform(translate3d(0, -3px, 0));
+    transform: translate3d(0, -3px, 0);
   }
 
   .js-product-nav-open & {
     opacity: 1;
-    @include transform(none);
+    transform: none;
 
     @for $i from 0 through 5 {
       &:nth-child(#{$i}) {
-        @include transition-delay($i * 0.05s);
+        transition-delay: $i * 0.05s;
       }
     }
   }

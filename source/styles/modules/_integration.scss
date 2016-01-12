@@ -16,10 +16,17 @@
 .integration {
   display: inline-block;
   text-align: center;
-  margin: 0 $gutter/3;
+  margin: 0.5em;
+
+  @include mq(medium) {
+    margin: 0 0.5em;
+  }
 }
 
 .integration__icon {
-  fill: $diverst-purple;
-  margin-bottom: 1em;
+  margin: 1em;
+
+  @include mq(medium) {
+
+  }
 }

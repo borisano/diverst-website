@@ -36,21 +36,21 @@ a {
   @include mq(small) {
     width: 90%;
     padding: 0;
-    max-width: em(900px);
+    max-width: 900px;
   }
 
   @include mq(medium) {
-    max-width: em(1000px);
+    max-width: 1000px;
   }
 
   @include mq(large) {
-    max-width: em(1040px);
+    max-width: 1040px;
   }
 }
 
 .site-wrap--wide {
   width: 100%;
-  max-width: em(1600px);
+  max-width: 1600px;
 }
 
 
@@ -62,18 +62,18 @@ a {
 
 #page-wrap {
   position: relative;
+  transition: transform $time $curve;
+  transform: translate3d(0, 0, 0);
   @include z-index(page-wrap);
-  @include transition(transform $time $curve);
-  @include transform(translate3d(0, 0, 0));
 
   .js-product-nav-open & {
 
     @include mq(medium) {
-      @include transform(translate3d(0, 240px, 0));
+      transform: translate3d(0, 240px, 0);
     }
 
     @include mq(large) {
-      @include transform(translate3d(0, 300px, 0));
+      transform: translate3d(0, 300px, 0);
     }
   }
 }

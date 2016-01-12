@@ -23,11 +23,11 @@
     opacity: 0;
 
     .ready & {
-      @include animation(fade-in-up $time $curve both);
+      animation: fade-in-up $time $curve both;
 
       @for $i from 0 through 4 {
         &:nth-child(#{$i}) {
-          @include animation-delay($i * 0.1s);
+          animation-delay: $i * 0.1s;
         }
       }
     }
@@ -51,7 +51,7 @@
   color: $diverst-white;
   display: none;
   border-radius: $border-radius;
-  @include transition(background-color $time $curve);
+  transition: background-color $time $curve;
 
   .icon {
     margin: 0;
@@ -86,11 +86,13 @@
 
   @include mq(small) {
     display: inline-block;
-    @include size(32px);
+    width: 32px;
+    height: 32px;
   }
 
   @include mq(medium) {
-    @include size(40px);
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -123,20 +125,20 @@
   background-image: url('/images/header.jpg');
   background-size: cover;
   background-position: center center;
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   * {
     position: relative;
     @include z-index(header-content);
 
     .ready & {
-      @include animation(fade-in-up $time $curve both);
+      animation: fade-in-up $time $curve both;
 
       @for $i from 0 through 4 {
         &:nth-child(#{$i}) {
-          @include animation-delay($i * 0.1s);
+          animation-delay: $i * 0.1s;
         }
       }
     }
@@ -160,7 +162,7 @@
   &:before {
     display: none;
     height: 150px;
-    @include linear-gradient(to top, rgba(#000, 0), rgba(#000, 0.5));
+    background-image: linear-gradient(to top, rgba(#000, 0), rgba(#000, 0.5));
 
     @include mq(large) {
       display: block;

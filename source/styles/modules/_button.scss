@@ -13,7 +13,7 @@
   text-transform: uppercase;
   font-weight: $font-weight-bold;
   text-align: center;
-  @include transition(all $time $curve);
+  transition: all $time $curve;
 
   @include mq(small) {
     width: auto;

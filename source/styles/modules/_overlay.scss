@@ -10,7 +10,7 @@
   opacity: 0;
   background-color: rgba(#000, 0.6);
   @include z-index(overlay);
-  @include transition(visibility $time $curve, opacity $time $curve);
+  transition: visibility $time $curve, opacity $time $curve;
 
   @include mq(medium) {
     display: none;

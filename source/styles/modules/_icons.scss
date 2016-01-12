@@ -11,13 +11,16 @@
 .icon {
   display: inline-block;
   vertical-align: middle;
-  @include size(24px);
+  width: 24px;
+  height: 24px;
 }
 
 .icon--large {
-  @include size(48px);
+  width: 48px;
+  height: 48px;
 }
 
 .icon--medium {
-  @include size(36px);
+  width: 36px;
+  height: 36px;
 }

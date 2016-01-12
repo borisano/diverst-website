@@ -5,27 +5,26 @@ $columns: 12;
 .row {
   margin-left: (-$gutter/2);
   margin-right: (-$gutter/2);
-  @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
 
   &--equal-height {
-    @include display(flex);
-    @include flex-wrap(wrap);
+    display: flex;
 
     > [class*="col-"] {
-      @include display(flex);
+      display: flex;
     }
   }
 
   @include mq(medium) {
     &--center {
-      @include display(flex);
-      @include align-items(center);
+      display: flex;
+      align-items: center;
     }
   }
 }
 
 [class*="col-"] {
-  float: left;
   padding-left: ($gutter/2);
   padding-right: ($gutter/2);
 }
