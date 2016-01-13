@@ -41,9 +41,9 @@
 
 .savings__section {
   margin-bottom: 1em;
-  @include display(flex);
-  @include justify-content(center);
-  @include flex-direction(column);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   &:last-child {
     margin-bottom: 0;

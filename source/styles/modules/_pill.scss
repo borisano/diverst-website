@@ -1,9 +1,9 @@
 // Pill
 
 .pill-list {
-  @include justify-content(center);
-  @include display(flex);
-  @include flex-wrap(wrap);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .pill {

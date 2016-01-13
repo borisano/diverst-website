@@ -1,6 +1,6 @@
 // Fade In
 
-@include keyframes (fade-in) {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -12,44 +12,44 @@
 
 // Fade In Left
 
-@include keyframes (fade-in-left) {
+@keyframes fade-in-left {
   0% {
     opacity: 0;
-    @include transform(translate3d($gutter/3, 0, 0));
+    transform: translate3d($gutter/3, 0, 0);
   }
 
   100% {
     opacity: 1;
-    @include transform(none);
+    transform: none;
   }
 }
 
 
 // Fade In Up
 
-@include keyframes (fade-in-up) {
+@keyframes fade-in-up {
   0% {
     opacity: 0;
-    @include transform(translate3d(0, $gutter/3, 0));
+    transform: translate3d(0, $gutter/3, 0);
   }
 
   100% {
     opacity: 1;
-    @include transform(none);
+    transform: none;
   }
 }
 
 
 // Fade In Down
 
-@include keyframes (fade-in-down) {
+@keyframes fade-in-down {
   0% {
     opacity: 0;
-    @include transform(translate3d(0, -$gutter/3, 0));
+    transform: translate3d(0, -$gutter/3, 0);
   }
 
   100% {
     opacity: 1;
-    @include transform(none);
+    transform: none;
   }
 }

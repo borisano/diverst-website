@@ -11,3 +11,14 @@
      @media (min-width: $small) { @content ; }
   }
 }
+
+
+// Clearfix
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
