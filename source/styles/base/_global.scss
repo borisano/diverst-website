@@ -79,6 +79,26 @@ a {
 }
 
 
+// Spacer
+
+.spacer {
+  display: inline-block;
+  width: 50px;
+
+  @include mq(small) {
+    width: 35%;
+  }
+
+  @include mq(medium) {
+    width: 30%;
+  }
+
+  @include mq(large) {
+    width: 20%;
+  }
+}
+
+
 // Images
 
 .certification {
