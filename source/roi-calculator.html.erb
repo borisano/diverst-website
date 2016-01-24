@@ -8,8 +8,8 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
 <section class="section calculator" id="roi-calculator">
   <div class="site-wrap">
 
-    <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="grid">
+      <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2">
         <h2>Fill out the form below for an ROI estimate of what the Diverst toolset could help you achieve.</h2>
         <h3>Contact info</h3>
         <form action="#">
@@ -55,17 +55,17 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
       </div>
     </div>
 
-    <div class="row" id="roi-results">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 calculator__section" data-bind="css: { 'calculator__section--obfuscated': obfuscateResults }">
+    <div class="grid" id="roi-results">
+      <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2 calculator__section" data-bind="css: { 'calculator__section--obfuscated': obfuscateResults }">
         <h2>Yearly cost savings</h2>
 
         <div class="savings">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+          <div class="grid">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
               <h4>Absenteeism</h4>
               <h1>$<span data-bind="text: savings.absenteeism"></span></h1>
             </div>
-            <div class="col-xs-12 col-sm-6 savings__section">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
               <div class="savings__row">
                 <strong>$<span data-bind="text: averageSalary"></span></strong> average salary
               </div>
@@ -83,20 +83,20 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
+          <div class="grid">
+            <div class="grid__col--xs-12">
               <p class="savings__sources">Diverst’s <em>Collaborate</em>, <em>Scope</em> and <em>Mentor</em> modules foster and promote inclusion, which are  proven to reduce absenteeism. When employees feel more valued and included in day-to-day company operations, they want to be more present at work.</p>
             </div>
           </div>
         </div>
 
         <div class="savings">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+          <div class="grid">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
               <h4>Retention</h4>
               <h1>$<span data-bind="text: savings.retention"></h1>
             </div>
-            <div class="col-xs-12 col-sm-6 savings__section">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
               <div class="savings__row">
                 <strong data-bind="text: nbEmployees"></strong> employees
               </div>
@@ -114,20 +114,20 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
+          <div class="grid">
+            <div class="grid__col--xs-12">
               <p class="savings__sources">Deploying Diverst’s <em>Collaborate</em>, <em>Scope</em> and <em>Mentor</em> toolset enables your organization to make good on the promise of diversity and inclusion. Our view is that all talent is diverse and that people like to stay in places where they can be authentic. In an environment of visible inclusion, a big reason for leaving is removed.</p>
             </div>
           </div>
         </div>
 
         <div class="savings">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+          <div class="grid">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
               <h4>HR time savings</h4>
               <h1>$<span data-bind="text: savings.hrTime"></h1>
             </div>
-            <div class="col-xs-12 col-sm-6 savings__section">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
               <div class="savings__row">
                 <strong><span data-bind="text: sizeOfDITeam"></span></strong> employees in D&amp;I team
               </div>
@@ -142,20 +142,20 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
+          <div class="grid">
+            <div class="grid__col--xs-12">
               <p class="savings__sources">Diverst’s <em>Manage</em> tool automates what is currently being organized and handled manually. By leveraging our technology in your diversity and inclusion process, you save your HR and D&amp;I teams significant amounts of time &ndash; time that can be spent building your D&amp;I engagement rather than managing the tasks associated with it.</p>
             </div>
           </div>
         </div>
 
         <div class="savings">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 savings__section savings__section--sum">
+          <div class="grid">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
               <h4>Productivity increase</h4>
               <h1>$<span data-bind="text: savings.productivityIncrease"></h1>
             </div>
-            <div class="col-xs-12 col-sm-6 savings__section">
+            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
               <div class="savings__row">
                 <strong data-bind="text: nbEmployees"></strong> employees
               </div>
@@ -170,16 +170,16 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
+          <div class="grid">
+            <div class="grid__col--xs-12">
               <p class="savings__sources">Time spent administering diversity is time spent away from practicing it. With opportunities for on-demand mentorship, collaboration campaigns and digital spaces for numerous ERG activities, your managers and employees can actually focus on quantifiable business objectives and culture building, rather than how to pull it all together. That’s what <em>Manage</em>, <em>Collaborate</em>, <em>Scope</em> and Mentor are here for.</p>
             </div>
           </div>
         </div>
 
         <div class="savings savings--total">
-          <div class="row row--equal-height">
-            <div class="col-xs-12 savings__section">
+          <div class="grid grid--equal-height">
+            <div class="grid__col--xs-12 savings__section">
               <h4>Total</h4>
               <h1>$<span data-bind="text: totalSavings"></span></h1>
             </div>
