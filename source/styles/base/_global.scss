@@ -66,6 +66,10 @@ a {
   transform: translate3d(0, 0, 0);
   @include z-index(page-wrap);
 
+  .js-menu-open & {
+    transform: translate3d(-80px, 0, 0);
+  }
+
   .js-product-nav-open & {
 
     @include mq(medium) {
@@ -75,6 +79,26 @@ a {
     @include mq(large) {
       transform: translate3d(0, 300px, 0);
     }
+  }
+}
+
+
+// Spacer
+
+.spacer {
+  display: inline-block;
+  width: 50px;
+
+  @include mq(small) {
+    width: 35%;
+  }
+
+  @include mq(medium) {
+    width: 30%;
+  }
+
+  @include mq(large) {
+    width: 20%;
   }
 }
 
