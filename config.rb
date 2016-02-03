@@ -53,7 +53,7 @@ page '/index.html', :layout => false
 
 erg_variants = [{
   abbr: 'ERG',
-  full: 'Enterprise Resource Group'
+  full: 'Employee Resource Group'
 }, {
   abbr: 'BRG',
   full: 'Business Resource Group'
