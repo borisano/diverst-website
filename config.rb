@@ -27,6 +27,11 @@ helpers do
     prev_product_index = data.menuElements.products.length - 1 if prev_product_index < 0
     data.menuElements.products[prev_product_index].href
   end
+
+  def section(options, &block)
+    content = "<section#{options[:id] ? " id='" + options[:id] + "'" : ""} class='section#{options[:class] ? " " + options[:class] : ""}'><div class='site-wrap'>" + capture(&block) + "</div></section>"
+    concat(content)
+  end
 end
 
 activate :livereload

@@ -20,88 +20,84 @@
       <%= partial :nav %>
       <%= partial :header %>
 
-      <section class="section" id="learn-more">
-        <div class="site-wrap">
-          <div class="grid grid--center">
-            <div class="grid__col--xs-12 grid__col--md-8 grid__col--md-offset-2 grid__col--lg-6 grid__col--lg-offset-0">
-              <p class="large">Diversity is more than just hiring diverse talent. It is about including and integrating unique perspectives, practices and skills into a strong culture.</p>
-              <p class="large">Diversity &amp; inclusion is easier when the right conversations lead to collaboration on corporate issues that matter. Diverst enables just that.</p>
-              <p><a href="#products" class="btn btn--primary">View products</a></p>
-            </div>
-            <div class="hide-md grid__col--xs-12 grid__col--md-6">
-              <img src="/images/marketscope.png">
-            </div>
+      <% section id: 'learn-more' do %>
+        <div class="grid grid--center">
+          <div class="grid__col--xs-12 grid__col--md-8 grid__col--md-offset-2 grid__col--lg-6 grid__col--lg-offset-0">
+            <p class="large">Diversity is more than just hiring diverse talent. It is about including and integrating unique perspectives, practices and skills into a strong culture.</p>
+            <p class="large">Diversity &amp; inclusion is easier when the right conversations lead to collaboration on corporate issues that matter. Diverst enables just that.</p>
+            <p><a href="#products" class="btn btn--primary">View products</a></p>
+          </div>
+          <div class="hide-md grid__col--xs-12 grid__col--md-6">
+            <img src="/images/marketscope.png">
           </div>
         </div>
-      </section>
+      <% end %>
 
-      <section class="section" id="products">
-        <div class="site-wrap">
-          <h2 class="section__title">Products</h2>
-          <div class="grid grid--equal-height features">
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="/products/manage-erg" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/manage.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Manage</h3>
-                  <p>The first ERG/BRG management and reporting tool</p>
-                  <span class="feature__link">Learn more</span>
-                </div>
-              </a>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="/products/collaborate" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/collaborate.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Collaborate</h3>
-                  <p>Engagement and inclusion for your D&amp;I process</p>
-                  <span class="feature__link">Learn more</span>
-                </div>
-              </a>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="/products/scope" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/scope.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Scope</h3>
-                  <p>Your diversity segmentation analysis ally</p>
-                  <span class="feature__link">Learn more</span>
-                </div>
-              </a>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="/products/mentor" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/mentor.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Mentor</h3>
-                  <p>Developing diversity talent at every level</p>
-                  <span class="feature__link">Learn more</span>
-                </div>
-              </a>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="/products/meet" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/meet.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Meet</h3>
-                  <p>Increasing diversity through introductions</p>
-                  <span class="feature__link">Learn more</span>
-                </div>
-              </a>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="#sign-up" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/more.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>More to come</h3>
-                  <p>We're working hard on developing new products</p>
-                  <span class="feature__link">Get in touch</span>
-                </div>
-              </a>
-            </div>
+      <% section id: 'products' do %>
+        <h2 class="section__title">Products</h2>
+        <div class="grid grid--equal-height features">
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <a href="/products/manage-erg" class="feature feature--stacked text-center feature--outline">
+              <%= inline_svg("icons/manage.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Manage</h3>
+                <p>The first ERG/BRG management and reporting tool</p>
+                <span class="feature__link">Learn more</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <a href="/products/collaborate" class="feature feature--stacked text-center feature--outline">
+              <%= inline_svg("icons/collaborate.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Collaborate</h3>
+                <p>Engagement and inclusion for your D&amp;I process</p>
+                <span class="feature__link">Learn more</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <a href="/products/scope" class="feature feature--stacked text-center feature--outline">
+              <%= inline_svg("icons/scope.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Scope</h3>
+                <p>Your diversity segmentation analysis ally</p>
+                <span class="feature__link">Learn more</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <a href="/products/mentor" class="feature feature--stacked text-center feature--outline">
+              <%= inline_svg("icons/mentor.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Mentor</h3>
+                <p>Developing diversity talent at every level</p>
+                <span class="feature__link">Learn more</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <a href="/products/meet" class="feature feature--stacked text-center feature--outline">
+              <%= inline_svg("icons/meet.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Meet</h3>
+                <p>Increasing diversity through introductions</p>
+                <span class="feature__link">Learn more</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <a href="#sign-up" class="feature feature--stacked text-center feature--outline">
+              <%= inline_svg("icons/more.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>More to come</h3>
+                <p>We're working hard on developing new products</p>
+                <span class="feature__link">Get in touch</span>
+              </div>
+            </a>
           </div>
         </div>
-      </section>
+      <% end %>
 
       <a href="/technology/#integrations" class="section section--small section--accent integrations">
         <div class="site-wrap">
@@ -135,77 +131,72 @@
         </div>
       </a>
 
-      <section class="section section--alt" id="features">
-        <div class="site-wrap">
-
-          <h2 class="section__title">Features</h2>
-
-          <div class="grid grid--equal-height features">
-
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <div class="feature">
-                <%= inline_svg("icons/content.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Content repository</h3>
-                  <p>Provide easily-accessible best practices content and reusable material to managers and employees.</p>
-                </div>
+      <% section class: 'section--alt', id: 'features' do %>
+        <h2 class="section__title">Features</h2>
+        <div class="grid grid--equal-height features">
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/content.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Content repository</h3>
+                <p>Provide easily-accessible best practices content and reusable material to managers and employees.</p>
               </div>
             </div>
+          </div>
 
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <div class="feature">
-                <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Hosting</h3>
-                  <p>Hosted on the top rated Amazon Web Services provider for maximum security, robustness and performance.</p>
-                </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Hosting</h3>
+                <p>Hosted on the top rated Amazon Web Services provider for maximum security, robustness and performance.</p>
               </div>
             </div>
+          </div>
 
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <div class="feature">
-                <%= inline_svg("icons/metrics.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Business intelligence</h3>
-                  <p>Get a full view of your company's demographic profile through configurable metrics and aggregate reporting.</p>
-                </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/metrics.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Business intelligence</h3>
+                <p>Get a full view of your company's demographic profile through configurable metrics and aggregate reporting.</p>
               </div>
             </div>
+          </div>
 
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <div class="feature">
-                <%= inline_svg("icons/internationalization.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Internationalization</h3>
-                  <p>Remove traditional barriers and expand your communication reach with realtime language translation.</p>
-                </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/internationalization.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Internationalization</h3>
+                <p>Remove traditional barriers and expand your communication reach with realtime language translation.</p>
               </div>
             </div>
+          </div>
 
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <div class="feature">
-                <%= inline_svg("icons/ui.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Simple UI</h3>
-                  <p>A simple and intuitive user interface that engages more people to achieve your diversity goals faster.</p>
-                </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/ui.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Simple UI</h3>
+                <p>A simple and intuitive user interface that engages more people to achieve your diversity goals faster.</p>
               </div>
             </div>
+          </div>
 
-            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <div class="feature">
-                <%= inline_svg("icons/dashboard.svg", class: "icon feature__icon") %>
-                <div class="feature__content">
-                  <h3>Customizable dashboards</h3>
-                  <p>Create multiple dashoards for Diversity &amp; Inclusion configurations tailored to your needs.</p>
-                </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/dashboard.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Customizable dashboards</h3>
+                <p>Create multiple dashoards for Diversity &amp; Inclusion configurations tailored to your needs.</p>
               </div>
             </div>
-
           </div>
 
         </div>
-      </section>
+
+      <% end %>
 
       <%= partial :pills %>
 

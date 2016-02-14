@@ -5,192 +5,189 @@ subtitle: "Diversity by the numbers"
 meta_description: Calculate your diversity ROI by measuring the effects of diversity on absenteeism, retention and turnover rates, HR time savings and productivity gains.
 ---
 
-<section class="section calculator" id="roi-calculator">
-  <div class="site-wrap">
+<% section class: 'calculator', id: 'roi-calculator' do %>
 
-    <div class="grid">
-      <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2">
-        <h2>Fill out the form below for an ROI estimate of what the Diverst toolset could help you achieve.</h2>
-        <h3>Contact info</h3>
-        <form action="#">
-          <div class="form__section">
-            <div class="field field--third">
-              <label class="field__label">Name</label>
-              <input class="field__input" type="text" placeholder="John Doe" data-bind="value: name">
-            </div>
-            <div class="field field--third">
-              <label class="field__label">Email</label>
-              <input class="field__input" type="email" placeholder="john@example.com" required data-bind="value: email">
-            </div>
-            <div class="field field--third">
-              <label class="field__label">Phone</label>
-              <input class="field__input" type="tel" placeholder="123-456-7890" required data-bind="value: phone">
-            </div>
+  <div class="grid">
+    <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2">
+      <h2>Fill out the form below for an ROI estimate of what the Diverst toolset could help you achieve.</h2>
+      <h3>Contact info</h3>
+      <form action="#">
+        <div class="form__section">
+          <div class="field field--third">
+            <label class="field__label">Name</label>
+            <input class="field__input" type="text" placeholder="John Doe" data-bind="value: name">
           </div>
-          <div class="form__section">
-            <div class="field">
-              <h3>Organization info</h3>
-            </div>
-            <div class="field field--quarter">
-              <label class="field__label">No of employees</label>
-              <input class="field__input" type="number" placeholder="100" required data-bind="textInput: nbEmployeesInput" min="0">
-            </div>
-            <div class="field field--quarter">
-              <label class="field__label">Average salary</label>
-              <input class="field__input" type="number" placeholder="$50,000" required data-bind="textInput: averageSalaryInput" min="0">
-            </div>
-            <div class="field field--quarter">
-              <label class="field__label">Turnover rate</label>
-              <input class="field__input" type="number" placeholder="20%" required data-bind="textInput: turnoverRate" min="0" max="100">
-            </div>
-            <div class="field field--quarter">
-              <label class="field__label">Size of D&amp;I team</label>
-              <input class="field__input" type="number" placeholder="10" required data-bind="textInput: sizeOfDITeam" min="0">
-            </div>
+          <div class="field field--third">
+            <label class="field__label">Email</label>
+            <input class="field__input" type="email" placeholder="john@example.com" required data-bind="value: email">
           </div>
+          <div class="field field--third">
+            <label class="field__label">Phone</label>
+            <input class="field__input" type="tel" placeholder="123-456-7890" required data-bind="value: phone">
+          </div>
+        </div>
+        <div class="form__section">
           <div class="field">
-            <button class="btn btn--primary btn--full" data-bind="click: showROI">Calculate ROI</button>
+            <h3>Organization info</h3>
           </div>
-        </form>
-      </div>
+          <div class="field field--quarter">
+            <label class="field__label">No of employees</label>
+            <input class="field__input" type="number" placeholder="100" required data-bind="textInput: nbEmployeesInput" min="0">
+          </div>
+          <div class="field field--quarter">
+            <label class="field__label">Average salary</label>
+            <input class="field__input" type="number" placeholder="$50,000" required data-bind="textInput: averageSalaryInput" min="0">
+          </div>
+          <div class="field field--quarter">
+            <label class="field__label">Turnover rate</label>
+            <input class="field__input" type="number" placeholder="20%" required data-bind="textInput: turnoverRate" min="0" max="100">
+          </div>
+          <div class="field field--quarter">
+            <label class="field__label">Size of D&amp;I team</label>
+            <input class="field__input" type="number" placeholder="10" required data-bind="textInput: sizeOfDITeam" min="0">
+          </div>
+        </div>
+        <div class="field">
+          <button class="btn btn--primary btn--full" data-bind="click: showROI">Calculate ROI</button>
+        </div>
+      </form>
     </div>
-
-    <div class="grid" id="roi-results">
-      <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2 calculator__section" data-bind="css: { 'calculator__section--obfuscated': obfuscateResults }">
-        <h2>Yearly cost savings</h2>
-
-        <div class="savings">
-          <div class="grid">
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
-              <h4>Absenteeism</h4>
-              <h1>$<span data-bind="text: savings.absenteeism"></span></h1>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
-              <div class="savings__row">
-                <strong>$<span data-bind="text: averageSalary"></span></strong> average salary
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>131%</strong> benefits cost<sup><a href="http://www.bls.gov/news.release/pdf/ecec.pdf" target="_blank" class="tooltip" title="US Bureau of Labour, EMPLOYER COSTS FOR EMPLOYEE COMPENSATION – SEPTEMBER 2015">*</a></sup>
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">÷</span><strong>240</strong> work days
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>1.5</strong> days of reduction in absenteeism<sup><a href="http://www.tandfonline.com/doi/full/10.1080/09585192.2014.991344" target="_blank" class="tooltip" title="Organizational diversity programs across cultures: effects on absenteeism, turnover, performance and innovation">*</a></sup>
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong data-bind="text: nbEmployees"></strong> employees
-              </div>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__col--xs-12">
-              <p class="savings__sources">Diverst’s <em>Collaborate</em>, <em>Scope</em> and <em>Mentor</em> modules foster and promote inclusion, which are  proven to reduce absenteeism. When employees feel more valued and included in day-to-day company operations, they want to be more present at work.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="savings">
-          <div class="grid">
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
-              <h4>Retention</h4>
-              <h1>$<span data-bind="text: savings.retention"></h1>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
-              <div class="savings__row">
-                <strong data-bind="text: nbEmployees"></strong> employees
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>38%</strong> turnover cost<sup><a href="http://www.tandfonline.com/doi/full/10.1080/09585192.2014.991344" target="_blank" class="tooltip" title="Organizational diversity programs across cultures: effects on absenteeism, turnover, performance and innovation">*</a></sup>
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong><span data-bind="text: turnoverRate"></span>%</strong> current turnover rate
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>22%</strong> turnover rate reduction<sup><a href="http://workforcediversitynetwork.com/docs/business_case_3.pdf" class="tooltip" title="Marcus Robinson, Charles Pfeffer, and Joan Buccigrossm, &quot;Business Case for Diversity with Inclusion&quot; (2003)" target="_blank">*</a></sup>
-              </div>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__col--xs-12">
-              <p class="savings__sources">Deploying Diverst’s <em>Collaborate</em>, <em>Scope</em> and <em>Mentor</em> toolset enables your organization to make good on the promise of diversity and inclusion. Our view is that all talent is diverse and that people like to stay in places where they can be authentic. In an environment of visible inclusion, a big reason for leaving is removed.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="savings">
-          <div class="grid">
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
-              <h4>HR time savings</h4>
-              <h1>$<span data-bind="text: savings.hrTime"></h1>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
-              <div class="savings__row">
-                <strong><span data-bind="text: sizeOfDITeam"></span></strong> employees in D&amp;I team
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>131%</strong> benefits cost<sup><a href="http://www.bls.gov/news.release/pdf/ecec.pdf" target="_blank" class="tooltip" title="US Bureau of Labour, EMPLOYER COSTS FOR EMPLOYEE COMPENSATION – SEPTEMBER 2015">*</a></sup>
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>10%</strong> of time saved
-              </div>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__col--xs-12">
-              <p class="savings__sources">Diverst’s <em>Manage</em> tool automates what is currently being organized and handled manually. By leveraging our technology in your diversity and inclusion process, you save your HR and D&amp;I teams significant amounts of time &ndash; time that can be spent building your D&amp;I engagement rather than managing the tasks associated with it.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="savings">
-          <div class="grid">
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
-              <h4>Productivity increase</h4>
-              <h1>$<span data-bind="text: savings.productivityIncrease"></h1>
-            </div>
-            <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
-              <div class="savings__row">
-                <strong data-bind="text: nbEmployees"></strong> employees
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>131%</strong> benefits cost<sup><a href="http://www.bls.gov/news.release/pdf/ecec.pdf" target="_blank" class="tooltip" title="US Bureau of Labour, EMPLOYER COSTS FOR EMPLOYEE COMPENSATION – SEPTEMBER 2015">*</a></sup>
-              </div>
-              <div class="savings__row">
-                <span class="savings__symbol">×</span><strong>5%</strong> productivity gain<sup><a href="http://www.mckinsey.com/insights/organization/why_diversity_matters" target="_blank" class="tooltip" title="McKinsey &amp; Company, Why diversity matters">*</a></sup>
-              </div>
-            </div>
-          </div>
-          <div class="grid">
-            <div class="grid__col--xs-12">
-              <p class="savings__sources">Time spent administering diversity is time spent away from practicing it. With opportunities for on-demand mentorship, collaboration campaigns and digital spaces for numerous ERG activities, your managers and employees can actually focus on quantifiable business objectives and culture building, rather than how to pull it all together. That’s what <em>Manage</em>, <em>Collaborate</em>, <em>Scope</em> and Mentor are here for.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="savings savings--total">
-          <div class="grid grid--equal-height">
-            <div class="grid__col--xs-12 savings__section">
-              <h4>Total</h4>
-              <h1>$<span data-bind="text: totalSavings"></span></h1>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
-</section>
+
+  <div class="grid" id="roi-results">
+    <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2 calculator__section" data-bind="css: { 'calculator__section--obfuscated': obfuscateResults }">
+      <h2>Yearly cost savings</h2>
+
+      <div class="savings">
+        <div class="grid">
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
+            <h4>Absenteeism</h4>
+            <h1>$<span data-bind="text: savings.absenteeism"></span></h1>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
+            <div class="savings__row">
+              <strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>131%</strong> benefits cost<sup><a href="http://www.bls.gov/news.release/pdf/ecec.pdf" target="_blank" class="tooltip" title="US Bureau of Labour, EMPLOYER COSTS FOR EMPLOYEE COMPENSATION – SEPTEMBER 2015">*</a></sup>
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">÷</span><strong>240</strong> work days
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>1.5</strong> days of reduction in absenteeism<sup><a href="http://www.tandfonline.com/doi/full/10.1080/09585192.2014.991344" target="_blank" class="tooltip" title="Organizational diversity programs across cultures: effects on absenteeism, turnover, performance and innovation">*</a></sup>
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong data-bind="text: nbEmployees"></strong> employees
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--xs-12">
+            <p class="savings__sources">Diverst’s <em>Collaborate</em>, <em>Scope</em> and <em>Mentor</em> modules foster and promote inclusion, which are  proven to reduce absenteeism. When employees feel more valued and included in day-to-day company operations, they want to be more present at work.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="savings">
+        <div class="grid">
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
+            <h4>Retention</h4>
+            <h1>$<span data-bind="text: savings.retention"></h1>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
+            <div class="savings__row">
+              <strong data-bind="text: nbEmployees"></strong> employees
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>38%</strong> turnover cost<sup><a href="http://www.tandfonline.com/doi/full/10.1080/09585192.2014.991344" target="_blank" class="tooltip" title="Organizational diversity programs across cultures: effects on absenteeism, turnover, performance and innovation">*</a></sup>
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong><span data-bind="text: turnoverRate"></span>%</strong> current turnover rate
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>22%</strong> turnover rate reduction<sup><a href="http://workforcediversitynetwork.com/docs/business_case_3.pdf" class="tooltip" title="Marcus Robinson, Charles Pfeffer, and Joan Buccigrossm, &quot;Business Case for Diversity with Inclusion&quot; (2003)" target="_blank">*</a></sup>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--xs-12">
+            <p class="savings__sources">Deploying Diverst’s <em>Collaborate</em>, <em>Scope</em> and <em>Mentor</em> toolset enables your organization to make good on the promise of diversity and inclusion. Our view is that all talent is diverse and that people like to stay in places where they can be authentic. In an environment of visible inclusion, a big reason for leaving is removed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="savings">
+        <div class="grid">
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
+            <h4>HR time savings</h4>
+            <h1>$<span data-bind="text: savings.hrTime"></h1>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
+            <div class="savings__row">
+              <strong><span data-bind="text: sizeOfDITeam"></span></strong> employees in D&amp;I team
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>131%</strong> benefits cost<sup><a href="http://www.bls.gov/news.release/pdf/ecec.pdf" target="_blank" class="tooltip" title="US Bureau of Labour, EMPLOYER COSTS FOR EMPLOYEE COMPENSATION – SEPTEMBER 2015">*</a></sup>
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>10%</strong> of time saved
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--xs-12">
+            <p class="savings__sources">Diverst’s <em>Manage</em> tool automates what is currently being organized and handled manually. By leveraging our technology in your diversity and inclusion process, you save your HR and D&amp;I teams significant amounts of time &ndash; time that can be spent building your D&amp;I engagement rather than managing the tasks associated with it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="savings">
+        <div class="grid">
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section savings__section--sum">
+            <h4>Productivity increase</h4>
+            <h1>$<span data-bind="text: savings.productivityIncrease"></h1>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 savings__section">
+            <div class="savings__row">
+              <strong data-bind="text: nbEmployees"></strong> employees
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>$<span data-bind="text: averageSalary"></span></strong> average salary
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>131%</strong> benefits cost<sup><a href="http://www.bls.gov/news.release/pdf/ecec.pdf" target="_blank" class="tooltip" title="US Bureau of Labour, EMPLOYER COSTS FOR EMPLOYEE COMPENSATION – SEPTEMBER 2015">*</a></sup>
+            </div>
+            <div class="savings__row">
+              <span class="savings__symbol">×</span><strong>5%</strong> productivity gain<sup><a href="http://www.mckinsey.com/insights/organization/why_diversity_matters" target="_blank" class="tooltip" title="McKinsey &amp; Company, Why diversity matters">*</a></sup>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid__col--xs-12">
+            <p class="savings__sources">Time spent administering diversity is time spent away from practicing it. With opportunities for on-demand mentorship, collaboration campaigns and digital spaces for numerous ERG activities, your managers and employees can actually focus on quantifiable business objectives and culture building, rather than how to pull it all together. That’s what <em>Manage</em>, <em>Collaborate</em>, <em>Scope</em> and Mentor are here for.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="savings savings--total">
+        <div class="grid grid--equal-height">
+          <div class="grid__col--xs-12 savings__section">
+            <h4>Total</h4>
+            <h1>$<span data-bind="text: totalSavings"></span></h1>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>
 
 <% content_for :page_scripts do %>
   <%= javascript_include_tag 'roi-calculator' %>
