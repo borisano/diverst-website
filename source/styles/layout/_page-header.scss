@@ -50,47 +50,50 @@
   display: block;
   position: absolute;
   top: 26%;
+  overflow: hidden;
   color: $diverst-white;
   display: none;
   border-radius: $border-radius;
-  transition: background-color $time $curve;
+  transition: background-color $time $curve, max-width $time $curve;
+  background-color: rgba(#000, 0.1);
+  max-width: 72px;
+  min-height: 72px;
+  line-height: 72px;
 
-  &:hover span {
-    opacity: 1;
-  }
+  &:hover {
+    max-width: 280px;
+    background-color: rgba(#000, 0.2);
 
-  span {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate3d(0, -50%, 0);
-    opacity: 0;
-    transition: opacity $time $curve;
-  }
-
-  .icon {
-    margin: 0;
-  }
-
-  @include mq(medium) {
-    display: block;
-    padding: 15px;
-
-    &:hover {
-      background-color: rgba(#000, 0.1);
+    span {
+      opacity: 1;
     }
   }
 
   @include mq(large) {
-    top: 40%;
+    display: block;
+  }
+
+  span {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity $time $curve;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
   }
 
   &--prev {
     left: 2em;
 
     span {
-      left: 140%;
-      right: auto;
+      padding: 0 24px 0 70px;
+    }
+
+    .icon {
+      left: 16px;
     }
   }
 
@@ -98,8 +101,11 @@
     right: 2em;
 
     span {
-      left: auto;
-      right: 140%;
+      padding: 0 70px 0 24px;
+    }
+
+    .icon {
+      right: 16px;
     }
   }
 }
@@ -127,6 +133,7 @@
 
   @include mq(small) {
     margin-top: 3em;
+    margin-bottom: -6.5em;
   }
 
   @include mq(medium) {

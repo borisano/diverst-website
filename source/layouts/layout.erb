@@ -14,10 +14,10 @@
 
     <%= partial :product_nav %>
     <%= partial :mobile_nav %>
+    <%= partial :nav %>
+    <div class="overlay"></div>
 
     <div id="page-wrap">
-      <div class="overlay"></div>
-      <%= partial :nav %>
       <%= partial :page_header, locals: { show_nav_arrows: false } %>
       <%= yield %>
       <%= partial :sign_up %>

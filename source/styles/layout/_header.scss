@@ -18,7 +18,7 @@
     .ready & {
       animation: fade-in-up $time $curve both;
 
-      @for $i from 0 through 4 {
+      @for $i from 0 through 6 {
         &:nth-child(#{$i}) {
           animation-delay: $i * 0.1s;
         }
@@ -26,7 +26,6 @@
     }
   }
 
-  &:after,
   &:before {
     content: "";
     display: block;
@@ -36,19 +35,9 @@
     width: 100%;
   }
 
-  &:after {
+  &:before {
     height: 100%;
     background-color: rgba(#000, 0.4);
-  }
-
-  &:before {
-    display: none;
-    height: 150px;
-    background-image: linear-gradient(to top, rgba(#000, 0), rgba(#000, 0.5));
-
-    @include mq(large) {
-      display: block;
-    }
   }
 
   @include mq(small) {
@@ -62,7 +51,7 @@
   @include mq(large) {
     padding: 10em 0;
 
-    &:after {
+    &:before {
       background-color: rgba(#000, 0.25);
     }
   }
@@ -81,13 +70,14 @@
     line-height: 1.1;
   }
 
-  ul {
-    @extend h2;
+  .h2 {
     font-weight: $font-weight-regular;
+    margin-bottom: 0;
     color: rgba($diverst-white, 0.7);
   }
 
   .btn {
+    margin-top: 1.5em;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
   }
 }

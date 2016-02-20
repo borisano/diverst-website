@@ -14,15 +14,15 @@
 
     <%= partial :product_nav %>
     <%= partial :mobile_nav %>
+    <%= partial :nav %>
+    <div class="overlay"></div>
 
     <div id="page-wrap">
-      <div class="overlay"></div>
-      <%= partial :nav %>
       <%= partial :header %>
 
       <% section class: '' do %>
         <div class="grid grid--equal-height features">
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+          <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
               <%= inline_svg("icons/content.svg", class: "icon feature__icon") %>
               <div class="feature__content">
@@ -31,7 +31,7 @@
               </div>
             </div>
           </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+          <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
               <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
               <div class="feature__content">
@@ -40,7 +40,7 @@
               </div>
             </div>
           </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+          <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
               <%= inline_svg("icons/metrics.svg", class: "icon feature__icon") %>
               <div class="feature__content">
@@ -149,7 +149,7 @@
       <% section class: 'section--alt text-center integrations', id: 'products' do %>
         <h2 class="section__title">Integrate with the products you already use</h2>
         <div class="integration">
-          <%= inline_svg("icons/yammer.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/yammer-color.svg", class: "icon icon--medium integration__icon") %>
           <h4>Yammer</h4>
         </div>
         <div class="integration">
@@ -157,15 +157,15 @@
           <h4>Chatter</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/sharepoint.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/sharepoint-color.svg", class: "icon icon--medium integration__icon") %>
           <h4>Sharepoint</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/slack.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/slack-color.svg", class: "icon icon--medium integration__icon") %>
           <h4>Slack</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/linkedin.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/linkedin-color.svg", class: "icon icon--medium integration__icon") %>
           <h4>LinkedIn</h4>
         </div>
       <% end %>

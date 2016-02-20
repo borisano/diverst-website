@@ -53,6 +53,10 @@ a {
   max-width: 1600px;
 }
 
+.site-wrap--narrow {
+  max-width: 900px;
+}
+
 
 // List
 
@@ -66,24 +70,10 @@ a {
 }
 
 #page-wrap {
-  position: relative;
-  transition: transform $time $curve;
-  transform: translate3d(0, 0, 0);
-  @include z-index(page-wrap);
+  padding-top: 76px;
 
-  .js-menu-open & {
-    transform: translate3d(-80px, 0, 0);
-  }
-
-  .js-product-nav-open & {
-
-    @include mq(medium) {
-      transform: translate3d(0, 240px, 0);
-    }
-
-    @include mq(large) {
-      transform: translate3d(0, 300px, 0);
-    }
+  @include mq(medium) {
+    padding-top: 92px;
   }
 }
 

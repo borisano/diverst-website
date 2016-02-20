@@ -1,22 +1,19 @@
 // Nav
 
 .nav {
-  padding: 1.5em 0;
+  height: 76px;
+  line-height: 76px;
   background-color: $diverst-white;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  box-shadow: 0px 1px 3px 0px rgba($diverst-grey, 0.15);
   @include z-index(nav);
 
-  @include mq(small) {
-    padding: 1.75em 0;
-  }
-
   @include mq(medium) {
-    padding: 2em 0;
-  }
-
-  @include mq(large) {
-    padding: 2.5em 0;
+    height: 92px;
+    line-height: 92px;
   }
 
   .site-wrap {

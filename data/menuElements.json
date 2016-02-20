@@ -1,16 +1,20 @@
 {
-  "resources": [{
-    "title": "Features",
-    "href": "/features"
-  }, {
+  "top": [{
     "title": "Technology",
     "href": "/technology"
   }, {
-    "title": "ROI Calculator",
-    "href": "/roi-calculator"
+    "title": "Resources",
+    "href": "/resources"
   }, {
     "title": "Company",
     "href": "/company"
+  }],
+  "resources": [{
+    "title": "White Papers",
+    "href": "/white-papers"
+  }, {
+    "title": "ROI Calculator",
+    "href": "/roi-calculator"
   }],
   "products": [{
     "title": "Manage",

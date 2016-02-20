@@ -2,7 +2,7 @@
 
 .product-nav {
   position: fixed;
-  top: 0;
+  top: 92px;
   left: 0;
   width: 100%;
   background-color: $diverst-white;
@@ -10,7 +10,14 @@
   -webkit-backface-visibility: hidden;
   padding: 0 $gutter/2;
   @include z-index(product-nav);
-  transition: transform $time $curve, opacity $time $curve;
+  transform: translate3d(0, -100%, 0);
+  transition: transform $time $curve, box-shadow $time $curve;
+  box-shadow: none;
+
+  .js-product-nav-open & {
+    transform: none;
+    box-shadow: 0px 1px 3px 0px rgba($diverst-grey, 0.15);
+  }
 
   @include mq(medium) {
     display: block;
@@ -36,37 +43,19 @@
   text-align: center;
   height: 240px;
   padding: 0 $gutter/2;
-  opacity: 0;
-  background-color: $diverst-white;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translate3d(0, $gutter, 0);
-  transition: transform $time $curve, opacity $time $curve;
+  transition: transform $time $curve;
 
-  > * {
-    transition: transform $time/2 $curve;
-  }
-
-  &:hover > * {
+  &:hover {
     transform: translate3d(0, -3px, 0);
   }
 
-  .js-product-nav-open & {
-    opacity: 1;
-    transform: none;
-
-    @for $i from 0 through 5 {
-      &:nth-child(#{$i}) {
-        transition-delay: $i * 0.05s;
-      }
-    }
-  }
-
   @include mq(large) {
-    height: 300px;
+    height: 280px;
   }
 }
 

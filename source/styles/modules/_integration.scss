@@ -11,13 +11,9 @@
 .integration {
   display: inline-block;
   text-align: center;
-  margin: 0.5em;
-
-  @include mq(medium) {
-    margin: 0 0.5em;
-  }
+  margin: 1em;
 }
 
 .integration__icon {
-  margin: 1em;
+  margin-bottom: 1em;
 }
