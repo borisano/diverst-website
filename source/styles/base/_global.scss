@@ -58,6 +58,11 @@ a {
 
 .list {
   padding-left: 1em;
+  margin-bottom: 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 #page-wrap {
@@ -79,26 +84,6 @@ a {
     @include mq(large) {
       transform: translate3d(0, 300px, 0);
     }
-  }
-}
-
-
-// Spacer
-
-.spacer {
-  display: inline-block;
-  width: 50px;
-
-  @include mq(small) {
-    width: 35%;
-  }
-
-  @include mq(medium) {
-    width: 30%;
-  }
-
-  @include mq(large) {
-    width: 20%;
   }
 }
 

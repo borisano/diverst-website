@@ -1,5 +1,5 @@
 {
-  "top": [{
+  "resources": [{
     "title": "Features",
     "href": "/features"
   }, {
@@ -8,6 +8,9 @@
   }, {
     "title": "ROI Calculator",
     "href": "/roi-calculator"
+  }, {
+    "title": "Company",
+    "href": "/company"
   }],
   "products": [{
     "title": "Manage",

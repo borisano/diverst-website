@@ -5,12 +5,15 @@ $columns: 12;
 .grid {
   margin-left: (-$gutter/2);
   margin-right: (-$gutter/2);
+  margin-bottom: -($gutter/2);
   display: flex;
   flex-wrap: wrap;
 
-  &--equal-height {
-    display: flex;
+  @include mq(medium) {
+    margin-bottom: -($gutter/1.5);
+  }
 
+  &--equal-height {
     > [class*="grid__col--"] {
       display: flex;
     }
@@ -27,6 +30,11 @@ $columns: 12;
 [class*="grid__col--"] {
   padding-left: ($gutter/2);
   padding-right: ($gutter/2);
+  margin-bottom: ($gutter/2);
+
+  @include mq(medium) {
+    margin-bottom: ($gutter/1.5);
+  }
 }
 
 

@@ -1,20 +1,8 @@
 // Sign-up form
 
 .sign-up {
-  text-align: center;
-  padding: 3em 0;
-  background-color: $diverst-black;
-  border-bottom: 1px solid mix($diverst-grey, $diverst-black, 50%);
-
-  @include mq(medium) {
-    padding: 4em 0;
-  }
 
   h2 {
-    color: $diverst-white;
-  }
-
-  p {
-    color: $diverst-white;
+    margin-bottom: 0.5em;
   }
 }

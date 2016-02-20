@@ -11,7 +11,13 @@
     <% end %>
   </div>
   <% if show_nav_arrows %>
-    <a href="<%= prev_product_path %>" class="page-header__nav page-header__nav--prev"><%= inline_svg("icons/left-arrow.svg", class: "icon page-header__icon") %></a>
-    <a href="<%= next_product_path %>" class="page-header__nav page-header__nav--next"><%= inline_svg("icons/right-arrow.svg", class: "icon page-header__icon") %></a>
+    <a href="<%= prev_product_path %>" class="page-header__nav page-header__nav--prev">
+      <span><%= prev_product_name %></span>
+      <%= inline_svg("icons/left-arrow.svg", class: "icon page-header__icon") %>
+    </a>
+    <a href="<%= next_product_path %>" class="page-header__nav page-header__nav--next">
+      <span><%= next_product_name %></span>
+      <%= inline_svg("icons/right-arrow.svg", class: "icon page-header__icon") %>
+    </a>
   <% end %>
 </div>

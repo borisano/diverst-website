@@ -20,20 +20,39 @@
       <%= partial :nav %>
       <%= partial :header %>
 
-      <% section id: 'learn-more' do %>
-        <div class="grid grid--center">
-          <div class="grid__col--xs-12 grid__col--md-8 grid__col--md-offset-2 grid__col--lg-6 grid__col--lg-offset-0">
-            <p class="large">Diversity is more than just hiring diverse talent. It is about including and integrating unique perspectives, practices and skills into a strong culture.</p>
-            <p class="large">Diversity &amp; inclusion is easier when the right conversations lead to collaboration on corporate issues that matter. Diverst enables just that.</p>
-            <p><a href="#products" class="btn btn--primary">View products</a></p>
+      <% section class: '' do %>
+        <div class="grid grid--equal-height features">
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/content.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Flexible deployment</h3>
+                <p>Diverst can be hosted securely on the cloud (AWS) or on-premise</p>
+              </div>
+            </div>
           </div>
-          <div class="hide-md grid__col--xs-12 grid__col--md-6">
-            <img src="/images/marketscope.png">
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Easy configuration</h3>
+                <p>Highly configurable platform to support customization and white labelling</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+            <div class="feature">
+              <%= inline_svg("icons/metrics.svg", class: "icon feature__icon") %>
+              <div class="feature__content">
+                <h3>Simple UI</h3>
+                <p>A simple and intuitive user interface that engages more people to achieve your diversity goals faster.</p>
+              </div>
+            </div>
           </div>
         </div>
       <% end %>
 
-      <% section id: 'products' do %>
+      <% section class: 'section--alt', id: 'products' do %>
         <h2 class="section__title">Products</h2>
         <div class="grid grid--equal-height features">
           <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
@@ -99,106 +118,23 @@
         </div>
       <% end %>
 
-      <a href="/technology/#integrations" class="section section--small section--accent integrations">
-        <div class="site-wrap">
-          <div class="grid grid--center">
-            <div class="grid__col--xs-12 grid__col--md-6">
-              <h2>Integrate with the products you already use</h2>
-            </div>
-            <div class="grid__col--xs-12 grid__col--md-6">
-              <div class="integration">
-                <%= inline_svg("icons/yammer.svg", class: "icon icon--medium integration__icon") %>
-                <h4>Yammer</h4>
-              </div>
-              <div class="integration">
-                <%= inline_svg("icons/chatter.svg", class: "icon icon--medium integration__icon") %>
-                <h4>Chatter</h4>
-              </div>
-              <div class="integration">
-                <%= inline_svg("icons/sharepoint.svg", class: "icon icon--medium integration__icon") %>
-                <h4>Sharepoint</h4>
-              </div>
-              <div class="integration">
-                <%= inline_svg("icons/slack.svg", class: "icon icon--medium integration__icon") %>
-                <h4>Slack</h4>
-              </div>
-              <div class="integration">
-                <%= inline_svg("icons/linkedin.svg", class: "icon icon--medium integration__icon") %>
-                <h4>LinkedIn</h4>
-              </div>
-            </div>
+      <% section class: '' do %>
+        <div class="grid">
+          <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
+            <h2>Features</h2>
+            <ul class="list">
+              <li>Business Intelligence</li>
+              <li>Customizable dashboards</li>
+            </ul>
+          </div>
+          <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
+            <h2>Benefits</h2>
+            <ul class="list">
+              <li>Business Intelligence</li>
+            </ul>
           </div>
         </div>
-      </a>
-
-      <% section class: 'section--alt', id: 'features' do %>
-        <h2 class="section__title">Features</h2>
-        <div class="grid grid--equal-height features">
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <div class="feature">
-              <%= inline_svg("icons/content.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Content repository</h3>
-                <p>Provide easily-accessible best practices content and reusable material to managers and employees.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <div class="feature">
-              <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Hosting</h3>
-                <p>Hosted on the top rated Amazon Web Services provider for maximum security, robustness and performance.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <div class="feature">
-              <%= inline_svg("icons/metrics.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Business intelligence</h3>
-                <p>Get a full view of your company's demographic profile through configurable metrics and aggregate reporting.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <div class="feature">
-              <%= inline_svg("icons/internationalization.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Internationalization</h3>
-                <p>Remove traditional barriers and expand your communication reach with realtime language translation.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <div class="feature">
-              <%= inline_svg("icons/ui.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Simple UI</h3>
-                <p>A simple and intuitive user interface that engages more people to achieve your diversity goals faster.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <div class="feature">
-              <%= inline_svg("icons/dashboard.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Customizable dashboards</h3>
-                <p>Create multiple dashoards for Diversity &amp; Inclusion configurations tailored to your needs.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       <% end %>
-
-      <%= partial :pills %>
 
       <section class="section section--testimonial" style="background-image: url('/images/team.jpg');">
         <div class="site-wrap">
@@ -209,6 +145,30 @@
           </div>
         </div>
       </section>
+
+      <% section class: 'section--alt text-center integrations', id: 'products' do %>
+        <h2 class="section__title">Integrate with the products you already use</h2>
+        <div class="integration">
+          <%= inline_svg("icons/yammer.svg", class: "icon icon--medium integration__icon") %>
+          <h4>Yammer</h4>
+        </div>
+        <div class="integration">
+          <%= inline_svg("icons/chatter.svg", class: "icon icon--medium integration__icon") %>
+          <h4>Chatter</h4>
+        </div>
+        <div class="integration">
+          <%= inline_svg("icons/sharepoint.svg", class: "icon icon--medium integration__icon") %>
+          <h4>Sharepoint</h4>
+        </div>
+        <div class="integration">
+          <%= inline_svg("icons/slack.svg", class: "icon icon--medium integration__icon") %>
+          <h4>Slack</h4>
+        </div>
+        <div class="integration">
+          <%= inline_svg("icons/linkedin.svg", class: "icon icon--medium integration__icon") %>
+          <h4>LinkedIn</h4>
+        </div>
+      <% end %>
 
       <%= partial :sign_up %>
       <%= partial :footer %>

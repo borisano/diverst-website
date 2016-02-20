@@ -1,126 +1,8 @@
-// Page header
-
-.page-header {
-  background-color: $diverst-purple;
-  padding: 6em 0 4em;
-  text-align: center;
-  position: relative;
-
-  @include mq(small) {
-    padding: 7em 0 5.5em;
-  }
-
-  @include mq(medium) {
-    padding: 9.5em 0 6.5em;
-  }
-
-  @include mq(large) {
-    padding: 12em 0 10em;
-  }
-
-  .site-wrap > * {
-    color: $diverst-white;
-    opacity: 0;
-
-    .ready & {
-      animation: fade-in-up $time $curve both;
-
-      @for $i from 0 through 4 {
-        &:nth-child(#{$i}) {
-          animation-delay: $i * 0.1s;
-        }
-      }
-    }
-  }
-
-  h1 {
-    margin-bottom: 0.1em;
-  }
-
-  .site-wrap h2 {
-    color: rgba($diverst-white, 0.6);
-    font-weight: $font-weight-regular;
-    margin-bottom: 0;
-  }
-}
-
-.page-header__nav {
-  display: block;
-  position: absolute;
-  top: 26%;
-  color: $diverst-white;
-  display: none;
-  border-radius: $border-radius;
-  transition: background-color $time $curve;
-
-  .icon {
-    margin: 0;
-  }
-
-  @include mq(medium) {
-    display: block;
-    padding: 15px;
-
-    &:hover {
-      background-color: rgba(#000, 0.1);
-    }
-  }
-
-  @include mq(large) {
-    top: 40%;
-  }
-
-  &--prev {
-    left: 2em;
-  }
-
-  &--next {
-    right: 2em;
-  }
-}
-
-.page-header__icon {
-  fill: $diverst-white;
-  margin-bottom: 0.5em;
-  display: none;
-
-  @include mq(small) {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-  }
-
-  @include mq(medium) {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.page-header__image {
-  margin: 2em -1em -5em;
-  width: 800px;
-
-  @include mq(small) {
-    margin-top: 3em;
-    margin-bottom: -7em;
-  }
-
-  @include mq(medium) {
-    margin-bottom: -9em;
-  }
-
-  @include mq(large) {
-    margin-top: 4em;
-    margin-bottom: -12.5em;
-  }
-}
-
-
 // Header
 
 .header {
   position: relative;
-  padding: 8em 0 6em;
+  padding: 4.5em 0;
   color: $diverst-white;
   background-image: url('/images/header.jpg');
   background-size: cover;
@@ -170,27 +52,27 @@
   }
 
   @include mq(small) {
-    padding: 9.5em 0 8em;
+    padding: 6em 0;
   }
 
   @include mq(medium) {
-    padding: 13.5em 0 11em;
+    padding: 8em 0;
   }
 
   @include mq(large) {
-    padding: 16.5em 0 13em;
+    padding: 10em 0;
 
     &:after {
       background-color: rgba(#000, 0.25);
     }
   }
 
-  h1, h2, .btn {
+  h1, ul, .btn {
     opacity: 0;
   }
 
   h1,
-  h2 {
+  ul {
     text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
   }
 
@@ -199,10 +81,10 @@
     line-height: 1.1;
   }
 
-  h2 {
-    color: rgba($diverst-white, 0.7);
-    margin-bottom: 1.25em;
+  ul {
+    @extend h2;
     font-weight: $font-weight-regular;
+    color: rgba($diverst-white, 0.7);
   }
 
   .btn {

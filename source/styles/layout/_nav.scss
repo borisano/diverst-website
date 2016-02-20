@@ -2,12 +2,8 @@
 
 .nav {
   padding: 1.5em 0;
-  position: relative; // Position nav above header
-  color: $diverst-white;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: $diverst-white;
+  position: relative;
   width: 100%;
   @include z-index(nav);
 
@@ -34,20 +30,16 @@
 
 .nav__logo {
   float: left;
-  width: 130px;
-  fill: $diverst-white;
+  width: 140px;
+  fill: $diverst-purple;
   transition: color $time $curve;
 
-  .index & {
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-  }
-
   @include mq(medium) {
-    width: 120px;
+    width: 160px;
   }
 
   @include mq(large) {
-    width: 160px;
+    width: 180px;
   }
 }
 
@@ -62,11 +54,7 @@
   }
 
   .icon {
-    fill: $diverst-white;
-    
-    .index .header & {
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-    }
+    fill: $diverst-grey;
   }
 }
 
@@ -93,48 +81,32 @@
 
 .nav__link {
   position: relative;
-  color: rgba($diverst-white, 0.8);
-
-  .index & {
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
-  }
+  color: rgba($diverst-black, 0.8);
 
   &:hover,
   &:focus {
-    color: $diverst-white;
+    color: $diverst-black;
   }
 
   &--active {
-    color: $diverst-white;
+    color: $diverst-black;
     padding-bottom: 5px;
-    border-bottom: 2px solid rgba($diverst-white, 0.2);
+    border-bottom: 2px solid rgba($diverst-black, 0.2);
   }
 }
 
 .nav__dropdown {
-  fill: rgba($diverst-white, 0.8);
+  fill: rgba($diverst-black, 0.8);
   cursor: pointer;
   transition: transform $time $curve;
 
-  .index & {
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-  }
-
   .nav__link:hover &,
   .nav__link:focus & {
-    fill: $diverst-white;
+    fill: $diverst-black;
   }
 
   .js-product-nav-open & {
     transform: rotate(180deg);
-  }
-}
-
-.nav__btn {
-  
-  .index & {
-    background-color: $diverst-purple;
-    color: $diverst-white;
   }
 }
 

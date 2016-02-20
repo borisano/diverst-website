@@ -2,14 +2,9 @@
 
 .integrations {
   display: block;
-  text-align: center;
 
-  @include mq(medium) {
-    text-align: left;
-
-    h2 {
-      margin-bottom: 0;
-    }
+  h2 {
+    margin-bottom: 0.75em;
   }
 }
 
@@ -25,8 +20,4 @@
 
 .integration__icon {
   margin: 1em;
-
-  @include mq(medium) {
-
-  }
 }

@@ -1,21 +1,13 @@
 // Feature
 
 .features {
-  margin-bottom: -2em;
-
-  @include mq(medium) {
-    margin-bottom: -3em;
-  }
+  margin-bottom: -1em;
 }
 
 .feature {
   width: 100%;
-  margin-bottom: 2em;
   display: flex;
-
-  @include mq(medium) {
-    margin-bottom: 3em;
-  }
+  margin-bottom: 1em;
 
   h3 {
     display: inline-block;
@@ -63,6 +55,7 @@
   border-radius: $border-radius;
   padding: $gutter;
   border: 1px solid $diverst-border;
+  background-color: $diverst-white;
   display: flex;
   flex-direction: column;
   align-items: center;

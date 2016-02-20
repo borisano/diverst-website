@@ -22,10 +22,22 @@ helpers do
     data.menuElements.products[next_product_index].href
   end
 
+  def next_product_name
+    next_product_index = product_index(current_page.data.title) + 1
+    next_product_index = 0 if next_product_index > data.menuElements.products.length - 1
+    data.menuElements.products[next_product_index].title
+  end
+
   def prev_product_path
     prev_product_index = product_index(current_page.data.title) - 1
     prev_product_index = data.menuElements.products.length - 1 if prev_product_index < 0
     data.menuElements.products[prev_product_index].href
+  end
+
+  def prev_product_name
+    prev_product_index = product_index(current_page.data.title) - 1
+    prev_product_index = data.menuElements.products.length - 1 if prev_product_index < 0
+    data.menuElements.products[prev_product_index].title
   end
 
   def section(options, &block)
