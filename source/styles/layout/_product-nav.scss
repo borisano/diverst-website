@@ -53,10 +53,6 @@
   &:hover {
     transform: translate3d(0, -3px, 0);
   }
-
-  @include mq(large) {
-    height: 280px;
-  }
 }
 
 .product-nav__icon {

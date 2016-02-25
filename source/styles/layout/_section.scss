@@ -4,33 +4,13 @@
   background-color: $diverst-white;
   padding: 3em 0;
 
-  @include mq(small) {
-    padding: 4em 0;
-  }
-
   @include mq(medium) {
-    padding: 5em 0;
-  }
-
-  @include mq(large) {
-    padding: 6em 0;
+    padding: 4em 0;
   }
 }
 
 .section--small {
   padding: 2.5em 0;
-  
-  @include mq(small) {
-    padding: 3em 0;
-  }
-
-  @include mq(medium) {
-    padding: 3.5em 0;
-  }
-
-  @include mq(large) {
-    padding: 4em 0;
-  }
 }
 
 .section--accent {
@@ -90,11 +70,11 @@
 
 .section__title {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   position: relative;
 
   @include mq(medium) {
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
   }
 }
 

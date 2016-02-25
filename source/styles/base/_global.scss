@@ -54,7 +54,7 @@ a {
 }
 
 .site-wrap--narrow {
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 
@@ -67,11 +67,25 @@ a {
   &:last-child {
     margin-bottom: 0;
   }
+
+  li:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  &--unstyled {
+    list-style: none;
+  }
 }
 
-#page-wrap {
-  padding-top: 76px;
+.list__icon {
+  margin-left: -1.75em;
+  margin-right: 0.25em;
+}
 
+
+// Page wrap
+
+#page-wrap {
   @include mq(medium) {
     padding-top: 92px;
   }

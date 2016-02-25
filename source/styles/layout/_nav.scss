@@ -1,10 +1,9 @@
 // Nav
 
 .nav {
-  height: 76px;
-  line-height: 76px;
+  height: 64px;
+  line-height: 64px;
   background-color: $diverst-white;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,6 +11,7 @@
   @include z-index(nav);
 
   @include mq(medium) {
+    position: fixed;
     height: 92px;
     line-height: 92px;
   }

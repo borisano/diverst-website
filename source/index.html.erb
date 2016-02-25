@@ -20,7 +20,7 @@
     <div id="page-wrap">
       <%= partial :header %>
 
-      <% section class: '' do %>
+      <% section class: 'section--alt' do %>
         <div class="grid grid--equal-height features">
           <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
@@ -52,73 +52,75 @@
         </div>
       <% end %>
 
-      <% section class: 'section--alt', id: 'products' do %>
-        <h2 class="section__title">Products</h2>
-        <div class="grid grid--equal-height features">
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <a href="/products/manage-erg" class="feature feature--stacked text-center feature--outline">
-              <%= inline_svg("icons/manage.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Manage</h3>
-                <p>The first ERG/BRG management and reporting tool</p>
-                <span class="feature__link">Learn more</span>
-              </div>
-            </a>
-          </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <a href="/products/collaborate" class="feature feature--stacked text-center feature--outline">
-              <%= inline_svg("icons/collaborate.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Collaborate</h3>
-                <p>Engagement and inclusion for your D&amp;I process</p>
-                <span class="feature__link">Learn more</span>
-              </div>
-            </a>
-          </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <a href="/products/scope" class="feature feature--stacked text-center feature--outline">
-              <%= inline_svg("icons/scope.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Scope</h3>
-                <p>Your diversity segmentation analysis ally</p>
-                <span class="feature__link">Learn more</span>
-              </div>
-            </a>
-          </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <a href="/products/mentor" class="feature feature--stacked text-center feature--outline">
-              <%= inline_svg("icons/mentor.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Mentor</h3>
-                <p>Developing diversity talent at every level</p>
-                <span class="feature__link">Learn more</span>
-              </div>
-            </a>
-          </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <a href="/products/meet" class="feature feature--stacked text-center feature--outline">
-              <%= inline_svg("icons/meet.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>Meet</h3>
-                <p>Increasing diversity through introductions</p>
-                <span class="feature__link">Learn more</span>
-              </div>
-            </a>
-          </div>
-          <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-            <a href="#sign-up" class="feature feature--stacked text-center feature--outline">
-              <%= inline_svg("icons/more.svg", class: "icon feature__icon") %>
-              <div class="feature__content">
-                <h3>More to come</h3>
-                <p>We're working hard on developing new products</p>
-                <span class="feature__link">Get in touch</span>
-              </div>
-            </a>
+      <section class="section">
+        <div class="site-wrap site-wrap--narrow">
+          <h2 class="section__title">Products</h2>
+          <div class="grid grid--equal-height features">
+            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+              <a href="/products/manage-erg" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/manage.svg", class: "icon feature__icon") %>
+                <div class="feature__content">
+                  <h3>Manage</h3>
+                  <p>The first ERG/BRG management and reporting tool</p>
+                  <span class="feature__link">Learn more</span>
+                </div>
+              </a>
+            </div>
+            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+              <a href="/products/collaborate" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/collaborate.svg", class: "icon feature__icon") %>
+                <div class="feature__content">
+                  <h3>Collaborate</h3>
+                  <p>Engagement and inclusion for your D&amp;I process</p>
+                  <span class="feature__link">Learn more</span>
+                </div>
+              </a>
+            </div>
+            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+              <a href="/products/scope" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/scope.svg", class: "icon feature__icon") %>
+                <div class="feature__content">
+                  <h3>Scope</h3>
+                  <p>Your diversity segmentation analysis ally</p>
+                  <span class="feature__link">Learn more</span>
+                </div>
+              </a>
+            </div>
+            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+              <a href="/products/mentor" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/mentor.svg", class: "icon feature__icon") %>
+                <div class="feature__content">
+                  <h3>Mentor</h3>
+                  <p>Developing diversity talent at every level</p>
+                  <span class="feature__link">Learn more</span>
+                </div>
+              </a>
+            </div>
+            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+              <a href="/products/meet" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/meet.svg", class: "icon feature__icon") %>
+                <div class="feature__content">
+                  <h3>Meet</h3>
+                  <p>Increasing diversity through introductions</p>
+                  <span class="feature__link">Learn more</span>
+                </div>
+              </a>
+            </div>
+            <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
+              <a href="#sign-up" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/more.svg", class: "icon feature__icon") %>
+                <div class="feature__content">
+                  <h3>More to come</h3>
+                  <p>We're working hard on developing new products</p>
+                  <span class="feature__link">Get in touch</span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-      <% end %>
+      </section>
 
-      <% section class: '' do %>
+      <% section class: 'section--alt' do %>
         <div class="grid">
           <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
             <h2>Features</h2>
@@ -149,23 +151,23 @@
       <% section class: 'section--alt text-center integrations', id: 'products' do %>
         <h2 class="section__title">Integrate with the products you already use</h2>
         <div class="integration">
-          <%= inline_svg("icons/yammer-color.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/yammer-color.svg", class: "icon icon--large integration__icon") %>
           <h4>Yammer</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/chatter.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/chatter.svg", class: "icon icon--large integration__icon") %>
           <h4>Chatter</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/sharepoint-color.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/sharepoint-color.svg", class: "icon icon--large integration__icon") %>
           <h4>Sharepoint</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/slack-color.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/slack-color.svg", class: "icon icon--large integration__icon") %>
           <h4>Slack</h4>
         </div>
         <div class="integration">
-          <%= inline_svg("icons/linkedin-color.svg", class: "icon icon--medium integration__icon") %>
+          <%= inline_svg("icons/linkedin-color.svg", class: "icon icon--large integration__icon") %>
           <h4>LinkedIn</h4>
         </div>
       <% end %>

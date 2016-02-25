@@ -47,8 +47,6 @@ module ImageHelpers
         svg["class"] = options[:class]
       end
 
-      doc.css('style').remove
-
       doc
     end
   end

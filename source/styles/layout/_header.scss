@@ -2,7 +2,7 @@
 
 .header {
   position: relative;
-  padding: 4.5em 0;
+  padding: 3.5em 0;
   color: $diverst-white;
   background-image: url('/images/header.jpg');
   background-size: cover;
@@ -41,15 +41,15 @@
   }
 
   @include mq(small) {
-    padding: 6em 0;
+    padding: 4.5em 0;
   }
 
   @include mq(medium) {
-    padding: 8em 0;
+    padding: 6em 0;
   }
 
   @include mq(large) {
-    padding: 10em 0;
+    padding: 7.5em 0;
 
     &:before {
       background-color: rgba(#000, 0.25);
@@ -74,6 +74,11 @@
     font-weight: $font-weight-regular;
     margin-bottom: 0;
     color: rgba($diverst-white, 0.7);
+
+    .icon {
+      margin-right: 0.25em;
+      fill: rgba($diverst-white, 0.7);
+    }
   }
 
   .btn {
