@@ -95,10 +95,14 @@ a {
 // Images
 
 .certification {
-  width: 100px;
+  width: 80px;
 
   @include mq(medium) {
-    width: 150px;
+    width: 100px;
     margin: 0 $gutter/3;
+  }
+
+  @include mq(large) {
+    width: 120px;
   }
 }
