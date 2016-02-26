@@ -1,0 +1,51 @@
+// Modal
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include z-index(modal);
+}
+
+.modal__dialog {
+  position: relative;
+  margin: 10% auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: $diverst-white;
+  padding: 2em;
+  border-radius: $border-radius;
+  @include z-index(modal-dialog);
+
+  @include mq(medium) {
+    padding: 3em;
+  }
+}
+
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.6);
+  @include z-index(modal-backdrop);
+}
+
+
+// Header
+
+.modal__header {
+  display: flex;
+  margin-bottom: 1.5em;
+}
+
+.modal__title {
+  margin-bottom: 0;
+}
+
+.modal__close {
+  margin-left: auto;
+}

@@ -40,13 +40,12 @@ meta_description: Manage simplifies ERG management by helping you govern and tra
 <% section class: '' do %>
   <div class="grid grid--center grid--reverse">
     <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
-      <h2>ERG Management and Segmentation</h2>
-      <ul class="list">
-        <li>Quick and easy user onboarding through Yammer, Chatter, SharePoint, Slack, .CSV, HRMS or manual invitation</li>
-        <li>Centralized resource repository for D&I practitioners and ERG managers to store best practices, videos and much more</li>
-        <li>Easily publish general or ERG specific news, messages and events all from a simple dashboard</li>
-        <li>Establish deeper, more granular groups through segmentation capabilities (i.e.: LGBT Veterans Aged 40+)</li>
-        <li>Hold online ERG governance meetings through embedded video and whiteboard functionality</li>
+      <h2>Unmatched Visibility and Engagement</h2>
+      <ul class="list list--unstyled">
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Dedicated dashboards provide each ERG its own branding, events, messages and content</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Easily identify who manages each ERG and connect with them through our LinkedIn integration</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Live leaderboards and game mechanics to showcase top ERG performers and top performing ERGs</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Insight into the latest members of each ERG</li>
       </ul>
     </div>
     <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
@@ -55,105 +54,20 @@ meta_description: Manage simplifies ERG management by helping you govern and tra
   </div>
 <% end %>
 
-
-
-<% section class: 'section--alt', id: 'features' do %>
-  <div class="grid grid--equal-height features">
+<% section class: 'section--alt' do %>
+  <div class="grid grid--center">
     <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Easy onboarding</h3>
-          <p>Onboard your employees quickly and easily</p>
-          <img class="feature__image" src="/images/screenshots/manage/onboarding.png">
-        </div>
-      </div>
+      <h2>Actionable Analytics</h2>
+      <ul class="list list--unstyled">
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Real-time ERG metrics allow you to tap into membership stats and engagement levels</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Create custom reports with a few clicks, no PhD required</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Time-based metrics provide visibility and transparency into D&I program successes</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Export results to .CSV to easily put together the annual D&I report</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Activity and segmentation BI reveal potential under-representation and unconscious biases from multiple vantage points</li>
+      </ul>
     </div>
     <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Resources</h3>
-          <p><%= erg_variant[:abbr] %> playbook, CMS and document repository</p>
-          <img class="feature__image" src="/images/screenshots/manage/resources.png">
-        </div>
-      </div>
-    </div>
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>News and events</h3>
-          <p>Manage your news and events from a single dashboard</p>
-          <img class="feature__image" src="/images/screenshots/manage/news.png">
-        </div>
-      </div>
-    </div>
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Custom reports</h3>
-          <p>Measure engagement with on-demand custom reports</p>
-          <img class="feature__image" src="/images/screenshots/manage/reports.png">
-        </div>
-      </div>
+      <img class="feature__image" src="/images/screenshots/manage/onboarding.png">
     </div>
   </div>
 <% end %>
-
-<% section class: '' do %>
-  <div class="grid">
-    <div class="grid__col--xs-12">
-      <h2 class="section__title">Other features</h2>
-    </div>
-  </div>
-  <div class="grid grid--equal-height features">
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0 grid__col--lg-4">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>User management</h3>
-          <p>Import lists of users and segment them according to their membership(s).</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0 grid__col--lg-4">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Role-based permissions</h3>
-          <p>Provide individual <%= erg_variant[:full].downcase %> managers their own dashboards and metrics.</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0 grid__col--lg-4">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Configurable</h3>
-          <p>Configure each <%= erg_variant[:full].downcase %> according to its unique characteristics.</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0 grid__col--lg-4">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Dedicated dashboards</h3>
-          <p>Each <%= erg_variant[:abbr] %> gets its own branding, events, messages and content through its own dashboard.</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0 grid__col--lg-4">
-      <div class="feature feature--stacked">
-        <div class="feature__content">
-          <h3>Virtual meetings</h3>
-          <p>Hold governance meetings online through embedded video and whiteboard functionality.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
-
-<section class="section section--testimonial" style="background-image: url('/images/<%= current_page.data.testimonial_image %>');">
-  <div class="site-wrap">
-    <div class="grid">
-      <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-8 grid__col--md-offset-2">
-        <h2>"Spend more time creating a culture of diversity and inclusion rather than administrating its activities"</h2>
-      </div>
-    </div>
-  </div>
-</section>

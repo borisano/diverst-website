@@ -4,40 +4,6 @@ form {
   margin: 0 -#{$gutter/4};
 }
 
-.form--inline {
-  margin: 0 -#{$gutter/4};
-
-  @include mq(medium) {
-    display: flex;
-
-    .btn,
-    .field__input {
-      height: 55px;
-      line-height: 55px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  .btn {
-    width: 100%;
-
-    @include mq(medium) {
-      width: auto;
-    }
-  }
-
-  .field {
-    margin-bottom: 1.5em;
-    padding: 0 $gutter/4;
-    flex: 1;
-
-    @include mq(medium) {
-      margin-bottom: 0;
-    }
-  }
-}
-
 .form__section {
   margin-bottom: 1em;
 
@@ -58,31 +24,14 @@ form {
 
 .field {
   position: relative;
-  margin-bottom: 1em;
-  padding: 0 $gutter/4;
   float: left;
   width: 100%;
   text-align: left;
-
-  &--third {
-    @include mq(small) {
-      width: 33.333%;
-    }
-  }
-
-  &--quarter {
-    @include mq(small) {
-      width: 50%;
-    }
-    @include mq(large) {
-      width: 25%;
-    }
-  }
 }
 
 .field__label {
   display: block;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   font-size: 80%;
 }
 
@@ -97,7 +46,7 @@ form {
 .field__input {
   width: 100%;
   border-radius: $border-radius;
-  padding: 1em;
+  padding: 0.85em;
   margin: 0;
   box-shadow: 0;
   outline: 0;

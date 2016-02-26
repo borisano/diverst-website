@@ -1,6 +1,6 @@
 // Z-index
 
-$z-indexed-items: 'header-content', 'page-wrap', 'product-nav', 'nav', 'overlay', 'mobile-nav', 'fixed-product-nav';
+$z-indexed-items: 'header-content', 'page-wrap', 'product-nav', 'nav', 'overlay', 'mobile-nav', 'fixed-product-nav', 'modal', 'modal-backdrop', 'modal-dialog';
 
 @mixin z-index($key) {
   z-index: index($z-indexed-items, $key);

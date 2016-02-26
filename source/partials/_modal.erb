@@ -1,0 +1,35 @@
+<div class="modal">
+  <div class="modal__dialog">
+    <div class="modal__header">
+      <h2 class="modal__title">Title</h2>
+      <button class="modal__close"><%= inline_svg("icons/close.svg", class: "icon") %></button>
+    </div>
+    <div class="grid grid--tight">
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Name</label>
+          <input class="field__input" type="text" placeholder="John Doe">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Email</label>
+          <input class="field__input" type="email" placeholder="john.doe@acme.com">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Company</label>
+          <input class="field__input" type="text" placeholder="Acme Inc.">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Phone</label>
+          <input class="field__input" type="tel" placeholder="514-439-2392">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal__backdrop"></div>
+</div>

@@ -27,6 +27,13 @@ $(".product-nav-trigger").click(function() {
 });
 
 
+// Product nav
+
+$(".demo-modal-trigger").click(function() {
+  $("body").toggleClass("js-demo-modal-open");
+});
+
+
 // Mobile nav
 
 $(".nav__hamburger, .mobile-nav__close").click(function() {

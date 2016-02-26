@@ -13,6 +13,11 @@ $columns: 12;
     margin-bottom: -($gutter/1.5);
   }
 
+  &--tight {
+    margin-left: (-$gutter/4);
+    margin-right: (-$gutter/4);
+  }
+
   &--reverse {
     @include mq(medium) {
       flex-direction: row-reverse;
@@ -40,6 +45,11 @@ $columns: 12;
 
   @include mq(medium) {
     margin-bottom: ($gutter/1.5);
+  }
+
+  .grid--tight & {
+    padding-left: ($gutter/4);
+    padding-right: ($gutter/4);
   }
 }
 
