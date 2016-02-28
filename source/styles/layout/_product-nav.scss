@@ -9,10 +9,10 @@
   display: none;
   -webkit-backface-visibility: hidden;
   padding: 0 $gutter/2;
-  @include z-index(product-nav);
   transform: translate3d(0, -100%, 0);
   transition: transform $time $curve, box-shadow $time $curve;
   box-shadow: none;
+  @include z-index(product-nav);
 
   .js-product-nav-open & {
     transform: none;

@@ -6,6 +6,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $time $curve, visibility $time $curve;
   @include z-index(modal);
 }
 
@@ -48,4 +53,13 @@
 
 .modal__close {
   margin-left: auto;
+  margin-top: -0.25em; // Bring close icon up slightly
+}
+
+
+// Demo
+
+.js-demo-modal-open .js-demo-modal {
+  opacity: 1;
+  visibility: visible;
 }

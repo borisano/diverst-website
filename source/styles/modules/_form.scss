@@ -24,7 +24,6 @@ form {
 
 .field {
   position: relative;
-  float: left;
   width: 100%;
   text-align: left;
 }
@@ -32,7 +31,7 @@ form {
 .field__label {
   display: block;
   margin-bottom: 0.5em;
-  font-size: 80%;
+  font-size: 85%;
 }
 
 .field__error {
@@ -46,13 +45,16 @@ form {
 .field__input {
   width: 100%;
   border-radius: $border-radius;
+  background-color: transparent;
   padding: 0.85em;
   margin: 0;
   box-shadow: 0;
+  line-height: normal;
   outline: 0;
   color: $diverst-black;
   border: 1px solid $diverst-border;
-  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
   &:invalid {
     -moz-box-shadow: none; // Remove red border around input in Firefox
@@ -66,5 +68,25 @@ form {
   &:focus {
     border-color: $diverst-purple;
     box-shadow: 0px 0px 0px 1px $diverst-purple;
+  }
+}
+
+textarea {
+  min-height: 120px;
+}
+
+select {
+  background-image: url('/images/icons/dropdown.svg');
+  background-position: right 0.85em center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.radio,
+.checkbox {
+  margin-right: 0.5em;
+
+  + label {
+    cursor: pointer;
   }
 }

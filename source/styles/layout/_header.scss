@@ -72,13 +72,22 @@
   }
 
   .h2 {
+    position: relative;
+    padding-left: 2.5rem;
     font-weight: $font-weight-regular;
     margin-bottom: 0;
     color: rgba($diverst-white, 0.7);
 
     .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
       margin-right: 0.25em;
       fill: rgba($diverst-white, 0.7);
+
+      @include mq(medium) {
+        top: 0.5rem;
+      }
     }
   }
 

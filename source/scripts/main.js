@@ -29,8 +29,8 @@ $(".product-nav-trigger").click(function() {
 
 // Product nav
 
-$(".demo-modal-trigger").click(function() {
-  $("body").toggleClass("js-demo-modal-open");
+$(".js-demo-modal-trigger, .modal__close").click(function() {
+  $("body").toggleClass("js-demo-modal-open hidden");
 });
 
 
