@@ -1,6 +1,7 @@
 // Modal
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -70,4 +71,5 @@
 .js-demo-modal-open .js-demo-modal {
   opacity: 1;
   visibility: visible;
+  display: block;
 }

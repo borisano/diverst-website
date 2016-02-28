@@ -24,6 +24,7 @@
 
   .savings__section {
     padding: 30px;
+    margin: 0;
   }
 
   * {
@@ -44,10 +45,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &--sum {
     h1 {

@@ -1,0 +1,22 @@
+// Careers
+
+.job {
+  cursor: pointer;
+  margin-bottom: 3em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.job__title {
+  margin-bottom: 0;
+}
+
+.job__location {
+  text-transform: capitalize;
+}
+
+.job__description {
+  margin-top: 1em;
+}

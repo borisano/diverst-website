@@ -13,38 +13,54 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
       <h3>Contact info</h3>
       <form action="#">
         <div class="form__section">
-          <div class="field field--third">
-            <label class="field__label">Name</label>
-            <input class="field__input" type="text" placeholder="John Doe" data-bind="value: name">
-          </div>
-          <div class="field field--third">
-            <label class="field__label">Email</label>
-            <input class="field__input" type="email" placeholder="john@example.com" required data-bind="value: email">
-          </div>
-          <div class="field field--third">
-            <label class="field__label">Phone</label>
-            <input class="field__input" type="tel" placeholder="123-456-7890" required data-bind="value: phone">
+          <div class="grid grid--tight">
+            <div class="grid__col--xs-12 grid__col--md-4">
+              <div class="field">
+                <label class="field__label">Name</label>
+                <input class="field__input" type="text" placeholder="John Doe" data-bind="value: name">
+              </div>
+            </div>
+            <div class="grid__col--xs-12 grid__col--md-4">
+              <div class="field">
+                <label class="field__label">Email</label>
+                <input class="field__input" type="email" placeholder="john@example.com" required data-bind="value: email">
+              </div>
+            </div>
+            <div class="grid__col--xs-12 grid__col--md-4">
+              <div class="field">
+                <label class="field__label">Phone</label>
+                <input class="field__input" type="tel" placeholder="123-456-7890" required data-bind="value: phone">
+              </div>
+            </div>
           </div>
         </div>
         <div class="form__section">
-          <div class="field">
-            <h3>Organization info</h3>
-          </div>
-          <div class="field field--quarter">
-            <label class="field__label">No of employees</label>
-            <input class="field__input" type="number" placeholder="100" required data-bind="textInput: nbEmployeesInput" min="0">
-          </div>
-          <div class="field field--quarter">
-            <label class="field__label">Average salary</label>
-            <input class="field__input" type="number" placeholder="$50,000" required data-bind="textInput: averageSalaryInput" min="0">
-          </div>
-          <div class="field field--quarter">
-            <label class="field__label">Turnover rate</label>
-            <input class="field__input" type="number" placeholder="20%" required data-bind="textInput: turnoverRate" min="0" max="100">
-          </div>
-          <div class="field field--quarter">
-            <label class="field__label">Size of D&amp;I team</label>
-            <input class="field__input" type="number" placeholder="10" required data-bind="textInput: sizeOfDITeam" min="0">
+          <h3>Organization info</h3>
+          <div class="grid grid--tight">
+            <div class="grid__col--xs-12 grid__col--md-6 grid__col--lg-3">
+              <div class="field">
+                <label class="field__label">No of employees</label>
+                <input class="field__input" type="number" placeholder="100" required data-bind="textInput: nbEmployeesInput" min="0">
+              </div>
+            </div>
+            <div class="grid__col--xs-12 grid__col--md-6 grid__col--lg-3">
+              <div class="field">
+                <label class="field__label">Average salary</label>
+                <input class="field__input" type="number" placeholder="$50,000" required data-bind="textInput: averageSalaryInput" min="0">
+              </div>
+            </div>
+            <div class="grid__col--xs-12 grid__col--md-6 grid__col--lg-3">
+              <div class="field">
+                <label class="field__label">Turnover rate</label>
+                <input class="field__input" type="number" placeholder="20%" required data-bind="textInput: turnoverRate" min="0" max="100">
+              </div>
+            </div>
+            <div class="grid__col--xs-12 grid__col--md-6 grid__col--lg-3">
+              <div class="field">
+                <label class="field__label">Size of D&amp;I team</label>
+                <input class="field__input" type="number" placeholder="10" required data-bind="textInput: sizeOfDITeam" min="0">
+              </div>
+            </div>
           </div>
         </div>
         <div class="field">
@@ -177,11 +193,9 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
       </div>
 
       <div class="savings savings--total">
-        <div class="grid grid--equal-height">
-          <div class="grid__col--xs-12 savings__section">
-            <h4>Total</h4>
-            <h1>$<span data-bind="text: totalSavings"></span></h1>
-          </div>
+        <div class="savings__section">
+          <h4>Total</h4>
+          <h1>$<span data-bind="text: totalSavings"></span></h1>
         </div>
       </div>
 

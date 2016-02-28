@@ -1,0 +1,49 @@
+---
+title: "Company"
+subtitle: "The first enterprise D&I software platform"
+meta_description: Calculate your diversity ROI by measuring the effects of diversity on absenteeism, retention and turnover rates, HR time savings and productivity gains.
+---
+
+<% section class: '' do %>
+  <div class="grid">
+    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-8 grid__col--md-offset-2">
+      <p class="large">Diverst is a software company offering a diversity & inclusion (D&I) platform that helps organizations increase traction for and obtain ROI from their diversity initiatives.</p>
+      <p class="large">Diverst technology provides solutions to organizations that have hired diverse talent and are now looking to move to the next step – inclusion and culture building. Diverst fosters authenticity and drives engagement; enabling organizations to manage, grow and track the progress of their D&I program – to fully deliver on the promise of diversity and inclusion.</p>
+    </div>
+  </div>
+<% end %>
+
+<% section class: 'section--alt' do %>
+  <div class="grid">
+    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
+      <h3>Why choose Diverst?</h3>
+      <p>We are the pioneers of D&I software technology – successfully meshing management and inclusion of your diversity initiatives.</p>
+      <p>We have a diverse team of experts who have involved themselves with D&I and enterprise software for over 15 years. The deep process knowledge and best practices help us provide our clients with successful implementations, positive ROI and growth towards their D&I program.</p>
+    </div>
+    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-6 grid__col--md-offset-0">
+      <h3>Our promise</h3>
+      <ul class="list list--unstyled">
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Always listen to your questions/concerns</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Address requests as promptly as possible</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Remain user-friendly and simple</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Allow you to connect Diverst with tools you already use</li>
+        <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Take your feedback into consideration for product development</li>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<% section class: '' do %>
+  <div class="grid">
+    <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-8 grid__col--md-offset-2">
+      <h2 class="section__title">Careers</h2>
+      <div id="jobs-container">
+        <div class="jobs-list"></div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<% content_for :page_scripts do %>
+  <%= javascript_include_tag 'careers' %>
+<% end %>
