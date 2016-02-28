@@ -30,7 +30,7 @@ $(".product-nav-trigger").click(function() {
 // Product nav
 
 $(".js-demo-modal-trigger, .modal__close").click(function() {
-  $("body").toggleClass("js-demo-modal-open hidden");
+  $("body").toggleClass("js-modal-open js-demo-modal-open hidden");
 });
 
 

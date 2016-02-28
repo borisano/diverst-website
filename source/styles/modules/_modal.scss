@@ -16,13 +16,21 @@
 
 .modal__dialog {
   position: relative;
-  margin: 10% auto;
+  margin: 8% auto;
   width: 90%;
   max-width: 800px;
   background-color: $diverst-white;
   padding: 2em;
   border-radius: $border-radius;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: opacity $time $curve, transform $time $curve;
   @include z-index(modal-dialog);
+
+  .js-modal-open & {
+    opacity: 1;
+    transform: none;
+  }
 
   @include mq(medium) {
     padding: 3em;
