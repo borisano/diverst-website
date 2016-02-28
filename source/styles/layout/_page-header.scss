@@ -47,9 +47,8 @@
 }
 
 .page-header__nav {
-  display: block;
   position: absolute;
-  top: 26%;
+  top: 220px;
   overflow: hidden;
   color: $diverst-white;
   display: none;
@@ -59,6 +58,7 @@
   max-width: 72px;
   min-height: 72px;
   line-height: 72px;
+  @include clearfix;
 
   &:hover {
     max-width: 280px;
@@ -75,7 +75,6 @@
 
   span {
     opacity: 0;
-    transform: translate3d(0, -50%, 0);
     transition: opacity $time $curve;
   }
 
@@ -90,6 +89,7 @@
 
     span {
       padding: 0 24px 0 70px;
+      float: left;
     }
 
     .icon {
@@ -101,6 +101,7 @@
     right: 2em;
 
     span {
+      float: right;
       padding: 0 70px 0 24px;
     }
 
