@@ -43,6 +43,13 @@
           <input type="radio" class="radio" name="network-group-name" id="network-group-eng" value="ENGs" data-bind="checked: networkGroupName">
           <label for="network-group-eng">ENGs</label>
         </div>
+        <div class="field">
+          <input type="radio" class="radio" name="network-group-name" id="network-group-other" value="Other" data-bind="checked: networkGroupName">
+          <label for="network-group-other">Other</label>
+        </div>
+        <div class="field" data-bind="visible: isCustomNetworkGroupNameVisible" style="margin-top: 5px;">
+          <input class="field__input" type="text" placeholder="Network group name" name="other-network-group-name" data-bind="value: customNetworkGroupName">
+        </div>
       </div>
       <div class="grid__col--xs-12 grid__col--md-6">
         <div class="field">
@@ -110,10 +117,3 @@
   </div>
   <div class="modal__backdrop"></div>
 </div>
-
-<% content_for :page_scripts do %>
-  <%= javascript_include_tag 'demo-modal' %>
-  <script>
-    ko.applyBindings(new DemoModal(), document.getElementById('js-demo-modal'));
-  </script>
-<% end %>

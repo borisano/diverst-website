@@ -30,8 +30,12 @@ $columns: 12;
     }
   }
 
+  &--center {
+    justify-content: center;
+  }
+
   @include mq(medium) {
-    &--center {
+    &--middle {
       display: flex;
       align-items: center;
     }

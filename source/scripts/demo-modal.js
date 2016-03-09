@@ -29,6 +29,7 @@ var DemoModal = function() {
   self.interestedIn = ko.observableArray();
   self.message = ko.observable();
   self.hearAboutUs = ko.observable();
+  self.customNetworkGroupName = ko.observable();
 
 
   // View functions
@@ -41,12 +42,16 @@ var DemoModal = function() {
     }
   };
 
+  self.isCustomNetworkGroupNameVisible = ko.computed(function() {
+    return self.networkGroupName() === "Other";
+  });
+
 
   // Private functions
 
   var sendInfoToCRM = function() {
     $.getJSON('http://ipinfo.io', function(visitorInfo) { // Get visitor info using a 3rd party service
-      $.post('//app.diverst.com/website/demo', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
+      $.post('//app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
     });
   };
 

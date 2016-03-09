@@ -5,6 +5,7 @@
 //= require knockout-validation
 //= require contact-form
 //= require tooltipster
+//= require demo-modal
 
 // Fade in body when page is loaded
 
@@ -83,6 +84,6 @@ ko.validation.rules['companyEmail'] = {
 
 ko.validation.registerExtenders();
 
-// Mount the Knockout contact form
+// Mount the Knockout demo modal
 
-ko.applyBindings(new ContactForm(), document.getElementById('sign-up'));
+ko.applyBindings(new DemoModal(), document.getElementById('js-demo-modal'));
