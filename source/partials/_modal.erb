@@ -4,116 +4,116 @@
       <h2 class="modal__title">Request a demo</h2>
       <button class="modal__close"><%= inline_svg("icons/close.svg", class: "icon") %></button>
     </div>
-    <form>
-      <div class="grid grid--tight">
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <div class="field">
-            <label class="field__label">Name</label>
-            <input class="field__input" type="text" placeholder="John Doe">
-          </div>
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <div class="field">
-            <label class="field__label">Email</label>
-            <input class="field__input" type="email" placeholder="john.doe@acme.com">
-          </div>
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <div class="field">
-            <label class="field__label">Company</label>
-            <input class="field__input" type="text" placeholder="Acme Inc.">
-          </div>
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <div class="field">
-            <label class="field__label">Phone</label>
-            <input class="field__input" type="tel" placeholder="514-439-2392">
-          </div>
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <p class="field__label">How does your organization refer to Network Groups?</p>
-          <div class="field">
-            <input type="radio" class="radio" id="network-group-erg" name="network-group">
-            <label for="network-group-erg">ERGs</label>
-          </div>
-          <div class="field">
-            <input type="radio" class="radio" id="network-group-brg" name="network-group">
-            <label for="network-group-brg">BRGs</label>
-          </div>
-          <div class="field">
-            <input type="radio" class="radio" id="network-group-eng" name="network-group">
-            <label for="network-group-eng">ENGs</label>
-          </div>
-  <!--         <div class="field">
-            <input type="radio" class="radio" id="radio-other" name="network-group">
-            <label for="radio-other">Other</label>
-            <input class="field__input" type="text" placeholder="Please specify">
-          </div> -->
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <div class="field">
-            <label class="field__label">How many ERGs do you have?</label>
-            <input class="field__input" type="number" placeholder="100">
-          </div>
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <p class="field__label">Are you running Global D&amp;I initiatives?</p>
-          <div class="field">
-            <input type="radio" class="radio" id="di-initiative-yes" name="di-initiative">
-            <label for="di-initiative-yes">Yes</label>
-          </div>
-          <div class="field">
-            <input type="radio" class="radio" id="di-initiative-no" name="di-initiative">
-            <label for="di-initiative-no">No</label>
-          </div>
-        </div>
-        <div class="grid__col--xs-12 grid__col--md-6">
-          <p class="field__label">Which products are you most interested in seeing?</p>
-          <div class="field">
-            <input type="checkbox" class="checkbox" id="products-manage" name="products">
-            <label for="products-manage">Manage</label>
-          </div>
-          <div class="field">
-            <input type="checkbox" class="checkbox" id="products-collaborate" name="products">
-            <label for="products-collaborate">Collaborate</label>
-          </div>
-          <div class="field">
-            <input type="checkbox" class="checkbox" id="products-scope" name="products">
-            <label for="products-scope">Scope</label>
-          </div>
-          <div class="field">
-            <input type="checkbox" class="checkbox" id="products-mentor" name="products">
-            <label for="products-mentor">Mentor</label>
-          </div>
-          <div class="field">
-            <input type="checkbox" class="checkbox" id="products-meet" name="products">
-            <label for="products-meet">Meet</label>
-          </div>
-          <div class="field">
-            <input type="checkbox" class="checkbox" id="products-all" name="products">
-            <label for="products-all">All of them</label>
-          </div>
-        </div>
-        <div class="grid__col--xs-12">
-          <div class="field">
-            <label class="field__label">What are you trying to accomplish with your D&I initiative? What are your pain points?</label>
-            <textarea class="field__input" type="number" placeholder="Write a message..."></textarea>
-          </div>
-        </div>
-        <div class="grid__col--xs-12">
-          <div class="field">
-            <p class="field__label">How did you hear about us?</p>
-            <select class="field__input">
-              <option>Option 1</option>
-            </select>
-          </div>
-        </div>
-        <div class="grid__col--xs-12">
-          <button class="btn btn--primary btn--full">Submit</button>
+    <div class="grid grid--tight">
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Name</label>
+          <input class="field__input" type="text" placeholder="John Doe" data-bind="value: name">
         </div>
       </div>
-    </form>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Email</label>
+          <input class="field__input" type="email" placeholder="john.doe@acme.com" data-bind="value: email">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Company</label>
+          <input class="field__input" type="text" placeholder="Acme Inc." data-bind="value: company">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">Phone</label>
+          <input class="field__input" type="tel" placeholder="514-439-2392" data-bind="value: phone">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <p class="field__label">How does your organization refer to Network Groups?</p>
+        <div class="field">
+          <input type="radio" class="radio" name="network-group-name" id="network-group-erg" value="ERGs" data-bind="checked: networkGroupName">
+          <label for="network-group-erg">ERGs</label>
+        </div>
+        <div class="field">
+          <input type="radio" class="radio" name="network-group-name" id="network-group-brg" value="BRGs" data-bind="checked: networkGroupName">
+          <label for="network-group-brg">BRGs</label>
+        </div>
+        <div class="field">
+          <input type="radio" class="radio" name="network-group-name" id="network-group-eng" value="ENGs" data-bind="checked: networkGroupName">
+          <label for="network-group-eng">ENGs</label>
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <div class="field">
+          <label class="field__label">How many ERGs do you have?</label>
+          <input class="field__input" type="number" placeholder="100" data-bind="value: nbERGs">
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <p class="field__label">Are you running Global D&amp;I initiatives?</p>
+        <div class="field">
+          <input type="radio" class="radio" name="runnning-di-initiative" value="Yes" id="di-initiative-yes" data-bind="checked: hasDIInitiatives">
+          <label for="di-initiative-yes">Yes</label>
+        </div>
+        <div class="field">
+          <input type="radio" class="radio" name="runnning-di-initiative" value="No" id="di-initiative-no" data-bind="checked: hasDIInitiatives">
+          <label for="di-initiative-no">No</label>
+        </div>
+      </div>
+      <div class="grid__col--xs-12 grid__col--md-6">
+        <p class="field__label">Which products are you most interested in seeing?</p>
+        <div class="field">
+          <input type="checkbox" class="checkbox" id="products-manage" value="Manage" data-bind="checked: interestedIn">
+          <label for="products-manage">Manage</label>
+        </div>
+        <div class="field">
+          <input type="checkbox" class="checkbox" id="products-collaborate" value="Collaborate" data-bind="checked: interestedIn">
+          <label for="products-collaborate">Collaborate</label>
+        </div>
+        <div class="field">
+          <input type="checkbox" class="checkbox" id="products-scope" value="Scope" data-bind="checked: interestedIn">
+          <label for="products-scope">Scope</label>
+        </div>
+        <div class="field">
+          <input type="checkbox" class="checkbox" id="products-mentor" value="Mentor" data-bind="checked: interestedIn">
+          <label for="products-mentor">Mentor</label>
+        </div>
+        <div class="field">
+          <input type="checkbox" class="checkbox" id="products-meet" value="Meet" data-bind="checked: interestedIn">
+          <label for="products-meet">Meet</label>
+        </div>
+      </div>
+      <div class="grid__col--xs-12">
+        <div class="field">
+          <label class="field__label">What are you trying to accomplish with your D&I initiative? What are your pain points?</label>
+          <textarea class="field__input" placeholder="Write a message..." data-bind="value: message"></textarea>
+        </div>
+      </div>
+      <div class="grid__col--xs-12">
+        <div class="field">
+          <p class="field__label">How did you hear about us?</p>
+          <select class="field__input" data-bind="value: hearAboutUs">
+            <option value="-">Please choose one...</option>
+            <option value="Search engine">Search engine</option>
+            <option value="Advertisement">Advertisement</option>
+            <option value="Event">Event</option>
+            <option value="Word of mouth">Word of mouth</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid__col--xs-12">
+        <button class="btn btn--primary btn--full" data-bind="click: submitRequest">Submit</button>
+      </div>
+    </div>
 
   </div>
   <div class="modal__backdrop"></div>
 </div>
+
+<% content_for :page_scripts do %>
+  <%= javascript_include_tag 'demo-modal' %>
+  <script>
+    ko.applyBindings(new DemoModal(), document.getElementById('js-demo-modal'));
+  </script>
+<% end %>

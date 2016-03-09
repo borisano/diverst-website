@@ -5,7 +5,7 @@ subtitle: "Diversity by the numbers"
 meta_description: Calculate your diversity ROI by measuring the effects of diversity on absenteeism, retention and turnover rates, HR time savings and productivity gains.
 ---
 
-<% section class: 'calculator', id: 'roi-calculator' do %>
+<% section class: 'calculator', id: 'js-roi-calculator' do %>
 
   <div class="grid">
     <div class="grid__col--xs-12 grid__col--md-10 grid__col--md-offset-1 grid__col--lg-8 grid__col--lg-offset-2">
@@ -206,6 +206,6 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
 <% content_for :page_scripts do %>
   <%= javascript_include_tag 'roi-calculator' %>
   <script>
-    ko.applyBindings(new ROICalculator(), document.getElementById('roi-calculator'));
+    ko.applyBindings(new ROICalculator(), document.getElementById('js-roi-calculator'));
   </script>
 <% end %>
