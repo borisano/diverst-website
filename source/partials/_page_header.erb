@@ -1,4 +1,4 @@
-<div class="page-header">
+<div class="page-header" <% if defined? background_image %>style="background-image: url(<%= image_path("screenshots/#{current_page.data.title.downcase}/blur.jpg") %>);"<% end %>>
   <div class="site-wrap">
     <% if current_page.data.icon %>
       <%= inline_svg("icons/#{current_page.data.icon}.svg", class: "icon page-header__icon") %>

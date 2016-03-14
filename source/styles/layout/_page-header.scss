@@ -7,6 +7,9 @@
   padding: 4em 0;
   text-align: center;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   @include mq(small) {
     padding: 5em 0;

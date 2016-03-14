@@ -25,7 +25,7 @@
         <div class="grid grid--equal-height features">
           <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
-              <%= inline_svg("icons/content.svg", class: "icon feature__icon") %>
+              <%= inline_svg("icons/deployment.svg", class: "icon feature__icon") %>
               <div class="feature__content">
                 <h3>Flexible deployment</h3>
                 <p>Diverst can be hosted securely on the cloud (AWS) or on-premise</p>
@@ -34,7 +34,7 @@
           </div>
           <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
-              <%= inline_svg("icons/hosting.svg", class: "icon feature__icon") %>
+              <%= inline_svg("icons/configuration.svg", class: "icon feature__icon") %>
               <div class="feature__content">
                 <h3>Easy configuration</h3>
                 <p>Highly configurable platform to support customization and white labelling</p>
@@ -43,7 +43,7 @@
           </div>
           <div class="grid__col--xs-12 grid__col--md-4">
             <div class="feature">
-              <%= inline_svg("icons/metrics.svg", class: "icon feature__icon") %>
+              <%= inline_svg("icons/ui.svg", class: "icon feature__icon") %>
               <div class="feature__content">
                 <h3>Simple UI</h3>
                 <p>A simple and intuitive user interface that engages more people to achieve your diversity goals faster.</p>
@@ -98,10 +98,10 @@
               </a>
             </div>
             <div class="grid__col--xs-12 grid__col--sm-6 grid__col--lg-4">
-              <a href="/products/meet" class="feature feature--stacked text-center feature--outline">
-                <%= inline_svg("icons/meet.svg", class: "icon feature__icon") %>
+              <a href="/products/plan" class="feature feature--stacked text-center feature--outline">
+                <%= inline_svg("icons/plan.svg", class: "icon feature__icon") %>
                 <div class="feature__content">
-                  <h3>Meet</h3>
+                  <h3>Plan</h3>
                   <p>Increasing diversity through introductions</p>
                   <span class="feature__link">Learn more</span>
                 </div>
@@ -131,6 +131,7 @@
               <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>D&I Content Repository</li>
               <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>White labelling</li>
               <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Mobile-first responsive design</li>
+              <li><%= inline_svg("icons/checkmark.svg", class: "icon icon--accent list__icon") %>Role-based user permissions</li>
             </ul>
           </div>
           <div class="grid__col--xs-12 grid__col--sm-10 grid__col--sm-offset-1 grid__col--md-5 grid__col--md-offset-0">
@@ -157,7 +158,7 @@
         </div>
       </section>
 
-      <% section class: 'section--alt text-center integrations', id: 'products' do %>
+      <% section class: 'text-center integrations', id: 'products' do %>
         <h2 class="section__title">Integrate with the products you already use</h2>
         <div class="integration">
           <%= inline_svg("icons/yammer-color.svg", class: "icon icon--large integration__icon") %>
@@ -178,6 +179,10 @@
         <div class="integration">
           <%= inline_svg("icons/linkedin-color.svg", class: "icon icon--large integration__icon") %>
           <h4>LinkedIn</h4>
+        </div>
+        <div class="integration">
+          <%= inline_svg("icons/user-group.svg", class: "icon icon--large icon--accent integration__icon") %>
+          <h4>HCM/HRM</h4>
         </div>
       <% end %>
 
