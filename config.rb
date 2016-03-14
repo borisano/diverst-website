@@ -1,4 +1,5 @@
 activate :autoprefixer
+activate :imageoptim
 activate :minify_html
 
 require "lib/image_helpers"
