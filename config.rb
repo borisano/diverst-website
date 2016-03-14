@@ -7,7 +7,7 @@ helpers ImageHelpers
 
 after_configuration do
 	@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-	sprockets.append_path File.join "#{root}", @bower_config["directory"]
+	sprockets.append_path File.join("#{root}", @bower_config["directory"])
 end
 
 helpers do
