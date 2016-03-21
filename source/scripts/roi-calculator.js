@@ -21,7 +21,7 @@ var ROICalculator = function() {
 
   // Company fields
 
-  self.nbEmployeesInput = ko.observable(1000).extend({ required: true });
+  self.nbEmployeesInput = ko.observable(5000).extend({ required: true });
   self.averageSalaryInput = ko.observable(50000).extend({ required: true });
   self.turnoverRate = ko.observable(20).extend({ required: true });
   self.sizeOfDITeam = ko.observable(15).extend({ required: true });

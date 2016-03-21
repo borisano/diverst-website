@@ -6,6 +6,7 @@
 //= require contact-form
 //= require tooltipster
 //= require demo-modal
+//= require roi-calculator
 
 // Fade in body when page is loaded
 
@@ -86,4 +87,5 @@ ko.validation.registerExtenders();
 
 // Mount the Knockout demo modal
 
-ko.applyBindings(new DemoModal(), document.getElementById('js-demo-modal'));
+ko.applyBindings(new ROICalculator(), $('.js-roi-calculator')[0]);
+ko.applyBindings(new DemoModal(), $('.js-demo-modal')[0]);
