@@ -26,13 +26,11 @@ var ROICalculator = function() {
   self.turnoverRate = ko.observable(20).extend({ required: true });
   self.sizeOfDITeam = ko.observable(15).extend({ required: true });
 
-  self.obfuscateResults = ko.observable(true);
 
   self.showROI = function() {
     self.errors.showAllMessages(true);
 
     if (self.errors().length === 0) {
-      self.obfuscateResults(false);
       $.smoothScroll({ scrollTarget: '#roi-results' });
       sendInfoToCRM();
     }
