@@ -87,5 +87,4 @@ ko.validation.registerExtenders();
 
 // Mount the Knockout demo modal
 
-ko.applyBindings(new ROICalculator(), $('.js-roi-calculator')[0]);
 ko.applyBindings(new DemoModal(), $('.js-demo-modal')[0]);

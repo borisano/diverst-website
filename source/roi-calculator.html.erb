@@ -205,6 +205,6 @@ meta_description: Calculate your diversity ROI by measuring the effects of diver
 
 <% content_for :page_scripts do %>
   <script>
-
+    ko.applyBindings(new ROICalculator(), $('.js-roi-calculator')[0]);
   </script>
 <% end %>

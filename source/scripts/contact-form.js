@@ -16,6 +16,11 @@ var ContactForm = function() {
     companyEmail: true
   });
 
+  self.isCustomNetworkGroupNameVisible = ko.computed(function() {
+    console.log('meow');
+    self.networkGroupName() === 'Other';
+  });
+
   self.submitInfo = function() {
     self.errors.showAllMessages(true);
 
