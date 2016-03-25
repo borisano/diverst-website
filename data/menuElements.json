@@ -3,18 +3,12 @@
     "title": "Technology",
     "href": "/technology"
   }, {
-    "title": "ROI Calculator",
-    "href": "/roi-calculator"
-  }, {
     "title": "Company",
     "href": "/company"
   }],
   "resources": [{
     "title": "Whitepapers",
     "href": "/whitepapers"
-  }, {
-    "title": "ROI Calculator",
-    "href": "/roi-calculator"
   }],
   "products": [{
     "title": "Manage",
