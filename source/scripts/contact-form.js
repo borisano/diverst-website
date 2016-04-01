@@ -24,8 +24,8 @@ var ContactForm = function() {
     self.errors.showAllMessages(true);
 
     if (self.errors().length === 0) {
-      $.getJSON('https://ipinfo.io?token=fe594ecc38f7df', function(visitorInfo) { // Get visitor info using a 3rd party service
-        $.post('https://app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
+      $.getJSON('//ipinfo.io?token=fe594ecc38f7df', function(visitorInfo) { // Get visitor info using a 3rd party service
+        $.post('//app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
       });
 
       // Show submitted state

@@ -37,8 +37,8 @@ var ROICalculator = function() {
   };
 
   var sendInfoToCRM = function() {
-    $.getJSON('http://ipinfo.io', function(visitorInfo) { // Get visitor info using a 3rd party service
-      $.post('http://app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
+    $.getJSON('//ipinfo.io', function(visitorInfo) { // Get visitor info using a 3rd party service
+      $.post('//app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
     });
   };
 
