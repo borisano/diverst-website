@@ -17,7 +17,6 @@ var ContactForm = function() {
   });
 
   self.isCustomNetworkGroupNameVisible = ko.computed(function() {
-    console.log('meow');
     self.networkGroupName() === 'Other';
   });
 
@@ -25,8 +24,8 @@ var ContactForm = function() {
     self.errors.showAllMessages(true);
 
     if (self.errors().length === 0) {
-      $.getJSON('http://ipinfo.io', function(visitorInfo) { // Get visitor info using a 3rd party service
-        $.post('http://app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
+      $.getJSON('//ipinfo.io?token=fe594ecc38f7df', function(visitorInfo) { // Get visitor info using a 3rd party service
+        $.post('//app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo }));
       });
 
       // Show submitted state
