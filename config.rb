@@ -1,5 +1,4 @@
 activate :autoprefixer
-activate :imageoptim
 activate :minify_html
 
 require "lib/image_helpers"
@@ -46,8 +45,6 @@ helpers do
   end
 end
 
-activate :livereload
-
 activate :directory_indexes
 
 set :css_dir, 'styles'
@@ -59,6 +56,10 @@ configure :build do
 	activate :minify_css
 	activate :minify_javascript
 	activate :asset_hash
+end
+
+configure :development do
+  activate :livereload
 end
 
 activate :deploy do |deploy|
