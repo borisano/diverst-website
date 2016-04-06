@@ -111,7 +111,11 @@
         </div>
       </div>
       <div class="grid__col--xs-12">
-        <button class="btn btn--primary btn--full" data-bind="click: submitRequest">Submit</button>
+        <button class="btn btn--primary btn--full" data-bind="click: submitRequest">
+          <span data-bind="visible: !loading() && !done()">Submit</span>
+          <span data-bind="visible: loading"><img src="/images/loading.gif" style="height: 20px;"></span>
+          <span data-bind="visible: done">Thank you! We will reach out to you shortly.</span>
+        </button>
       </div>
     </div>
 
