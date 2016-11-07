@@ -58,7 +58,7 @@ var DemoModal = function() {
   var sendInfoToCRM = function() {
     $.getJSON('//ipinfo.io?token=fe594ecc38f7df', function(visitorInfo) { // Get visitor info using a 3rd party service
       self.loading(true);
-      $.post('//app.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo })).done(function() {
+      $.post('//newsandbox.diverst.com/website/leads', $.extend({}, JSON.parse(ko.toJSON(self)), { visitor_info: visitorInfo })).done(function() {
         self.loading(false);
         self.done(true);
       });
